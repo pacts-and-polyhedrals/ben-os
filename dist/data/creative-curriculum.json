@@ -1,0 +1,1380 @@
+{
+  "version": "2026-10-26",
+  "approach": "human-led creative learning, not default artwork generation",
+  "disciplines": [
+    {
+      "id": "painting",
+      "name": "Painting",
+      "group": "Visual art",
+      "techniques": [
+        "colour mixing",
+        "value studies",
+        "glazing",
+        "brush handling"
+      ],
+      "starterExercise": "Paint one familiar object using only three values, then explain the decisions you made.",
+      "advancedChallenge": "Create a coherent three-panel series using changing light.",
+      "feedbackQuestions": [
+        "Which choices communicate the focal point?",
+        "How does the colour temperature affect the mood?"
+      ],
+      "coachModes": [
+        "explore",
+        "learn",
+        "practice",
+        "critique",
+        "collaborate"
+      ],
+      "guidingPrinciple": "You are the creator; B.E.N. provides questions, references, techniques and feedback, not a finished piece."
+    },
+    {
+      "id": "drawing",
+      "name": "Drawing and sketching",
+      "group": "Visual art",
+      "techniques": [
+        "gesture",
+        "proportion",
+        "perspective",
+        "cross-hatching"
+      ],
+      "starterExercise": "Sketch the same subject at 30 seconds, two minutes and ten minutes.",
+      "advancedChallenge": "Build a visual diary of an observed public place using varied marks.",
+      "feedbackQuestions": [
+        "What was observed rather than assumed?",
+        "Where do marks create rhythm?"
+      ],
+      "coachModes": [
+        "explore",
+        "learn",
+        "practice",
+        "critique",
+        "collaborate"
+      ],
+      "guidingPrinciple": "You are the creator; B.E.N. provides questions, references, techniques and feedback, not a finished piece."
+    },
+    {
+      "id": "watercolour",
+      "name": "Watercolour and ink",
+      "group": "Visual art",
+      "techniques": [
+        "wet-on-wet",
+        "negative painting",
+        "washes",
+        "edge control"
+      ],
+      "starterExercise": "Paint three gradients and note drying time and paper differences.",
+      "advancedChallenge": "Develop a landscape emphasizing transparency and lost edges.",
+      "feedbackQuestions": [
+        "Which edges hold attention?",
+        "Where could you preserve paper white?"
+      ],
+      "coachModes": [
+        "explore",
+        "learn",
+        "practice",
+        "critique",
+        "collaborate"
+      ],
+      "guidingPrinciple": "You are the creator; B.E.N. provides questions, references, techniques and feedback, not a finished piece."
+    },
+    {
+      "id": "sculpture",
+      "name": "Sculpture",
+      "group": "Visual art",
+      "techniques": [
+        "armature",
+        "form in the round",
+        "subtractive modelling",
+        "material studies"
+      ],
+      "starterExercise": "Make a small maquette exploring one gesture from three viewpoints.",
+      "advancedChallenge": "Propose an accessible public sculpture with site and sustainability considerations.",
+      "feedbackQuestions": [
+        "How does the work change as viewers move?",
+        "What material properties shape the idea?"
+      ],
+      "coachModes": [
+        "explore",
+        "learn",
+        "practice",
+        "critique",
+        "collaborate"
+      ],
+      "guidingPrinciple": "You are the creator; B.E.N. provides questions, references, techniques and feedback, not a finished piece."
+    },
+    {
+      "id": "ceramics",
+      "name": "Ceramics and pottery",
+      "group": "Visual art",
+      "techniques": [
+        "pinch building",
+        "coils",
+        "slab construction",
+        "glazing safety"
+      ],
+      "starterExercise": "Make three small test forms to compare balance and wall thickness.",
+      "advancedChallenge": "Create a functional set balancing form, ergonomics and glaze performance.",
+      "feedbackQuestions": [
+        "Where are stresses concentrated?",
+        "How does form serve the intended user?"
+      ],
+      "coachModes": [
+        "explore",
+        "learn",
+        "practice",
+        "critique",
+        "collaborate"
+      ],
+      "guidingPrinciple": "You are the creator; B.E.N. provides questions, references, techniques and feedback, not a finished piece."
+    },
+    {
+      "id": "printmaking",
+      "name": "Printmaking",
+      "group": "Visual art",
+      "techniques": [
+        "relief",
+        "monoprint",
+        "registration",
+        "editions"
+      ],
+      "starterExercise": "Make a two-colour relief design using safe non-toxic material substitutes.",
+      "advancedChallenge": "Plan a limited edition exploring variation and repetition.",
+      "feedbackQuestions": [
+        "What does the medium add that drawing would not?",
+        "How precise should registration be?"
+      ],
+      "coachModes": [
+        "explore",
+        "learn",
+        "practice",
+        "critique",
+        "collaborate"
+      ],
+      "guidingPrinciple": "You are the creator; B.E.N. provides questions, references, techniques and feedback, not a finished piece."
+    },
+    {
+      "id": "photography",
+      "name": "Photography",
+      "group": "Lens and media",
+      "techniques": [
+        "exposure triangle",
+        "composition",
+        "light direction",
+        "sequencing"
+      ],
+      "starterExercise": "Photograph one subject from five viewpoints using available light.",
+      "advancedChallenge": "Build a small photo essay with captions, permissions and a clear point of view.",
+      "feedbackQuestions": [
+        "What is the story between images?",
+        "How does light affect emotional tone?"
+      ],
+      "coachModes": [
+        "explore",
+        "learn",
+        "practice",
+        "critique",
+        "collaborate"
+      ],
+      "guidingPrinciple": "You are the creator; B.E.N. provides questions, references, techniques and feedback, not a finished piece."
+    },
+    {
+      "id": "film",
+      "name": "Filmmaking",
+      "group": "Lens and media",
+      "techniques": [
+        "storyboarding",
+        "shot coverage",
+        "continuity",
+        "visual storytelling"
+      ],
+      "starterExercise": "Storyboard a 60-second scene without dialogue and plan its shots.",
+      "advancedChallenge": "Produce an accessible short film with sound and caption strategy.",
+      "feedbackQuestions": [
+        "What does each shot reveal?",
+        "Where can editing replace exposition?"
+      ],
+      "coachModes": [
+        "explore",
+        "learn",
+        "practice",
+        "critique",
+        "collaborate"
+      ],
+      "guidingPrinciple": "You are the creator; B.E.N. provides questions, references, techniques and feedback, not a finished piece."
+    },
+    {
+      "id": "cinematography",
+      "name": "Cinematography",
+      "group": "Lens and media",
+      "techniques": [
+        "lighting ratios",
+        "lens language",
+        "blocking",
+        "camera movement"
+      ],
+      "starterExercise": "Film a subject under three light directions and compare interpretation.",
+      "advancedChallenge": "Design a coherent lighting plan across contrasting locations.",
+      "feedbackQuestions": [
+        "What motivates the camera?",
+        "Can the image communicate without dialogue?"
+      ],
+      "coachModes": [
+        "explore",
+        "learn",
+        "practice",
+        "critique",
+        "collaborate"
+      ],
+      "guidingPrinciple": "You are the creator; B.E.N. provides questions, references, techniques and feedback, not a finished piece."
+    },
+    {
+      "id": "editing",
+      "name": "Film and video editing",
+      "group": "Lens and media",
+      "techniques": [
+        "rhythmic editing",
+        "continuity",
+        "montage",
+        "sound bridges"
+      ],
+      "starterExercise": "Cut a one-minute scene in two rhythms and compare its effect.",
+      "advancedChallenge": "Develop an edit that changes viewpoint without changing source footage.",
+      "feedbackQuestions": [
+        "What information does each cut add?",
+        "Does pacing support intention?"
+      ],
+      "coachModes": [
+        "explore",
+        "learn",
+        "practice",
+        "critique",
+        "collaborate"
+      ],
+      "guidingPrinciple": "You are the creator; B.E.N. provides questions, references, techniques and feedback, not a finished piece."
+    },
+    {
+      "id": "animation",
+      "name": "Animation",
+      "group": "Lens and media",
+      "techniques": [
+        "timing",
+        "spacing",
+        "squash and stretch",
+        "anticipation"
+      ],
+      "starterExercise": "Animate a simple bouncing shape with two different emotional qualities.",
+      "advancedChallenge": "Create a short animation combining physical movement and character intention.",
+      "feedbackQuestions": [
+        "Where does the audience expect the motion?",
+        "How do timing and arcs convey weight?"
+      ],
+      "coachModes": [
+        "explore",
+        "learn",
+        "practice",
+        "critique",
+        "collaborate"
+      ],
+      "guidingPrinciple": "You are the creator; B.E.N. provides questions, references, techniques and feedback, not a finished piece."
+    },
+    {
+      "id": "illustration",
+      "name": "Illustration",
+      "group": "Visual art",
+      "techniques": [
+        "visual hierarchy",
+        "character silhouette",
+        "editorial metaphor",
+        "narrative composition"
+      ],
+      "starterExercise": "Turn a short paragraph into three thumbnail concepts.",
+      "advancedChallenge": "Develop an illustration sequence for a complex public-interest topic.",
+      "feedbackQuestions": [
+        "Can a viewer read the idea at small scale?",
+        "Is the visual metaphor respectful and clear?"
+      ],
+      "coachModes": [
+        "explore",
+        "learn",
+        "practice",
+        "critique",
+        "collaborate"
+      ],
+      "guidingPrinciple": "You are the creator; B.E.N. provides questions, references, techniques and feedback, not a finished piece."
+    },
+    {
+      "id": "comics",
+      "name": "Comics and sequential art",
+      "group": "Visual storytelling",
+      "techniques": [
+        "panel composition",
+        "gutters",
+        "visual pacing",
+        "dialogue lettering"
+      ],
+      "starterExercise": "Tell a mundane story in six panels without explanatory captions.",
+      "advancedChallenge": "Produce a short comic that uses page turns as narrative reveals.",
+      "feedbackQuestions": [
+        "How does the gutter affect time?",
+        "What can a picture communicate alone?"
+      ],
+      "coachModes": [
+        "explore",
+        "learn",
+        "practice",
+        "critique",
+        "collaborate"
+      ],
+      "guidingPrinciple": "You are the creator; B.E.N. provides questions, references, techniques and feedback, not a finished piece."
+    },
+    {
+      "id": "graphic-design",
+      "name": "Graphic design",
+      "group": "Design",
+      "techniques": [
+        "typography",
+        "grids",
+        "contrast",
+        "information hierarchy"
+      ],
+      "starterExercise": "Redesign a community notice for readability, without losing facts.",
+      "advancedChallenge": "Develop an accessible visual identity and multi-format layout system.",
+      "feedbackQuestions": [
+        "What is read first?",
+        "Does meaning survive without colour?"
+      ],
+      "coachModes": [
+        "explore",
+        "learn",
+        "practice",
+        "critique",
+        "collaborate"
+      ],
+      "guidingPrinciple": "You are the creator; B.E.N. provides questions, references, techniques and feedback, not a finished piece."
+    },
+    {
+      "id": "typography",
+      "name": "Lettering and typography",
+      "group": "Design",
+      "techniques": [
+        "type anatomy",
+        "kerning",
+        "hierarchy",
+        "legibility"
+      ],
+      "starterExercise": "Hand-letter one phrase three ways for different audiences.",
+      "advancedChallenge": "Design a modular display alphabet with a documented legibility test.",
+      "feedbackQuestions": [
+        "Where does style undermine clarity?",
+        "How do negative spaces balance?"
+      ],
+      "coachModes": [
+        "explore",
+        "learn",
+        "practice",
+        "critique",
+        "collaborate"
+      ],
+      "guidingPrinciple": "You are the creator; B.E.N. provides questions, references, techniques and feedback, not a finished piece."
+    },
+    {
+      "id": "graffiti",
+      "name": "Graffiti and street art",
+      "group": "Public art",
+      "techniques": [
+        "letter construction",
+        "colour systems",
+        "composition",
+        "legal wall planning"
+      ],
+      "starterExercise": "Sketch three letterform variations in a notebook and test readability.",
+      "advancedChallenge": "Plan a permissioned community mural with accessible participation.",
+      "feedbackQuestions": [
+        "Does the design respect the location and community?",
+        "How will permission and maintenance work?"
+      ],
+      "coachModes": [
+        "explore",
+        "learn",
+        "practice",
+        "critique",
+        "collaborate"
+      ],
+      "guidingPrinciple": "You are the creator; B.E.N. provides questions, references, techniques and feedback, not a finished piece."
+    },
+    {
+      "id": "mural",
+      "name": "Murals and public art",
+      "group": "Public art",
+      "techniques": [
+        "scale transfer",
+        "community consultation",
+        "surface preparation",
+        "durable materials"
+      ],
+      "starterExercise": "Draw a small site mock-up from a documented permissioned wall.",
+      "advancedChallenge": "Plan a collaborative mural with consent, safety and maintenance requirements.",
+      "feedbackQuestions": [
+        "Whose voices shape the work?",
+        "Can residents recognise its intended meaning?"
+      ],
+      "coachModes": [
+        "explore",
+        "learn",
+        "practice",
+        "critique",
+        "collaborate"
+      ],
+      "guidingPrinciple": "You are the creator; B.E.N. provides questions, references, techniques and feedback, not a finished piece."
+    },
+    {
+      "id": "architecture",
+      "name": "Architecture and spatial design",
+      "group": "Design",
+      "techniques": [
+        "site analysis",
+        "circulation",
+        "sketch models",
+        "environmental comfort"
+      ],
+      "starterExercise": "Draw a familiar community room and identify one accessibility improvement.",
+      "advancedChallenge": "Propose a low-cost shared space balancing inclusion and energy demands.",
+      "feedbackQuestions": [
+        "Who is excluded by the plan?",
+        "How does circulation support different users?"
+      ],
+      "coachModes": [
+        "explore",
+        "learn",
+        "practice",
+        "critique",
+        "collaborate"
+      ],
+      "guidingPrinciple": "You are the creator; B.E.N. provides questions, references, techniques and feedback, not a finished piece."
+    },
+    {
+      "id": "interior",
+      "name": "Interior and set design",
+      "group": "Design",
+      "techniques": [
+        "mood boards",
+        "spatial zoning",
+        "light",
+        "material palette"
+      ],
+      "starterExercise": "Redesign a small corner for a new activity using existing objects.",
+      "advancedChallenge": "Build a reusable low-waste stage or event environment.",
+      "feedbackQuestions": [
+        "What changes with lighting?",
+        "Can props be repaired and reused?"
+      ],
+      "coachModes": [
+        "explore",
+        "learn",
+        "practice",
+        "critique",
+        "collaborate"
+      ],
+      "guidingPrinciple": "You are the creator; B.E.N. provides questions, references, techniques and feedback, not a finished piece."
+    },
+    {
+      "id": "textiles",
+      "name": "Textiles and fibre arts",
+      "group": "Craft",
+      "techniques": [
+        "weaving",
+        "embroidery",
+        "dye tests",
+        "pattern repeats"
+      ],
+      "starterExercise": "Make three stitch or weave samples and record texture differences.",
+      "advancedChallenge": "Create a collaborative textile installation reflecting community stories with consent.",
+      "feedbackQuestions": [
+        "How does touch contribute to meaning?",
+        "What are the material and labour impacts?"
+      ],
+      "coachModes": [
+        "explore",
+        "learn",
+        "practice",
+        "critique",
+        "collaborate"
+      ],
+      "guidingPrinciple": "You are the creator; B.E.N. provides questions, references, techniques and feedback, not a finished piece."
+    },
+    {
+      "id": "fashion",
+      "name": "Fashion and costume design",
+      "group": "Craft",
+      "techniques": [
+        "silhouette",
+        "draping",
+        "pattern drafting",
+        "fit"
+      ],
+      "starterExercise": "Redesign an existing garment through sketches and reversible changes.",
+      "advancedChallenge": "Create a low-waste costume collection with accessible fittings.",
+      "feedbackQuestions": [
+        "How does the wearer move?",
+        "Which construction choices reduce waste?"
+      ],
+      "coachModes": [
+        "explore",
+        "learn",
+        "practice",
+        "critique",
+        "collaborate"
+      ],
+      "guidingPrinciple": "You are the creator; B.E.N. provides questions, references, techniques and feedback, not a finished piece."
+    },
+    {
+      "id": "jewellery",
+      "name": "Jewellery and adornment",
+      "group": "Craft",
+      "techniques": [
+        "wire forming",
+        "assembly",
+        "material balance",
+        "wearability"
+      ],
+      "starterExercise": "Prototype a wearable form from inexpensive safe materials.",
+      "advancedChallenge": "Design a small collection linked by a personal symbol.",
+      "feedbackQuestions": [
+        "Does it feel comfortable and safe?",
+        "What makes it recognisably yours?"
+      ],
+      "coachModes": [
+        "explore",
+        "learn",
+        "practice",
+        "critique",
+        "collaborate"
+      ],
+      "guidingPrinciple": "You are the creator; B.E.N. provides questions, references, techniques and feedback, not a finished piece."
+    },
+    {
+      "id": "woodwork",
+      "name": "Woodworking and furniture",
+      "group": "Craft",
+      "techniques": [
+        "joinery",
+        "grain",
+        "prototyping",
+        "ergonomics"
+      ],
+      "starterExercise": "Sketch and mock up a simple shelf from cardboard first.",
+      "advancedChallenge": "Design repairable modular furniture for a shared room.",
+      "feedbackQuestions": [
+        "Can components be replaced?",
+        "Are loads and dimensions sensible?"
+      ],
+      "coachModes": [
+        "explore",
+        "learn",
+        "practice",
+        "critique",
+        "collaborate"
+      ],
+      "guidingPrinciple": "You are the creator; B.E.N. provides questions, references, techniques and feedback, not a finished piece."
+    },
+    {
+      "id": "papercraft",
+      "name": "Papercraft and book arts",
+      "group": "Craft",
+      "techniques": [
+        "folding",
+        "bookbinding",
+        "paper grain",
+        "pop-up mechanics"
+      ],
+      "starterExercise": "Make two foldable booklet prototypes and compare their reading sequence.",
+      "advancedChallenge": "Produce a tactile artist book with low-cost materials.",
+      "feedbackQuestions": [
+        "What changes as someone handles the object?",
+        "Is the reading order intuitive?"
+      ],
+      "coachModes": [
+        "explore",
+        "learn",
+        "practice",
+        "critique",
+        "collaborate"
+      ],
+      "guidingPrinciple": "You are the creator; B.E.N. provides questions, references, techniques and feedback, not a finished piece."
+    },
+    {
+      "id": "creative-writing",
+      "name": "Creative writing and fiction",
+      "group": "Writing",
+      "techniques": [
+        "character goals",
+        "conflict",
+        "scene beats",
+        "revision"
+      ],
+      "starterExercise": "Write a scene from an overheard harmless phrase, then revise the opening yourself.",
+      "advancedChallenge": "Build a multi-chapter story with a clear emotional arc and revision log.",
+      "feedbackQuestions": [
+        "What does the character want here?",
+        "Which details reveal rather than explain?"
+      ],
+      "coachModes": [
+        "explore",
+        "learn",
+        "practice",
+        "critique",
+        "collaborate"
+      ],
+      "guidingPrinciple": "You are the creator; B.E.N. provides questions, references, techniques and feedback, not a finished piece."
+    },
+    {
+      "id": "poetry",
+      "name": "Poetry",
+      "group": "Writing",
+      "techniques": [
+        "imagery",
+        "sound",
+        "line breaks",
+        "constraint"
+      ],
+      "starterExercise": "Write five lines about an ordinary sound without naming its source.",
+      "advancedChallenge": "Create a sequence of poems using a recurring image in changing contexts.",
+      "feedbackQuestions": [
+        "Where does the line break change meaning?",
+        "What does sound add?"
+      ],
+      "coachModes": [
+        "explore",
+        "learn",
+        "practice",
+        "critique",
+        "collaborate"
+      ],
+      "guidingPrinciple": "You are the creator; B.E.N. provides questions, references, techniques and feedback, not a finished piece."
+    },
+    {
+      "id": "playwriting",
+      "name": "Playwriting and dialogue",
+      "group": "Writing",
+      "techniques": [
+        "subtext",
+        "dramatic tension",
+        "character voice",
+        "stage action"
+      ],
+      "starterExercise": "Write a two-person exchange where neither states their real objective.",
+      "advancedChallenge": "Revise a short play for production with accessible stage directions.",
+      "feedbackQuestions": [
+        "Is conflict playable rather than explained?",
+        "Can performers infer intention?"
+      ],
+      "coachModes": [
+        "explore",
+        "learn",
+        "practice",
+        "critique",
+        "collaborate"
+      ],
+      "guidingPrinciple": "You are the creator; B.E.N. provides questions, references, techniques and feedback, not a finished piece."
+    },
+    {
+      "id": "screenwriting",
+      "name": "Screenwriting",
+      "group": "Writing",
+      "techniques": [
+        "scene objective",
+        "visual action",
+        "sequence structure",
+        "economy"
+      ],
+      "starterExercise": "Write the visual beats of one short scene with no voiceover.",
+      "advancedChallenge": "Outline a 12-minute short film before drafting any dialogue.",
+      "feedbackQuestions": [
+        "What can the camera show?",
+        "Where is the turning point?"
+      ],
+      "coachModes": [
+        "explore",
+        "learn",
+        "practice",
+        "critique",
+        "collaborate"
+      ],
+      "guidingPrinciple": "You are the creator; B.E.N. provides questions, references, techniques and feedback, not a finished piece."
+    },
+    {
+      "id": "nonfiction",
+      "name": "Creative nonfiction and memoir",
+      "group": "Writing",
+      "techniques": [
+        "scene and reflection",
+        "narrative distance",
+        "fact checking",
+        "ethical consent"
+      ],
+      "starterExercise": "Write one memory from observation, marking what is uncertain.",
+      "advancedChallenge": "Develop a personal essay that respects other people's privacy.",
+      "feedbackQuestions": [
+        "What is remembered versus verified?",
+        "Whose story is being told?"
+      ],
+      "coachModes": [
+        "explore",
+        "learn",
+        "practice",
+        "critique",
+        "collaborate"
+      ],
+      "guidingPrinciple": "You are the creator; B.E.N. provides questions, references, techniques and feedback, not a finished piece."
+    },
+    {
+      "id": "spoken-word",
+      "name": "Spoken word and storytelling",
+      "group": "Performance",
+      "techniques": [
+        "cadence",
+        "breath",
+        "emphasis",
+        "audience connection"
+      ],
+      "starterExercise": "Rehearse a 60-second personal story with three different pauses.",
+      "advancedChallenge": "Design a five-minute performance with audience-sensitive framing.",
+      "feedbackQuestions": [
+        "Where does silence do work?",
+        "How does delivery change meaning?"
+      ],
+      "coachModes": [
+        "explore",
+        "learn",
+        "practice",
+        "critique",
+        "collaborate"
+      ],
+      "guidingPrinciple": "You are the creator; B.E.N. provides questions, references, techniques and feedback, not a finished piece."
+    },
+    {
+      "id": "music-composition",
+      "name": "Music composition",
+      "group": "Music",
+      "techniques": [
+        "motif",
+        "harmony",
+        "counterpoint",
+        "form"
+      ],
+      "starterExercise": "Compose your own four-note motif and transform its rhythm three ways.",
+      "advancedChallenge": "Develop a short multi-section piece with clear thematic development.",
+      "feedbackQuestions": [
+        "Which musical idea holds it together?",
+        "How does tension release?"
+      ],
+      "coachModes": [
+        "explore",
+        "learn",
+        "practice",
+        "critique",
+        "collaborate"
+      ],
+      "guidingPrinciple": "You are the creator; B.E.N. provides questions, references, techniques and feedback, not a finished piece."
+    },
+    {
+      "id": "songwriting",
+      "name": "Songwriting",
+      "group": "Music",
+      "techniques": [
+        "prosody",
+        "melodic contour",
+        "verse chorus",
+        "lyrical specificity"
+      ],
+      "starterExercise": "Write a short lyric idea and try three original melodic contours.",
+      "advancedChallenge": "Develop an original song while documenting revisions and influences.",
+      "feedbackQuestions": [
+        "Does the phrasing fit natural speech?",
+        "What emotional change occurs?"
+      ],
+      "coachModes": [
+        "explore",
+        "learn",
+        "practice",
+        "critique",
+        "collaborate"
+      ],
+      "guidingPrinciple": "You are the creator; B.E.N. provides questions, references, techniques and feedback, not a finished piece."
+    },
+    {
+      "id": "production",
+      "name": "Music production",
+      "group": "Music",
+      "techniques": [
+        "arrangement",
+        "EQ",
+        "dynamic range",
+        "sound selection"
+      ],
+      "starterExercise": "Mix a simple arrangement with intentional frequency separation.",
+      "advancedChallenge": "Create two mixes optimized for different listening contexts.",
+      "feedbackQuestions": [
+        "Can every important element be heard?",
+        "Where is space needed?"
+      ],
+      "coachModes": [
+        "explore",
+        "learn",
+        "practice",
+        "critique",
+        "collaborate"
+      ],
+      "guidingPrinciple": "You are the creator; B.E.N. provides questions, references, techniques and feedback, not a finished piece."
+    },
+    {
+      "id": "sound-art",
+      "name": "Sound design and audio art",
+      "group": "Music",
+      "techniques": [
+        "field recording",
+        "layering",
+        "texture",
+        "soundscape"
+      ],
+      "starterExercise": "Record five safe everyday sounds and categorise their qualities.",
+      "advancedChallenge": "Construct an immersive soundscape using recordings with permission.",
+      "feedbackQuestions": [
+        "Which sounds establish place?",
+        "How does silence shape attention?"
+      ],
+      "coachModes": [
+        "explore",
+        "learn",
+        "practice",
+        "critique",
+        "collaborate"
+      ],
+      "guidingPrinciple": "You are the creator; B.E.N. provides questions, references, techniques and feedback, not a finished piece."
+    },
+    {
+      "id": "instrument",
+      "name": "Instrumental performance",
+      "group": "Music",
+      "techniques": [
+        "practice segmentation",
+        "rhythm",
+        "articulation",
+        "interpretation"
+      ],
+      "starterExercise": "Practise a challenging four-bar passage with three controlled tempos.",
+      "advancedChallenge": "Prepare a performance that explains interpretive choices.",
+      "feedbackQuestions": [
+        "Is tension interfering with technique?",
+        "Which phrase needs a clearer destination?"
+      ],
+      "coachModes": [
+        "explore",
+        "learn",
+        "practice",
+        "critique",
+        "collaborate"
+      ],
+      "guidingPrinciple": "You are the creator; B.E.N. provides questions, references, techniques and feedback, not a finished piece."
+    },
+    {
+      "id": "singing",
+      "name": "Vocal arts and singing",
+      "group": "Music",
+      "techniques": [
+        "breath management",
+        "resonance",
+        "diction",
+        "phrasing"
+      ],
+      "starterExercise": "Record a comfortable short phrase softly and reflect on diction.",
+      "advancedChallenge": "Plan an expressive set while respecting vocal health and range.",
+      "feedbackQuestions": [
+        "Is the voice comfortable?",
+        "Are the words intelligible?"
+      ],
+      "coachModes": [
+        "explore",
+        "learn",
+        "practice",
+        "critique",
+        "collaborate"
+      ],
+      "guidingPrinciple": "You are the creator; B.E.N. provides questions, references, techniques and feedback, not a finished piece."
+    },
+    {
+      "id": "dance",
+      "name": "Dance choreography",
+      "group": "Movement",
+      "techniques": [
+        "motif development",
+        "space",
+        "dynamics",
+        "transitions"
+      ],
+      "starterExercise": "Create eight counts using three gestures and vary speed and level.",
+      "advancedChallenge": "Choreograph a two-minute piece with accessibility adaptations.",
+      "feedbackQuestions": [
+        "How does movement develop its idea?",
+        "Are transitions intentional?"
+      ],
+      "coachModes": [
+        "explore",
+        "learn",
+        "practice",
+        "critique",
+        "collaborate"
+      ],
+      "guidingPrinciple": "You are the creator; B.E.N. provides questions, references, techniques and feedback, not a finished piece."
+    },
+    {
+      "id": "ballet",
+      "name": "Ballet and contemporary dance",
+      "group": "Movement",
+      "techniques": [
+        "alignment",
+        "musicality",
+        "phrasing",
+        "weight transfer"
+      ],
+      "starterExercise": "Explore a brief phrase while noting balance and effort safely.",
+      "advancedChallenge": "Develop a short choreographic study contrasting stillness and motion.",
+      "feedbackQuestions": [
+        "Where is movement initiated?",
+        "What does music reveal?"
+      ],
+      "coachModes": [
+        "explore",
+        "learn",
+        "practice",
+        "critique",
+        "collaborate"
+      ],
+      "guidingPrinciple": "You are the creator; B.E.N. provides questions, references, techniques and feedback, not a finished piece."
+    },
+    {
+      "id": "hiphop-dance",
+      "name": "Street and social dance",
+      "group": "Movement",
+      "techniques": [
+        "groove",
+        "musical interpretation",
+        "isolations",
+        "freestyle"
+      ],
+      "starterExercise": "Explore a groove to one track using three variations.",
+      "advancedChallenge": "Build a respectful collaborative routine acknowledging dance lineages.",
+      "feedbackQuestions": [
+        "Are cultural sources credited?",
+        "Does the movement express the music?"
+      ],
+      "coachModes": [
+        "explore",
+        "learn",
+        "practice",
+        "critique",
+        "collaborate"
+      ],
+      "guidingPrinciple": "You are the creator; B.E.N. provides questions, references, techniques and feedback, not a finished piece."
+    },
+    {
+      "id": "movement",
+      "name": "Movement and physical theatre",
+      "group": "Movement",
+      "techniques": [
+        "body awareness",
+        "ensemble composition",
+        "improvisation",
+        "viewpoints"
+      ],
+      "starterExercise": "Make a short movement score using only pathways and pauses.",
+      "advancedChallenge": "Create inclusive ensemble work with roles that allow different mobility.",
+      "feedbackQuestions": [
+        "Can performers adapt safely?",
+        "What emotion is carried without speech?"
+      ],
+      "coachModes": [
+        "explore",
+        "learn",
+        "practice",
+        "critique",
+        "collaborate"
+      ],
+      "guidingPrinciple": "You are the creator; B.E.N. provides questions, references, techniques and feedback, not a finished piece."
+    },
+    {
+      "id": "theatre",
+      "name": "Acting and theatre",
+      "group": "Performance",
+      "techniques": [
+        "objectives",
+        "given circumstances",
+        "ensemble listening",
+        "improvisation"
+      ],
+      "starterExercise": "Rehearse a short monologue focusing on a different objective each time.",
+      "advancedChallenge": "Create an ensemble performance with constructive rehearsal notes.",
+      "feedbackQuestions": [
+        "Are choices grounded in character need?",
+        "Can the partner affect the performance?"
+      ],
+      "coachModes": [
+        "explore",
+        "learn",
+        "practice",
+        "critique",
+        "collaborate"
+      ],
+      "guidingPrinciple": "You are the creator; B.E.N. provides questions, references, techniques and feedback, not a finished piece."
+    },
+    {
+      "id": "puppetry",
+      "name": "Puppetry and object theatre",
+      "group": "Performance",
+      "techniques": [
+        "focus",
+        "weight illusion",
+        "manipulation",
+        "ensemble"
+      ],
+      "starterExercise": "Animate a household object using breath and clear focus.",
+      "advancedChallenge": "Build a short accessible puppet piece from reclaimed materials.",
+      "feedbackQuestions": [
+        "Can the audience track the puppet's attention?",
+        "Where does movement imply weight?"
+      ],
+      "coachModes": [
+        "explore",
+        "learn",
+        "practice",
+        "critique",
+        "collaborate"
+      ],
+      "guidingPrinciple": "You are the creator; B.E.N. provides questions, references, techniques and feedback, not a finished piece."
+    },
+    {
+      "id": "comedy",
+      "name": "Comedy and improvisation",
+      "group": "Performance",
+      "techniques": [
+        "setup and payoff",
+        "timing",
+        "status play",
+        "ensemble trust"
+      ],
+      "starterExercise": "Write three variations of a gentle observational setup.",
+      "advancedChallenge": "Create a short sketch with consent-based rehearsal and social context.",
+      "feedbackQuestions": [
+        "Is the target a behaviour rather than vulnerability?",
+        "Where could timing improve?"
+      ],
+      "coachModes": [
+        "explore",
+        "learn",
+        "practice",
+        "critique",
+        "collaborate"
+      ],
+      "guidingPrinciple": "You are the creator; B.E.N. provides questions, references, techniques and feedback, not a finished piece."
+    },
+    {
+      "id": "game-design",
+      "name": "Game design and interactive storytelling",
+      "group": "Interactive",
+      "techniques": [
+        "player agency",
+        "feedback loops",
+        "prototyping",
+        "playtesting"
+      ],
+      "starterExercise": "Prototype a choice-based game with paper and observe one player.",
+      "advancedChallenge": "Create a cooperative game demonstrating meaningful trade-offs.",
+      "feedbackQuestions": [
+        "What choices really matter?",
+        "Does the feedback encourage learning?"
+      ],
+      "coachModes": [
+        "explore",
+        "learn",
+        "practice",
+        "critique",
+        "collaborate"
+      ],
+      "guidingPrinciple": "You are the creator; B.E.N. provides questions, references, techniques and feedback, not a finished piece."
+    },
+    {
+      "id": "interactive-art",
+      "name": "Interactive and digital art",
+      "group": "Interactive",
+      "techniques": [
+        "interaction design",
+        "responsive systems",
+        "participatory ethics",
+        "installation"
+      ],
+      "starterExercise": "Build a paper prototype of an artwork that responds to a visitor.",
+      "advancedChallenge": "Design a participatory artwork with explicit data and consent boundaries.",
+      "feedbackQuestions": [
+        "What control does the visitor have?",
+        "What happens when someone opts out?"
+      ],
+      "coachModes": [
+        "explore",
+        "learn",
+        "practice",
+        "critique",
+        "collaborate"
+      ],
+      "guidingPrinciple": "You are the creator; B.E.N. provides questions, references, techniques and feedback, not a finished piece."
+    },
+    {
+      "id": "craft-community",
+      "name": "Community art facilitation",
+      "group": "Collective",
+      "techniques": [
+        "facilitation",
+        "inclusive prompts",
+        "shared authorship",
+        "accessibility"
+      ],
+      "starterExercise": "Plan a 30-minute low-cost group activity with alternative participation modes.",
+      "advancedChallenge": "Organise a collaborative exhibition with fair credit and opt-in participation.",
+      "feedbackQuestions": [
+        "Who gets credited?",
+        "Can people join without prior skill?"
+      ],
+      "coachModes": [
+        "explore",
+        "learn",
+        "practice",
+        "critique",
+        "collaborate"
+      ],
+      "guidingPrinciple": "You are the creator; B.E.N. provides questions, references, techniques and feedback, not a finished piece."
+    },
+    {
+      "id": "culinary",
+      "name": "Culinary and food arts",
+      "group": "Everyday arts",
+      "techniques": [
+        "flavour balancing",
+        "plating",
+        "texture",
+        "food storytelling"
+      ],
+      "starterExercise": "Develop a personal dish variation and document what you taste.",
+      "advancedChallenge": "Plan a culturally respectful community food workshop with allergy safeguards.",
+      "feedbackQuestions": [
+        "What is the intended experience?",
+        "Which ingredient has a specific role?"
+      ],
+      "coachModes": [
+        "explore",
+        "learn",
+        "practice",
+        "critique",
+        "collaborate"
+      ],
+      "guidingPrinciple": "You are the creator; B.E.N. provides questions, references, techniques and feedback, not a finished piece."
+    },
+    {
+      "id": "floral",
+      "name": "Floral and landscape creative design",
+      "group": "Everyday arts",
+      "techniques": [
+        "form",
+        "rhythm",
+        "seasonal materials",
+        "ecological sensitivity"
+      ],
+      "starterExercise": "Compose a small arrangement using local non-protected plant material.",
+      "advancedChallenge": "Design a habitat-friendly public planting installation with community input.",
+      "feedbackQuestions": [
+        "Does it respect local ecology?",
+        "What seasonal change becomes part of the work?"
+      ],
+      "coachModes": [
+        "explore",
+        "learn",
+        "practice",
+        "critique",
+        "collaborate"
+      ],
+      "guidingPrinciple": "You are the creator; B.E.N. provides questions, references, techniques and feedback, not a finished piece."
+    }
+  ],
+  "references": [
+    {
+      "name": "The Metropolitan Museum of Art — Open Access",
+      "url": "https://www.metmuseum.org/hubs/open-access",
+      "type": "CC0 artwork reference",
+      "suitable": [
+        "painting",
+        "drawing",
+        "illustration",
+        "sculpture",
+        "ceramics",
+        "photography",
+        "textiles",
+        "fashion",
+        "printmaking"
+      ],
+      "note": "Only objects explicitly marked Open Access/CC0; credit maker when possible."
+    },
+    {
+      "name": "Smithsonian Open Access",
+      "url": "https://www.si.edu/openaccess",
+      "type": "CC0 collections",
+      "suitable": [
+        "painting",
+        "sculpture",
+        "architecture",
+        "textiles",
+        "jewellery",
+        "craft-community",
+        "photography",
+        "floral"
+      ],
+      "note": "Check individual item CC0 status, attribution and cultural context."
+    },
+    {
+      "name": "Purdue OWL",
+      "url": "https://owl.purdue.edu/",
+      "type": "writing education",
+      "suitable": [
+        "creative-writing",
+        "nonfiction",
+        "playwriting",
+        "screenwriting",
+        "poetry",
+        "spoken-word"
+      ],
+      "note": "Link to guides; do not scrape or redistribute full content."
+    },
+    {
+      "name": "Wikimedia Commons",
+      "url": "https://commons.wikimedia.org/",
+      "type": "Mixed-license media archive",
+      "suitable": [
+        "photography",
+        "painting",
+        "drawing",
+        "architecture",
+        "graffiti",
+        "dance",
+        "theatre"
+      ],
+      "note": "Check each file license and attribution before reuse."
+    },
+    {
+      "name": "Openverse",
+      "url": "https://openverse.org/",
+      "type": "Open-licensed image/audio discovery",
+      "suitable": [
+        "photography",
+        "painting",
+        "graphic-design",
+        "music-composition",
+        "sound-art",
+        "film"
+      ],
+      "note": "Verify source-level license/credit; preview is for study."
+    },
+    {
+      "name": "Project Gutenberg",
+      "url": "https://www.gutenberg.org/",
+      "type": "Public-domain literary works",
+      "suitable": [
+        "creative-writing",
+        "poetry",
+        "nonfiction",
+        "playwriting",
+        "screenwriting"
+      ],
+      "note": "Copyright status depends on jurisdiction; reference technique, not reproduction."
+    },
+    {
+      "name": "Europeana",
+      "url": "https://www.europeana.eu/",
+      "type": "Cultural collections with per-item rights",
+      "suitable": [
+        "painting",
+        "photography",
+        "film",
+        "fashion",
+        "dance",
+        "music-composition"
+      ],
+      "note": "Rights and cultural context vary by item."
+    },
+    {
+      "name": "Internet Archive",
+      "url": "https://archive.org/",
+      "type": "Historical audio/video/text references",
+      "suitable": [
+        "film",
+        "music-composition",
+        "animation",
+        "theatre",
+        "dance",
+        "spoken-word"
+      ],
+      "note": "Archive availability does not imply reuse permission."
+    },
+    {
+      "name": "Berklee Online — Free Music Resources",
+      "url": "https://online.berklee.edu/free-music-course-resources",
+      "type": "Music technique and production lessons",
+      "suitable": [
+        "music-composition",
+        "songwriting",
+        "production",
+        "sound-art",
+        "instrument",
+        "singing"
+      ],
+      "note": "Educational resource, not permission to redistribute course materials."
+    },
+    {
+      "name": "Royal Shakespeare Company — Teacher Resources",
+      "url": "https://www.rsc.org.uk/learn/schools-and-teachers/teacher-resources",
+      "type": "Theatre and active learning",
+      "suitable": [
+        "theatre",
+        "playwriting",
+        "screenwriting",
+        "spoken-word",
+        "comedy",
+        "movement"
+      ],
+      "note": "Access terms and region-specific availability vary."
+    },
+    {
+      "name": "Poetry Foundation — Education Resources",
+      "url": "https://www.poetryfoundation.org/education/resources",
+      "type": "Poetry, performance and reading",
+      "suitable": [
+        "poetry",
+        "creative-writing",
+        "spoken-word",
+        "songwriting"
+      ],
+      "note": "Educational links; poems and recordings may remain copyrighted."
+    },
+    {
+      "name": "National Gallery — Take One Picture",
+      "url": "https://www.nationalgallery.org.uk/learning/take-one-picture",
+      "type": "Visual art looking and interpretation",
+      "suitable": [
+        "painting",
+        "watercolour",
+        "drawing",
+        "mural",
+        "illustration",
+        "graphic-design"
+      ],
+      "note": "A learning approach, not a wholesale content license."
+    }
+  ],
+  "curriculumStatus": "Original coaching scaffolds. External references are starting points, not proof of expert qualification or live search results."
+}

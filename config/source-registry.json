@@ -1,0 +1,101 @@
+{
+  "note": "Links to owner-permissioned Google Drive sources. May reveal private document identifiers. Review before publishing this repository. Never fetch or publish restricted casework.",
+  "sources": [
+    {
+      "id": "BEN-00",
+      "title": "Start Here",
+      "url": "https://docs.google.com/document/d/1WVYfIuQWUB10GWqlvNRo1fwqSqPH3R4L/edit",
+      "status": "working draft / proposed; confirm adoption",
+      "visibility": "stewards / permissioned source",
+      "sourceDate": "2026-10-01"
+    },
+    {
+      "id": "BEN-01",
+      "title": "Identity & Community Charter",
+      "url": "https://docs.google.com/document/d/1fwy2hUCljaFIhDQDxBklf9fVFXOPkE0l/edit",
+      "status": "working draft / proposed; confirm adoption",
+      "visibility": "stewards / permissioned source",
+      "sourceDate": "2026-10-01"
+    },
+    {
+      "id": "BEN-02",
+      "title": "Community Code of Conduct",
+      "url": "https://docs.google.com/document/d/1-XEoPOTFa-UdLqA1Fvmk1aanUobqODrJ/edit",
+      "status": "working draft / proposed; confirm adoption",
+      "visibility": "stewards / permissioned source",
+      "sourceDate": "2026-10-01"
+    },
+    {
+      "id": "BEN-03",
+      "title": "Governance Handbook",
+      "url": "https://docs.google.com/document/d/1Aw-Bd1_1b7dlPhW26pJnN0eXM8EWb3Di/edit",
+      "status": "working draft / proposed; confirm adoption",
+      "visibility": "stewards / permissioned source",
+      "sourceDate": "2026-10-01"
+    },
+    {
+      "id": "BEN-04",
+      "title": "Safety, Moderation & Appeals",
+      "url": "https://docs.google.com/document/d/1lA4NMb1WOOqNeTbM8hbYTbMYFnFivTnv/edit",
+      "status": "working draft / proposed; confirm adoption",
+      "visibility": "stewards / permissioned source",
+      "sourceDate": "2026-10-01"
+    },
+    {
+      "id": "BEN-05",
+      "title": "Communications & Brand",
+      "url": "https://docs.google.com/document/d/1TS8Z2L2VqXM6roOpIYSTji6_gpZz4e4R/edit",
+      "status": "working draft / proposed; confirm adoption",
+      "visibility": "stewards / permissioned source",
+      "sourceDate": "2026-10-01"
+    },
+    {
+      "id": "BEN-06",
+      "title": "Operations, Privacy & Continuity",
+      "url": "https://docs.google.com/document/d/18g1SufTUnvt29_B5kVZn_NeOonrJQswE/edit",
+      "status": "working draft / proposed; confirm adoption",
+      "visibility": "stewards / permissioned source",
+      "sourceDate": "2026-10-01"
+    },
+    {
+      "id": "BEN-07",
+      "title": "Forms & Templates",
+      "url": "https://docs.google.com/document/d/1sotWvZDVbL1JmaoUtcoYqPhiWjgc5l_E/edit",
+      "status": "working draft / proposed; confirm adoption",
+      "visibility": "stewards / permissioned source",
+      "sourceDate": "2026-10-01"
+    },
+    {
+      "id": "BEN-CONTROL",
+      "title": "Control Centre",
+      "url": "https://docs.google.com/spreadsheets/d/1tIjomTNvt2FffZiEFZgPbMNw0zhue_Ax/edit",
+      "status": "working draft / proposed; confirm adoption",
+      "visibility": "stewards / permissioned source",
+      "sourceDate": "2026-10-01"
+    },
+    {
+      "id": "BEN-CONTENT",
+      "title": "Content & Activity",
+      "url": "https://docs.google.com/spreadsheets/d/1DNZtOGqPo0ySz-tTaNQ75jjsGxE9-Kcx/edit",
+      "status": "working draft / proposed; confirm adoption",
+      "visibility": "stewards / permissioned source",
+      "sourceDate": "2026-10-01"
+    },
+    {
+      "id": "BEN-CIC",
+      "title": "CIC Formation & Growth Roadmap",
+      "url": "https://docs.google.com/document/d/1M1QhyYpZIWTbHaCWWzIEutfdj0Qo9191d-8HXnrjL3o/edit",
+      "status": "working draft / proposed; confirm adoption",
+      "visibility": "stewards / permissioned source",
+      "sourceDate": "2026-10-01"
+    },
+    {
+      "id": "BEN-CIC-TRACK",
+      "title": "CIC Formation and Funding Tracker",
+      "url": "https://docs.google.com/spreadsheets/d/13z3Vwv8FXj2L8QlcRj2g9-wMUUqlXw01/edit",
+      "status": "working draft / proposed; confirm adoption",
+      "visibility": "stewards / permissioned source",
+      "sourceDate": "2026-10-01"
+    }
+  ]
+}

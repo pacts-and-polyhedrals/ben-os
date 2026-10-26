@@ -1,0 +1,21 @@
+{
+  "name": "ben-os",
+  "version": "0.3.0",
+  "private": true,
+  "license": "UNLICENSED",
+  "type": "module",
+  "description": "B.E.N. OS — human-led community, creative mentoring and GitHub App authentication prototype",
+  "engines": {"node": ">=22.13"},
+  "scripts": {
+    "start": "node src/server.mjs",
+    "dev": "node src/server.mjs",
+    "build:site": "node scripts/build-site.mjs",
+    "test": "npm run build:site && node --test tests/*.test.mjs",
+    "seed:preview": "node scripts/seed-github-issues.mjs",
+    "seed:apply": "node scripts/seed-github-issues.mjs --apply",
+    "seed:modules": "node scripts/seed-module-issues.mjs",
+    "check:ethics": "node --test tests/ethics.test.mjs",
+    "eval:creative": "node scripts/evaluate-creative.mjs --dry-run",
+    "eval:creative:run": "node scripts/evaluate-creative.mjs --run"
+  }
+}

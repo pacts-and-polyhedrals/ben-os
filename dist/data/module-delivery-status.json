@@ -1,0 +1,383 @@
+{
+  "version": "0.3.0",
+  "date": "2026-10-26",
+  "source": "config/roadmap-modules.json",
+  "meaning": {
+    "prototype_partial": "A limited development feature exists, not release-ready",
+    "planned": "A specification exists but no relevant production feature is implemented",
+    "verified_complete": "Full acceptance and external operational gates verified (none yet)"
+  },
+  "modules": [
+    {
+      "id": "P01",
+      "stage": "prototype_partial",
+      "whatExists": "GitHub templates and CI code are present; no live organisation, branch protection or tag.",
+      "targetRelease": "0.1.1",
+      "priority": "P0"
+    },
+    {
+      "id": "P02",
+      "stage": "prototype_partial",
+      "whatExists": "Node dev server, basic origin/CSRF controls and headers; production security, backups and hosting remain.",
+      "targetRelease": "0.1.1",
+      "priority": "P0"
+    },
+    {
+      "id": "P03",
+      "stage": "prototype_partial",
+      "whatExists": "GitHub App identity and member/steward allowlist checks; no production MFA, full conflict-aware role delegation or recovery.",
+      "targetRelease": "0.3",
+      "priority": "P0"
+    },
+    {
+      "id": "P04",
+      "stage": "prototype_partial",
+      "whatExists": "Development SQLite schema with basic row access and audit; no production migrations or data classification enforcement.",
+      "targetRelease": "0.2",
+      "priority": "P0"
+    },
+    {
+      "id": "P05",
+      "stage": "prototype_partial",
+      "whatExists": "Responsive prototype layouts and accessible labels; manual WCAG/browser QA pending.",
+      "targetRelease": "0.2",
+      "priority": "P0"
+    },
+    {
+      "id": "P06",
+      "stage": "prototype_partial",
+      "whatExists": "Static public homepage, constitution extracts and creative resources; no approved public launch.",
+      "targetRelease": "0.3",
+      "priority": "P0"
+    },
+    {
+      "id": "P07",
+      "stage": "planned",
+      "whatExists": "",
+      "targetRelease": "0.3",
+      "priority": "P1"
+    },
+    {
+      "id": "F01",
+      "stage": "prototype_partial",
+      "whatExists": "22 founding tasks visible with saved operational notes; launch gates not formally certified.",
+      "targetRelease": "0.2",
+      "priority": "P0"
+    },
+    {
+      "id": "F02",
+      "stage": "prototype_partial",
+      "whatExists": "GitHub Issue read/approved proposal publishing and local task changes; no full GitHub Projects sync.",
+      "targetRelease": "0.2",
+      "priority": "P0"
+    },
+    {
+      "id": "F03",
+      "stage": "prototype_partial",
+      "whatExists": "Founding source documents and proposed charter in repository; no policy adoption record or effective-date management.",
+      "targetRelease": "0.2",
+      "priority": "P0"
+    },
+    {
+      "id": "F04",
+      "stage": "prototype_partial",
+      "whatExists": "Six proposed portfolios displayed; no actual steward appointments, scopes or secure handovers.",
+      "targetRelease": "0.2",
+      "priority": "P0"
+    },
+    {
+      "id": "F05",
+      "stage": "planned",
+      "whatExists": "",
+      "targetRelease": "0.2",
+      "priority": "P0"
+    },
+    {
+      "id": "F06",
+      "stage": "planned",
+      "whatExists": "",
+      "targetRelease": "0.7",
+      "priority": "P0"
+    },
+    {
+      "id": "F07",
+      "stage": "planned",
+      "whatExists": "",
+      "targetRelease": "0.2",
+      "priority": "P0"
+    },
+    {
+      "id": "F08",
+      "stage": "planned",
+      "whatExists": "",
+      "targetRelease": "0.6",
+      "priority": "P1"
+    },
+    {
+      "id": "F09",
+      "stage": "planned",
+      "whatExists": "",
+      "targetRelease": "0.6",
+      "priority": "P1"
+    },
+    {
+      "id": "F10",
+      "stage": "planned",
+      "whatExists": "",
+      "targetRelease": "0.6",
+      "priority": "P1"
+    },
+    {
+      "id": "F11",
+      "stage": "planned",
+      "whatExists": "",
+      "targetRelease": "0.3",
+      "priority": "P0"
+    },
+    {
+      "id": "F12",
+      "stage": "planned",
+      "whatExists": "",
+      "targetRelease": "0.3",
+      "priority": "P1"
+    },
+    {
+      "id": "F13",
+      "stage": "prototype_partial",
+      "whatExists": "Member events can be proposed and listings human-reviewed; no full attendance/safety go-no-go workflow.",
+      "targetRelease": "0.3",
+      "priority": "P1"
+    },
+    {
+      "id": "F14",
+      "stage": "planned",
+      "whatExists": "",
+      "targetRelease": "0.2",
+      "priority": "P0"
+    },
+    {
+      "id": "F15",
+      "stage": "planned",
+      "whatExists": "",
+      "targetRelease": "0.4",
+      "priority": "P1"
+    },
+    {
+      "id": "F16",
+      "stage": "planned",
+      "whatExists": "",
+      "targetRelease": "0.3",
+      "priority": "P1"
+    },
+    {
+      "id": "M01",
+      "stage": "prototype_partial",
+      "whatExists": "GitHub login and gated self-attested adult onboarding; no independent identity/age validation.",
+      "targetRelease": "0.3",
+      "priority": "P0"
+    },
+    {
+      "id": "M02",
+      "stage": "prototype_partial",
+      "whatExists": "Opt-in creativity profiles and tags; not a full member profile and privacy control framework.",
+      "targetRelease": "0.3",
+      "priority": "P0"
+    },
+    {
+      "id": "M03",
+      "stage": "planned",
+      "whatExists": "",
+      "targetRelease": "0.4",
+      "priority": "P1"
+    },
+    {
+      "id": "M04",
+      "stage": "prototype_partial",
+      "whatExists": "Lend a Ben requests/offers with human review; no safe matching, casework or outcome fulfilment.",
+      "targetRelease": "0.4",
+      "priority": "P1"
+    },
+    {
+      "id": "M05",
+      "stage": "prototype_partial",
+      "whatExists": "Community projects submission/review/join; no completion verification or outcome measures.",
+      "targetRelease": "0.4",
+      "priority": "P1"
+    },
+    {
+      "id": "M06",
+      "stage": "prototype_partial",
+      "whatExists": "Gathering proposal/review/join; no reminders, capacity enforcement or safe event execution.",
+      "targetRelease": "0.4",
+      "priority": "P1"
+    },
+    {
+      "id": "M07",
+      "stage": "prototype_partial",
+      "whatExists": "48 basic creative curricula, opt-in mentor directory and private learning journal; expert review still required.",
+      "targetRelease": "0.4",
+      "priority": "P1"
+    },
+    {
+      "id": "M08",
+      "stage": "planned",
+      "whatExists": "",
+      "targetRelease": "0.3",
+      "priority": "P0"
+    },
+    {
+      "id": "M09",
+      "stage": "prototype_partial",
+      "whatExists": "Low-volume private gratitude messages; no public points, rankings or reward entitlements.",
+      "targetRelease": "0.5",
+      "priority": "P1"
+    },
+    {
+      "id": "M10",
+      "stage": "planned",
+      "whatExists": "",
+      "targetRelease": "0.6",
+      "priority": "P2"
+    },
+    {
+      "id": "M11",
+      "stage": "prototype_partial",
+      "whatExists": "Members can submit proposals and an independent steward can publish reviewed proposals as GitHub issues; no consultation/voting.",
+      "targetRelease": "0.4",
+      "priority": "P1"
+    },
+    {
+      "id": "M12",
+      "stage": "prototype_partial",
+      "whatExists": "Member creative opt-in, export, note deletion and deactivation; incomplete legal erasure and retention.",
+      "targetRelease": "0.3",
+      "priority": "P0"
+    },
+    {
+      "id": "M13",
+      "stage": "prototype_partial",
+      "whatExists": "Static curriculum and curated external reference links; no full searchable community knowledgebase.",
+      "targetRelease": "0.4",
+      "priority": "P1"
+    },
+    {
+      "id": "M14",
+      "stage": "planned",
+      "whatExists": "",
+      "targetRelease": "0.3",
+      "priority": "P0"
+    },
+    {
+      "id": "M15",
+      "stage": "planned",
+      "whatExists": "",
+      "targetRelease": "0.4",
+      "priority": "P1"
+    },
+    {
+      "id": "M16",
+      "stage": "planned",
+      "whatExists": "",
+      "targetRelease": "0.5",
+      "priority": "P2"
+    },
+    {
+      "id": "M17",
+      "stage": "prototype_partial",
+      "whatExists": "Responsive interface and accessible patterns; localization/low-bandwidth testing and translations pending.",
+      "targetRelease": "0.4",
+      "priority": "P1"
+    },
+    {
+      "id": "M18",
+      "stage": "planned",
+      "whatExists": "",
+      "targetRelease": "0.6",
+      "priority": "P1"
+    },
+    {
+      "id": "A01",
+      "stage": "prototype_partial",
+      "whatExists": "Founding values, draft AI ethics charter and no-authority prompt; not adopted and not verified against all failure modes.",
+      "targetRelease": "0.1.1",
+      "priority": "P0"
+    },
+    {
+      "id": "A02",
+      "stage": "prototype_partial",
+      "whatExists": "Curated organization notes and keyword retrieval; not versioned provenance-aware RAG.",
+      "targetRelease": "0.2",
+      "priority": "P0"
+    },
+    {
+      "id": "A03",
+      "stage": "prototype_partial",
+      "whatExists": "Founder tasks and proposal review exposed; no comprehensive admin AI workflows.",
+      "targetRelease": "0.3",
+      "priority": "P1"
+    },
+    {
+      "id": "A04",
+      "stage": "prototype_partial",
+      "whatExists": "Local model chat and human-first creative coaching; actual model quality not yet evaluated.",
+      "targetRelease": "0.5",
+      "priority": "P1"
+    },
+    {
+      "id": "A05",
+      "stage": "prototype_partial",
+      "whatExists": "Manually confirmed, separately reviewed GitHub proposal-to-issue flow; no autonomous actions.",
+      "targetRelease": "0.5",
+      "priority": "P0"
+    },
+    {
+      "id": "A06",
+      "stage": "planned",
+      "whatExists": "",
+      "targetRelease": "0.5",
+      "priority": "P1"
+    },
+    {
+      "id": "A07",
+      "stage": "prototype_partial",
+      "whatExists": "57 draft creative evaluation prompts and 11 passing automated code tests; no expert model scores.",
+      "targetRelease": "0.2",
+      "priority": "P0"
+    },
+    {
+      "id": "A08",
+      "stage": "prototype_partial",
+      "whatExists": "Ollama model selection through configuration; no production model cost/availability routing.",
+      "targetRelease": "0.5",
+      "priority": "P1"
+    },
+    {
+      "id": "A09",
+      "stage": "planned",
+      "whatExists": "",
+      "targetRelease": "0.6",
+      "priority": "P2"
+    },
+    {
+      "id": "A10",
+      "stage": "planned",
+      "whatExists": "",
+      "targetRelease": "0.7",
+      "priority": "P2"
+    },
+    {
+      "id": "A11",
+      "stage": "planned",
+      "whatExists": "",
+      "targetRelease": "0.5",
+      "priority": "P1"
+    },
+    {
+      "id": "A12",
+      "stage": "planned",
+      "whatExists": "",
+      "targetRelease": "1.0",
+      "priority": "P3"
+    }
+  ]
+}

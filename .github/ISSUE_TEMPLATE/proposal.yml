@@ -1,0 +1,27 @@
+name: Community proposal
+description: Suggest a constructive project or policy improvement
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: "Proposals are welcome even when people disagree with leadership. This is not a private complaint form or a vote."
+  - type: textarea
+    id: problem
+    attributes: {label: 'What problem or opportunity are we addressing?'}
+    validations: {required: true}
+  - type: textarea
+    id: idea
+    attributes: {label: 'What specifically would you like to try or change?'}
+    validations: {required: true}
+  - type: textarea
+    id: impact
+    attributes: {label: 'Who benefits, who may disagree, and what could go wrong?'}
+  - type: textarea
+    id: test
+    attributes: {label: 'How does this stand up to the B.E.N. Test?'}
+  - type: textarea
+    id: success
+    attributes: {label: 'What measurable and non-intrusive result would tell us it helped?'}
+  - type: input
+    id: authority
+    attributes: {label: 'Is a separate recorded decision required?'}

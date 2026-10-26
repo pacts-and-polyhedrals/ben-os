@@ -1,0 +1,24 @@
+name: AI behaviour or safety bug
+description: Report incorrect, misleading or exclusionary AI behaviour without private data
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: "Please anonymise example prompts. Never paste real complaints, personal identities, health details, passwords or private source material."
+  - type: input
+    id: version
+    attributes: {label: 'App and model version'}
+    validations: {required: true}
+  - type: textarea
+    id: reproduce
+    attributes: {label: 'Reproduction steps using safe synthetic examples'}
+    validations: {required: true}
+  - type: textarea
+    id: result
+    attributes: {label: 'Actual result and expected behaviour'}
+    validations: {required: true}
+  - type: dropdown
+    id: concern
+    attributes:
+      label: Main concern
+      options: [Fabricated authority, Factual error, Hostile or discriminatory wording, Privacy leak, Misleading source citation, Exclusionary or coercive reward, Accessibility, Other]

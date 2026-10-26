@@ -1,0 +1,48 @@
+{
+  "sourceDate": "2026-10-01",
+  "status": "proposed and unassigned",
+  "roles": [
+    {
+      "id": "ROLE-01",
+      "portfolio": "Coordination",
+      "remit": "Facilitation and handoffs; no casting vote or veto.",
+      "lead": null,
+      "backup": null
+    },
+    {
+      "id": "ROLE-02",
+      "portfolio": "Governance & Administration",
+      "remit": "Policies, minutes, decisions, consultations and elections.",
+      "lead": null,
+      "backup": null
+    },
+    {
+      "id": "ROLE-03",
+      "portfolio": "Community & Safeguarding",
+      "remit": "Welcoming, moderation, safety and independent case allocation.",
+      "lead": null,
+      "backup": null
+    },
+    {
+      "id": "ROLE-04",
+      "portfolio": "Communications & Social Media",
+      "remit": "Publishing pipeline and verified approvals.",
+      "lead": null,
+      "backup": null
+    },
+    {
+      "id": "ROLE-05",
+      "portfolio": "Events & Partnerships",
+      "remit": "Activity safety, collaboration and approved commitments.",
+      "lead": null,
+      "backup": null
+    },
+    {
+      "id": "ROLE-06",
+      "portfolio": "Operations / Finance / Technology",
+      "remit": "Account custody, access, records and financial controls.",
+      "lead": null,
+      "backup": null
+    }
+  ]
+}

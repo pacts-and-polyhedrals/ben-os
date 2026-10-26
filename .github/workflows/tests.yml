@@ -1,0 +1,28 @@
+name: B.E.N. OS checks
+on:
+  pull_request:
+  push:
+    branches: [main, develop]
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - name: Run tests and build static preview
+        run: npm test
+      - name: Verify no secrets in public static bundle
+        shell: bash
+        run: |
+          if grep -R -E 'GITHUB_CLIENT_SECRET=.+|BEN_GITHUB_PRIVATE_KEY_PATH=.+|BEGIN RSA PRIVATE KEY' dist/; then
+            echo 'Unexpected secret found in static bundle' >&2
+            exit 1
+          fi
+          test -f dist/index.html
+          test -f dist/data/creative-curriculum.json
+          test -f dist/data/roadmap-modules.json

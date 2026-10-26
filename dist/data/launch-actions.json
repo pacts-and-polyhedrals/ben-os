@@ -1,0 +1,227 @@
+{
+  "snapshotDate": "2026-10-01",
+  "notLive": true,
+  "note": "Snapshot of starter tasks from the working Control Centre. No current status, assigned ownership or approval is inferred. GitHub Issues become operational after an authorised import.",
+  "actions": [
+    {
+      "id": "ACT-001",
+      "workstream": "Founding",
+      "title": "Review and agree Charter and Code",
+      "priority": "High",
+      "policyRef": "01/02",
+      "nextStep": "Read drafts; record amendments.",
+      "owner": null,
+      "status": "Not started"
+    },
+    {
+      "id": "ACT-002",
+      "workstream": "Founding",
+      "title": "Agree Governance and numeric thresholds",
+      "priority": "High",
+      "policyRef": "03",
+      "nextStep": "Test voting and recusal scenarios.",
+      "owner": null,
+      "status": "Not started"
+    },
+    {
+      "id": "ACT-003",
+      "workstream": "Founding",
+      "title": "Record adoption and effective date",
+      "priority": "High",
+      "policyRef": "07 T01",
+      "nextStep": "Hold founding meeting and minute vote.",
+      "owner": null,
+      "status": "Not started"
+    },
+    {
+      "id": "ACT-004",
+      "workstream": "People",
+      "title": "Assign six leads and named backups",
+      "priority": "High",
+      "policyRef": "03",
+      "nextStep": "Complete Roles and appointment records.",
+      "owner": null,
+      "status": "Not started"
+    },
+    {
+      "id": "ACT-005",
+      "workstream": "People",
+      "title": "Appoint three Governance members",
+      "priority": "High",
+      "policyRef": "03",
+      "nextStep": "Reserved vote; confirm conflict / replacement process.",
+      "owner": null,
+      "status": "Not started"
+    },
+    {
+      "id": "ACT-006",
+      "workstream": "Safety",
+      "title": "Establish primary and alternative report contacts",
+      "priority": "High",
+      "policyRef": "04",
+      "nextStep": "Test both inboxes and explain monitoring hours.",
+      "owner": null,
+      "status": "Not started"
+    },
+    {
+      "id": "ACT-007",
+      "workstream": "Safety",
+      "title": "Secure an independent appeal arrangement",
+      "priority": "High",
+      "policyRef": "04",
+      "nextStep": "Confirm three competent reviewers and confidentiality.",
+      "owner": null,
+      "status": "Not started"
+    },
+    {
+      "id": "ACT-008",
+      "workstream": "Safety",
+      "title": "Train moderators and run three scenarios",
+      "priority": "High",
+      "policyRef": "04",
+      "nextStep": "Record lessons; resolve failures before invitations.",
+      "owner": null,
+      "status": "Not started"
+    },
+    {
+      "id": "ACT-009",
+      "workstream": "Privacy",
+      "title": "Confirm responsible holder, jurisdictions and privacy notice",
+      "priority": "High",
+      "policyRef": "06/07 T08",
+      "nextStep": "Obtain necessary advice and fill every live field.",
+      "owner": null,
+      "status": "Not started"
+    },
+    {
+      "id": "ACT-010",
+      "workstream": "Security",
+      "title": "Set up named account access, MFA and recovery",
+      "priority": "High",
+      "policyRef": "06",
+      "nextStep": "Verify access and recovery without sharing secrets.",
+      "owner": null,
+      "status": "Not started"
+    },
+    {
+      "id": "ACT-011",
+      "workstream": "Security",
+      "title": "Separate member, steward and casework storage",
+      "priority": "High",
+      "policyRef": "06",
+      "nextStep": "Test ordinary member and conflicted-founder access.",
+      "owner": null,
+      "status": "Not started"
+    },
+    {
+      "id": "ACT-012",
+      "workstream": "Community",
+      "title": "Confirm membership / adult-only launch rules",
+      "priority": "High",
+      "policyRef": "01/02",
+      "nextStep": "Record the actual eligibility decision.",
+      "owner": null,
+      "status": "Not started"
+    },
+    {
+      "id": "ACT-013",
+      "workstream": "Community",
+      "title": "Create the sixteen channels and pin conduct routes",
+      "priority": "High",
+      "policyRef": "02",
+      "nextStep": "Use Channels; no regional or duplicate groups.",
+      "owner": null,
+      "status": "Not started"
+    },
+    {
+      "id": "ACT-014",
+      "workstream": "Content",
+      "title": "Adopt publishing tiers and reviewer rota",
+      "priority": "High",
+      "policyRef": "05",
+      "nextStep": "Test a Green, Amber and Red item without publishing.",
+      "owner": null,
+      "status": "Not started"
+    },
+    {
+      "id": "ACT-015",
+      "workstream": "Operations",
+      "title": "Choose live master locations and repair cloud links",
+      "priority": "High",
+      "policyRef": "00/06",
+      "nextStep": "Open links in an ordinary member account.",
+      "owner": null,
+      "status": "Not started"
+    },
+    {
+      "id": "ACT-016",
+      "workstream": "Launch",
+      "title": "Approve a limited pilot invitation",
+      "priority": "High",
+      "policyRef": "00",
+      "nextStep": "Verify all mandatory gates and record go/no-go.",
+      "owner": null,
+      "status": "Not started"
+    },
+    {
+      "id": "ACT-017",
+      "workstream": "Review",
+      "title": "Hold the 30-day pilot review",
+      "priority": "Normal",
+      "policyRef": "00/03",
+      "nextStep": "Set date, collect feedback and publish changes.",
+      "owner": null,
+      "status": "Not started"
+    },
+    {
+      "id": "ACT-018",
+      "workstream": "Democracy",
+      "title": "Track the six-month / 50-member election trigger",
+      "priority": "Normal",
+      "policyRef": "03",
+      "nextStep": "Keep minimal roll; begin preparation at 30 active members.",
+      "owner": null,
+      "status": "Not started"
+    },
+    {
+      "id": "ACT-019",
+      "workstream": "Finance",
+      "title": "Decide whether money-related activity is needed",
+      "priority": "Normal",
+      "policyRef": "06",
+      "nextStep": "Keep disabled until currency, approvals and obligations are settled.",
+      "owner": null,
+      "status": "Not started"
+    },
+    {
+      "id": "ACT-020",
+      "workstream": "Activities",
+      "title": "Assess any in-person or higher-risk event",
+      "priority": "Normal",
+      "policyRef": "06",
+      "nextStep": "Do not offer unsupported activities.",
+      "owner": null,
+      "status": "Not started"
+    },
+    {
+      "id": "ACT-021",
+      "workstream": "Continuity",
+      "title": "Test backup restoration and steward handover",
+      "priority": "Normal",
+      "policyRef": "06/07 T09",
+      "nextStep": "Record check and next quarterly review.",
+      "owner": null,
+      "status": "Not started"
+    },
+    {
+      "id": "ACT-022",
+      "workstream": "Records",
+      "title": "Adopt retention review rules and access reviews",
+      "priority": "Normal",
+      "policyRef": "06",
+      "nextStep": "Check case-specific obligations and set review dates.",
+      "owner": null,
+      "status": "Not started"
+    }
+  ]
+}

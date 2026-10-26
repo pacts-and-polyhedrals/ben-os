@@ -1,0 +1,143 @@
+{
+  "note": "Curated non-sensitive summaries, NOT a live Drive sync and NOT approved policy. Each record cites its underlying draft.",
+  "entries": [
+    {
+      "id": "identity",
+      "title": "Purpose and membership",
+      "sourceId": "BEN-01",
+      "status": "proposed",
+      "terms": [
+        "purpose",
+        "charter",
+        "principles",
+        "member",
+        "membership",
+        "values",
+        "cult",
+        "ben",
+        "benevolent",
+        "be even nicer"
+      ],
+      "body": "B.E.N. is a voluntary network for practical kindness, creativity, mutual support, friendship, useful knowledge and opportunities to improve one another's lives. The founding operating pack is PROPOSED FOR ADOPTION; do not call it active policy. The legal name under discussion is Benevolent Energy Network. 'Be Even Nicer' is the AI's requested guiding ethos. #probablyacult is optional playful branding, never appropriate for safeguarding, appeals, privacy or financial messages. A member need not have the legal first name Ben (proposed launch default, not adopted). No ideology, religion or political allegiance is a condition of membership. Contributions vary with capacity; no compulsory fees, moral scores, loyalty tests or constant positivity."
+    },
+    {
+      "id": "governance",
+      "title": "Authority and decisions",
+      "sourceId": "BEN-03",
+      "status": "proposed",
+      "terms": [
+        "board",
+        "founder",
+        "steward",
+        "committee",
+        "vote",
+        "voting",
+        "governance",
+        "election",
+        "adoption",
+        "decision",
+        "role",
+        "quorum"
+      ],
+      "body": "Proposed: six equal founding stewards on one Board (not a separate Council), six named portfolios with backups, and a Governance Committee of three selected by reserved Board decision. At least four unconflicted Board participants constitute a quorum; proposed ordinary Board vote requires three yes; proposed reserved Board vote requires four yes out of six seats. The committee needs two yes of three for an authorised matter. Initial adoption of documents 01-07 requires an actual recorded founding vote and effective date. No named roles or votes have yet been entered in the 1 Oct 2026 template. Prepare for elections at 30 active members; begin transition at 50 or six months after adoption, whichever first. No founder veto. The AI may recommend or draft, not vote, appoint, adopt or overrule the Board."
+    },
+    {
+      "id": "safety",
+      "title": "Safety, moderation and appeals",
+      "sourceId": "BEN-04",
+      "status": "proposed",
+      "terms": [
+        "report",
+        "complaint",
+        "harassment",
+        "safety",
+        "appeal",
+        "moderation",
+        "ban",
+        "penalty",
+        "punish",
+        "greedy",
+        "negative",
+        "privacy"
+      ],
+      "body": "No social-credit scoring. No loss of access for respectful dissent, low activity, limited resources, criticism or lack of positivity. Address actual conduct rather than alleged moral worth. In proposed policy, moderator may take narrow temporary action for immediate safety, but formal sanctions require unconflicted review and written reasons, relevant evidence, proportionate scope and appeal. Reports and identities belong only in independently permissioned restricted casework storage, NOT GitHub issues, pull requests, discussions, logs or AI training data. Reporter of harm need not produce a solution. Serious incident contacts, independent appeal reviewers and backups must be established/tested before launch; do not fabricate contacts. No automatic bans from model output."
+    },
+    {
+      "id": "operations",
+      "title": "Operations and privacy",
+      "sourceId": "BEN-06",
+      "status": "proposed",
+      "terms": [
+        "privacy",
+        "data",
+        "security",
+        "login",
+        "account",
+        "password",
+        "database",
+        "finance",
+        "payments",
+        "funding",
+        "continuity",
+        "backup"
+      ],
+      "body": "Separate member-facing information, restricted steward operations and private casework into actual access boundaries. GitHub issues/project boards are for non-sensitive, permission-appropriate records; no member details, sensitive incidents, bank information or secrets. Official accounts should have named custodians, multifactor authentication, safe recovery and appropriate role permissions. Prefer two independent financial approvers and recorded budget decision; fundraising and spending disabled until adopted. Data minimisation, reviewable retention and consent for publicity. Check legal jurisdiction before handling live data. An operations tracker is not itself evidence of an approved vote."
+    },
+    {
+      "id": "communications",
+      "title": "Communications and publishing",
+      "sourceId": "BEN-05",
+      "status": "proposed",
+      "terms": [
+        "post",
+        "publish",
+        "social",
+        "brand",
+        "graphic",
+        "launch",
+        "marketing",
+        "newsletter",
+        "statement",
+        "press"
+      ],
+      "body": "Voice: friendly, curious, practical and lightly irreverent; clear, evidence-based, not forced positivity. Purple and gold with energetic graffiti styling, but prioritise legibility and accessibility. Proposed Green self-check for routine within-remit content; Amber exact-version independent reviewer other than author; Red all three governance reviewers participate and at least two approve. Approval to publish is NOT approval to enter contracts, spend or change policy. Check factual claims, rights/consent, accessible text, conflicts and the B.E.N. Test. Never claim a consultation proves unanimity without numbers and limitations."
+    },
+    {
+      "id": "growth",
+      "title": "CIC roadmap and impact",
+      "sourceId": "BEN-CIC",
+      "status": "working planning draft",
+      "terms": [
+        "cic",
+        "incorporation",
+        "charity",
+        "company",
+        "fund",
+        "grant",
+        "growth",
+        "impact",
+        "director",
+        "legal"
+      ],
+      "body": "The October 2026 CIC roadmap proposes a UK Community Interest Company limited by guarantee with six initially equal directors/legal members, one vote each, no permanent founder veto, and a gradual path to broader community governance. Formation has NOT been verified. Steps include founder alignment, legal advice, CIC36 and Articles, proper banking after incorporation, a small measurable community-benefit pilot, transparent impact measures and later elections. Fees, funder eligibility, legal duties and deadlines must be rechecked against official current sources before filing. Do not claim registered CIC or charity status."
+    },
+    {
+      "id": "community",
+      "title": "Projects and inclusion",
+      "sourceId": "BEN-02",
+      "status": "proposed",
+      "terms": [
+        "volunteer",
+        "help",
+        "project",
+        "community",
+        "event",
+        "meet",
+        "support",
+        "wellbeing",
+        "channels"
+      ],
+      "body": "Proposed community structure has sixteen broad interest channels. Lend a Ben focuses on volunteering, mutual aid and practical help; Bensemble holds event logistics; Well-Ben-ing is non-clinical peer support; Benefits Exchange is voluntary gifts/swaps, not a verified marketplace. Activities require appropriate safety checks, owners and backups. Welcoming and voluntary participation is more important than competitive kindness; do not convert service into a prestige ladder. Design for accessibility and respectful disagreement."
+    }
+  ]
+}

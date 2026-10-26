@@ -1,0 +1,36 @@
+name: Creative lesson review
+description: Propose an accessibility, provenance or technique improvement to the B.E.N. creative curriculum. No personal data.
+title: "Creative curriculum: "
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: "Please do not include member names, private correspondence or unpublished artworks without consent."
+  - type: input
+    id: discipline
+    attributes:
+      label: Discipline ID
+      placeholder: "painting"
+    validations:
+      required: true
+  - type: textarea
+    id: technique
+    attributes:
+      label: Which technique or exercise needs improvement?
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Sources, cultural considerations and proposed improvement
+    validations:
+      required: true
+  - type: checkboxes
+    id: ethics
+    attributes:
+      label: Human authorship and copyright review
+      options:
+        - label: No private information or unlicensed copyrighted artwork was included
+          required: true
+        - label: The revision supports rather than substitutes for human creativity
+          required: true

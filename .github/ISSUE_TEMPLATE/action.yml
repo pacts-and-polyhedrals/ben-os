@@ -1,0 +1,29 @@
+name: Non-sensitive action
+description: Track a B.E.N. operational task without private information
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: "**Privacy:** no complaints, identity documents, addresses, member records, bank details, credentials or medical data. Closing an issue is not a vote."
+  - type: input
+    id: deliverable
+    attributes:
+      label: Deliverable
+      description: What verifiable outcome is needed?
+    validations: {required: true}
+  - type: textarea
+    id: steps
+    attributes:
+      label: Next steps and evidence (non-sensitive)
+    validations: {required: true}
+  - type: dropdown
+    id: workstream
+    attributes:
+      label: Workstream
+      options: [Founding, Governance, Community, Safety, Operations, Communications, Events, AI development, Other]
+    validations: {required: true}
+  - type: input
+    id: decision
+    attributes:
+      label: Decision ID if needed
+      placeholder: "DEC-YYYY-NNN or pending"

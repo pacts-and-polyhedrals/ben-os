@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+ <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+ <meta name="color-scheme" content="dark"><meta name="theme-color" content="#171128">
+ <title>B.E.N. OS — Be Even Nicer</title>
+ <meta name="description" content="B.E.N.: a human-led creative and community operating system, built around the Benevolent Energy Network principles.">
+ <link rel="stylesheet" href="./styles.css" />
+ <script type="module" src="./app.js"></script>
+</head>
+<body>
+ <a class="skip" href="#content">Skip to content</a>
+ <header class="topbar">
+  <a href="#home" class="brand" aria-label="B.E.N. home">
+   <span class="brand-symbol" aria-hidden="true"><span class="sun-core"></span><span class="sun-ring"></span></span>
+   <span class="brand-text"><strong>B.E.N.</strong><small>BE EVEN NICER</small></span>
+  </a>
+  <div class="header-right"><span class="build-label">FOUNDING PROTOTYPE</span><span id="platform-state" class="status-chip">Connecting…</span>
+   <span id="user-chip" class="user-chip hidden"></span>
+   <a id="sign-in" class="button button-gold hidden" href="./auth/github">Sign in with GitHub</a>
+   <button id="sign-out" class="button button-quiet hidden" type="button">Sign out</button>
+  </div>
+ </header>
+ <div class="layout">
+  <aside class="sidebar" aria-label="B.E.N. navigation">
+   <div class="sidebar-top">
+    <span class="tiny-title">THE NETWORK</span>
+    <nav aria-label="Member portal">
+     <button class="nav active" data-view="home"><span aria-hidden="true">✦</span> Overview</button>
+     <button class="nav" data-view="creative"><span aria-hidden="true">◈</span> Creative studio</button>
+     <button class="nav member-only" data-view="people"><span aria-hidden="true">☀</span> Fellow creatives</button>
+     <button class="nav member-only" data-view="projects"><span aria-hidden="true">✳</span> Community projects</button>
+     <button class="nav member-only" data-view="help"><span aria-hidden="true">♡</span> Lend a Ben</button>
+     <button class="nav member-only" data-view="events"><span aria-hidden="true">◇</span> Gatherings</button>
+     <button class="nav member-only" data-view="proposals"><span aria-hidden="true">✎</span> Your voice</button>
+     <button class="nav member-only" data-view="assistant"><span aria-hidden="true">◎</span> Ask B.E.N.</button>
+     <button class="nav member-only" data-view="profile"><span aria-hidden="true">◌</span> My space</button>
+    </nav>
+    <span class="tiny-title space-top">OUR FOUNDATION</span>
+    <nav aria-label="About the movement">
+     <button class="nav" data-view="principles"><span aria-hidden="true">✺</span> Ten principles</button>
+     <button class="nav" data-view="ethics"><span aria-hidden="true">⚖</span> AI ethics</button>
+     <button class="nav" data-view="roadmap"><span aria-hidden="true">☷</span> Build roadmap</button>
+    </nav>
+    <div id="steward-nav" class="hidden"><span class="tiny-title space-top">STEWARDSHIP</span>
+     <nav aria-label="Founding team"><button class="nav" data-view="founders"><span aria-hidden="true">▦</span> Founder console</button></nav>
+    </div>
+   </div>
+   <div class="side-bottom"><span class="side-dot">●</span> A network, not a hierarchy.<br><small>Authority exists to protect the network, not to own it.</small></div>
+  </aside>
+  <main id="content" tabindex="-1">
+   <div id="notice" class="notice hidden" role="status"></div>
+   <section class="view active" id="view-home" aria-labelledby="home-title">
+    <div class="hero"><div class="hero-copy"><p class="eyebrow">A NEW KIND OF COMMUNITY INTELLIGENCE</p>
+     <h1 id="home-title">Be <em>Even</em> Nicer.</h1>
+     <p class="hero-lead">Create more. Help more. Share what you know. Make a little bit of the world better—together.</p>
+     <div class="hero-actions"><button class="button button-gold" data-go="creative">Explore creativity <span aria-hidden="true">↗</span></button>
+      <button class="button button-outline" data-go="principles">Why we exist</button></div>
+     <p class="hero-note">Built for humans. Guided by kindness. Governed by people, not AI.</p>
+    </div><div class="hero-art" aria-hidden="true"><div class="halo h1"></div><div class="halo h2"></div><div class="halo h3"></div><div class="core-art">B<br><span>✳</span>E<br>N</div><div class="orbit-label orbit-a">CREATE</div><div class="orbit-label orbit-b">CONNECT</div><div class="orbit-label orbit-c">CARE</div></div>
+    </div>
+    <div class="section-head"><div><p class="eyebrow">WHAT B.E.N. IS HERE TO DO</p><h2>A better world begins with people.</h2></div><small>Founding proposals · October 2026</small></div>
+    <div class="feature-grid"><article class="feature"><span class="feature-icon">✐</span><h3>Creative potential</h3><p>Learn skills, develop your own voice and find artists to collaborate with. The AI mentors. You make the art.</p><button data-go="creative" class="text-link">Visit creative studio →</button></article>
+     <article class="feature"><span class="feature-icon">♡</span><h3>Practical kindness</h3><p>Offer help, ask without shame and turn good intentions into real projects and meaningful connections.</p><button data-go="help" class="text-link">Explore community help →</button></article>
+     <article class="feature"><span class="feature-icon">⚖</span><h3>People before power</h3><p>Make decisions openly, protect disagreement and keep founders, funders and AI accountable to the community.</p><button data-go="ethics" class="text-link">Explore our ethics →</button></article>
+    </div>
+    <div class="two-up"><div class="panel"><p class="eyebrow">GETTING STARTED</p><h3 id="welcome-title">Explore the founding prototype</h3><p id="welcome-copy">You can browse the principles, creative learning library and AI ethics without registering. Member features are available when the founders safely open the pilot.</p><div id="onboard-section" class="hidden">
+     <label class="check-row"><input type="checkbox" id="adult-check"> I confirm I am 18 or older (self-attestation).</label>
+     <label class="check-row"><input type="checkbox" id="code-check"> I have read and accept the adopted B.E.N. Code of Conduct.</label>
+     <button id="onboard-button" class="button button-gold" type="button">Join B.E.N.</button>
+    </div></div>
+    <div class="panel palette-panel"><p class="eyebrow">A SIMPLE PROMISE</p><blockquote>“Benevolent means trying to help without controlling the person being helped.”</blockquote><span>— Founding B.E.N. Charter, proposed v0.2</span></div></div>
+    <div id="home-stats" class="metric-row hidden"></div>
+   </section>
+   <section class="view" id="view-creative" aria-labelledby="creative-title">
+    <div class="section-head"><div><p class="eyebrow">HUMAN IMAGINATION FIRST</p><h1 id="creative-title">The Creative Studio</h1><p class="intro">An AI mentor and a network of humans—not an art replacement factory.</p></div><span class="badge">48 creative disciplines</span></div>
+    <div class="tool-bar"><label class="sr-only" for="discipline-search">Find a creative discipline</label><input id="discipline-search" class="input" placeholder="Search painting, dance, music, writing, crafts…">
+     <label class="sr-only" for="discipline-group">Art form</label><select id="discipline-group" class="input"><option value="all">All art forms</option></select></div>
+    <div class="discipline-layout"><div id="disciplines-list" class="discipline-list" aria-label="Disciplines"></div>
+     <div class="panel creative-detail" id="creative-detail"><p class="eyebrow">CHOOSE SOMETHING TO EXPLORE</p><h2>Every human can create.</h2><p>Select a discipline to discover a technique, try an exercise, or develop an idea with B.E.N.'s guidance.</p></div></div>
+    <div class="two-up"><div class="panel"><p class="eyebrow">STUDY REAL HUMAN ART</p><h3>Inspiration, with credit</h3><p>Explore public-domain artworks from The Metropolitan Museum of Art. Be inspired by artists; learn from their approaches rather than copying their work.</p>
+     <div class="form-row"><label class="sr-only" for="inspiration-query">Artwork subject</label><input id="inspiration-query" class="input" placeholder="e.g. garden, portrait, colour study"><button id="find-inspiration" class="button button-gold">Find artworks</button></div>
+     <div id="inspiration-results" class="art-grid"></div><small class="muted">Images appear only after you search. Individual artwork rights are checked against collection metadata.</small></div>
+    <div class="panel"><p class="eyebrow">LEARN FROM PEOPLE</p><h3>Find a collaborator or mentor</h3><p>Your creative profile is opt-in. We never publish your personal contact information or make introductions without your request.</p>
+      <button data-go="people" class="button button-outline">Explore fellow creatives</button><div id="reference-links" class="resource-list"></div>
+    </div></div>
+    <div class="panel margin-top learning-path"><p class="eyebrow">CREATE OVER TIME</p><h2>Your creative learning journey</h2>
+      <p>Four stages in every discipline: foundations, experimentation, reflection and collaboration. These are original practice prompts, not a claim of expert certification.</p>
+      <div id="creative-path" class="learning-stages"></div>
+    </div>
+    <div class="panel margin-top hidden" id="journal-section"><p class="eyebrow">YOUR WORK BELONGS TO YOU</p><h2>Private practice journal</h2>
+     <p>Write down what you tried and learned. Your account alone can retrieve notes through the app, although development database administrators can technically access stored records. Notes are not used to train AI. Do not include private information about other people.</p>
+     <form id="journal-form" class="stack">
+       <p id="journal-selection" class="fine-note"></p>
+       <label>Learning stage<select id="journal-stage" class="input"><option value="foundations">Foundations</option><option value="experiment">Experiment</option><option value="reflection">Reflection</option><option value="collaboration">Collaboration</option></select></label>
+       <label>What did you practise?<textarea id="journal-notes" class="input" rows="4" minlength="10" maxlength="1500" required placeholder="Describe your exercise, decisions and process in your own words."></textarea></label>
+       <label>What would you try differently next time? (optional)<textarea id="journal-reflection" class="input" rows="2" maxlength="600" placeholder="One small experiment or insight for next time."></textarea></label>
+       <button class="button button-gold" type="submit">Save private practice note</button>
+     </form>
+     <div class="divider-line"></div><h3>My recent practice</h3><div id="journal-entries"></div>
+    </div>
+   </section>
+   <section class="view" id="view-people"><div class="section-head"><div><p class="eyebrow">MAKE SOMETHING TOGETHER</p><h1>Fellow creatives</h1><p class="intro">Only members who explicitly opted into collaboration or mentoring appear here.</p></div></div>
+    <div class="tool-bar"><select id="people-discipline" class="input"><option value="">All creative disciplines</option></select><button id="refresh-people" class="button button-outline">Refresh</button></div><div id="people-results" class="cards-3"></div>
+    <div class="panel"><h3>My invitations</h3><p class="muted">Connection requests are private between the two members. No unsolicited public contact details.</p><div id="connections-list"></div></div></section>
+   <section class="view" id="view-projects"><div class="section-head"><div><p class="eyebrow">HELP CREATE SOMETHING GOOD</p><h1>Community projects</h1><p class="intro">Propose a project, bring people together and learn from what you accomplish.</p></div></div><div id="projects-list" class="cards-3"></div><div class="new-activity" data-kind="project"></div></section>
+   <section class="view" id="view-help"><div class="section-head"><div><p class="eyebrow">GIVE WHAT YOU CAN. ASK WHEN YOU NEED.</p><h1>Lend a Ben</h1><p class="intro">Practical offers and requests—without points, shame or hidden rankings.</p></div></div><h2 class="list-subhead">People offering help</h2><div id="help_offer-list" class="cards-3"></div><div class="new-activity" data-kind="help_offer"></div><h2 class="list-subhead">People requesting help</h2><div id="help_request-list" class="cards-3"></div><div class="new-activity" data-kind="help_request"></div></section>
+   <section class="view" id="view-events"><div class="section-head"><div><p class="eyebrow">SHARE SOME TIME</p><h1>Bensemble gatherings</h1><p class="intro">Online and community gatherings with human-approved safety and accessibility arrangements.</p></div></div><div id="events-list" class="cards-3"></div><div class="new-activity" data-kind="event"></div></section>
+   <section class="view" id="view-proposals"><div class="section-head"><div><p class="eyebrow">YOUR VOICE MATTERS</p><h1>Community proposals</h1><p class="intro">Suggest improvements and question decisions. A proposal is a request for review, not an automatic vote.</p></div></div><div id="proposals-list" class="cards-3"></div><div class="new-activity" data-kind="proposal"></div></section>
+   <section class="view" id="view-assistant"><div class="section-head"><div><p class="eyebrow">GUIDANCE, NOT GOVERNMENT</p><h1>Ask B.E.N.</h1><p class="intro">Explore ideas, learn a technique or get constructive feedback. B.E.N. cannot approve policy or govern people.</p></div></div>
+    <div class="chat-area"><div class="chat-config"><label>Creative discipline (optional)<select id="ai-discipline" class="input"><option value="">General B.E.N. assistant</option></select></label>
+      <label>Coaching mode<select id="ai-mode" class="input"><option value="explore">Explore an idea</option><option value="learn">Learn a technique</option><option value="practice">Practise</option><option value="critique">Get constructive critique</option><option value="collaborate">Find a collaboration approach</option></select></label>
+      <label>My creative goal (optional)<input id="ai-goal" class="input" maxlength="350" placeholder="e.g. Build confidence with watercolour"></label>
+      <p class="fine-note">Messages are sent to the locally configured model for this prototype and are not added to the B.E.N. database. Avoid sharing private casework.</p>
+    </div><div class="chat-main"><div id="chat-log" class="chat-log" aria-live="polite"><div class="chat-bubble ben-bubble"><strong>B.E.N.</strong><p>Hello! What are you trying to learn, make or improve? I can help you practise and think through the process—your work remains yours.</p></div></div>
+      <form id="chat-form" class="chat-form"><label class="sr-only" for="chat-message">Message to B.E.N.</label><textarea id="chat-message" class="input" rows="3" maxlength="3400" placeholder="Tell me about your idea, a technique you're exploring, or something you're stuck on."></textarea><button class="button button-gold" type="submit">Ask B.E.N.</button></form>
+      <div id="chat-sources" class="muted"></div></div></div></section>
+   <section class="view" id="view-profile"><div class="section-head"><div><p class="eyebrow">ON YOUR TERMS</p><h1>My creative space</h1><p class="intro">You choose what you share. Creative discovery is off until you opt in.</p></div></div>
+    <div class="two-up"><form id="creative-profile" class="panel stack"><h3>My creative profile</h3><label>Short introduction<textarea id="profile-bio" class="input" rows="4" maxlength="450" placeholder="What do you enjoy making or want to learn?"></textarea></label>
+     <label>Creative disciplines (choose up to 8)<select id="profile-disciplines" class="input multi" multiple size="10" aria-label="Select up to eight disciplines"></select></label>
+     <label>Skills or interests (comma-separated)<input id="profile-tags" class="input" placeholder="e.g. oil painting, improvisation"></label>
+     <label class="check-row"><input id="opt-collab" type="checkbox"> I am open to collaboration</label><label class="check-row"><input id="opt-mentor" type="checkbox"> I am open to sharing skills or mentoring</label>
+     <button class="button button-gold" type="submit">Save my choices</button></form>
+     <div class="panel"><h3>My data and my choices</h3><p>You can export your account data and deactivate your membership. We keep no social score and don't sell member information.</p>
+      <p class="muted">GitHub sign-in establishes who you are to the app, but it never grants access to edit the GitHub repositories.</p>
+      <button id="export-data" class="button button-outline" type="button">Export my account data</button>
+      <button id="deactivate" class="button button-danger" type="button">Request deactivation</button>
+      <div class="divider-line"></div><h3>Say thanks privately</h3><p>A personal message of thanks—not a ranking or public reputation number.</p>
+      <div id="gratitude-list"></div></div></div>
+   </section>
+   <section class="view" id="view-principles"><div class="section-head"><div><p class="eyebrow">OUR FOUNDING COMPASS</p><h1>The Ten Principles</h1><p class="intro">From the October 2026 proposed B.E.N. Charter; not yet formally adopted.</p></div></div><div id="principles-grid" class="cards-2"></div>
+    <div class="panel"><h2>The B.E.N. Test</h2><p>Reflect on a proposal before making a decision. This is not a vote or permission to act.</p><div id="ben-test"></div><button id="copy-test" class="button button-outline">Copy my reflection</button></div></section>
+   <section class="view" id="view-ethics"><div class="section-head"><div><p class="eyebrow">WHY THIS AI EXISTS</p><h1>Ethics before expansion.</h1><p class="intro">A person-centred AI must also be independently testable, accountable and open to correction.</p></div></div>
+    <div class="cards-2"><article class="principle-card"><span class="card-num">01</span><h3>Human authorship</h3><p>B.E.N. supports creativity through instruction, discussion, critique and connections. Humans choose, practise and make the creative work.</p></article>
+     <article class="principle-card"><span class="card-num">02</span><h3>No algorithmic rulers</h3><p>The AI may explain and suggest, never silently vote, enforce punishment, approve funding or claim powers held by people.</p></article>
+     <article class="principle-card"><span class="card-num">03</span><h3>No social credit</h3><p>No ranking people by money, kindness, politics, productivity or conformity. Voluntary, private appreciation is not a privilege score.</p></article>
+     <article class="principle-card"><span class="card-num">04</span><h3>Privacy by default</h3><p>Data minimisation, explicit consent, independent safeguarding and member control. Personal stories aren't AI training material by default.</p></article>
+     <article class="principle-card"><span class="card-num">05</span><h3>Transparent provenance</h3><p>Disclose which model is running, which sources were used, what isn't verified and the limits of licensing or expertise.</p></article>
+     <article class="principle-card"><span class="card-num">06</span><h3>Be independently challengeable</h3><p>Open development, published evaluations, human appeals, model portability, accountability and clear exit routes.</p></article></div>
+    <div class="panel margin-top"><h3>The full ethics and open-source documents</h3><p>The repository includes <code>docs/AI_ETHICS_CHARTER.md</code>, <code>docs/CREATIVE_EDUCATION_CHARTER.md</code> and <code>docs/OPEN_SOURCE_STRATEGY.md</code>. The ethics charter is a proposal until formally approved.</p><p class="fine-note">A public manifesto cannot substitute for an actual policy, technical tests, trained humans, or the right to challenge a harmful outcome.</p></div>
+   </section>
+   <section class="view" id="view-roadmap"><div class="section-head"><div><p class="eyebrow">BUILD SOMETHING THAT OUTLIVES US</p><h1>The evolving B.E.N. OS</h1><p class="intro">53 module proposals. Features are marked as implemented or planned; the roadmap does not imply readiness for public launch.</p></div></div>
+    <div class="tool-bar"><input id="roadmap-search" class="input" placeholder="Search the build roadmap"><select id="roadmap-release" class="input"><option value="all">Every release</option></select></div>
+    <div id="roadmap-list" class="roadmap-list"></div></section>
+   <section class="view" id="view-founders"><div class="section-head"><div><p class="eyebrow">TRUST IS EARNED THROUGH ACCOUNTABILITY</p><h1>Founder control centre</h1><p class="intro">Visible only to authorised stewards. These are operational records—not votes, legal incorporation or safeguarding decisions.</p></div></div>
+    <div id="founder-metrics" class="metric-row"></div>
+    <div class="two-up"><div class="panel"><h3>Proposals needing review</h3><div id="pending-list"></div></div><div class="panel"><h3>GitHub development issues</h3><p class="muted">Read from the separate GitHub App installation when configured. Member GitHub identities have no repo privileges.</p><button id="refresh-issues" class="button button-outline">Refresh GitHub issues</button><div id="github-issues"></div></div></div>
+    <div class="section-head"><div><p class="eyebrow">THE FOUNDING OPERATING PACK</p><h2>Launch actions</h2></div><span class="badge">22 source tasks</span></div>
+    <div class="tool-bar"><input id="founder-search" class="input" placeholder="Filter actions"><select id="founder-state" class="input"><option value="all">All progress states</option><option value="not_started">Not started</option><option value="in_progress">In progress</option><option value="needs_review">Needs review</option><option value="completed">Completed*</option></select></div>
+    <div id="founder-actions"></div><p class="fine-note">*Completed in this tracker does not mean the founding Board adopted a policy. Decisions require separately recorded votes under the applicable approved rules.</p></section>
+   <footer><span>B.E.N. — Benevolent Energy Network</span><span>Human-first intelligence · Proposed founding prototype v0.3 · Be Even Nicer</span></footer>
+  </main>
+ </div>
+ <dialog id="connection-dialog"><form method="dialog" class="dialog-content"><h3>Say hello to a fellow creative</h3><p id="connection-target"></p><label for="connection-message">Brief invitation (no contact details)</label><textarea id="connection-message" class="input" maxlength="420" rows="4" placeholder="What would you like to collaborate on?"></textarea><div class="form-row"><button value="cancel" class="button button-outline">Cancel</button><button id="send-connection" value="send" class="button button-gold">Send invitation</button></div></form></dialog>
+</body></html>

@@ -1,0 +1,83 @@
+{
+  "name": "Benevolent Energy Network",
+  "shortName": "B.E.N.",
+  "ethos": "Be Even Nicer",
+  "status": "proposed for adoption",
+  "version": "BEN-01 v0.2",
+  "sourceDate": "2026-10-01",
+  "principles": [
+    {
+      "id": 1,
+      "title": "Leave Things Better",
+      "subtitle": "Be a net positive.",
+      "text": "Try to leave people, places, conversations, and situations better than you found them. We’re here to add something good to the world, not simply take up space in it."
+    },
+    {
+      "id": 2,
+      "title": "People Before Ego",
+      "subtitle": "The community matters more than any individual’s status.",
+      "text": "Nobody is too important to be challenged, corrected, or held accountable. Leadership is a responsibility, not a badge of importance."
+    },
+    {
+      "id": 3,
+      "title": "Assume Good Intent — Address Bad Impact",
+      "subtitle": "Start with generosity, but don’t ignore harm.",
+      "text": "People will make mistakes, misunderstand each other, and occasionally get things wrong. Give people room to explain themselves and learn, while still taking the impact of their actions seriously."
+    },
+    {
+      "id": 4,
+      "title": "Respect Is Non-Negotiable",
+      "subtitle": "Disagreement is welcome. Disrespect isn’t.",
+      "text": "Challenge ideas, question decisions, and have difficult conversations. But don’t humiliate, harass, intimidate, or deliberately tear people down."
+    },
+    {
+      "id": 5,
+      "title": "Everyone Gets a Seat",
+      "subtitle": "Build a community where people can belong without having to earn their way into the clique.",
+      "text": "We don’t care who you know, where you come from, how popular you are, or how long you’ve been around. New people should feel welcomed, and established members should help make that possible."
+    },
+    {
+      "id": 6,
+      "title": "Bring Solutions, Not Just Problems",
+      "subtitle": "Criticism is valuable when it helps us improve.",
+      "text": "If something isn’t working, say so. But whenever possible, bring an idea, question, alternative, or next step with you. We want B.E.N. to be a place where people turn frustration into constructive action."
+    },
+    {
+      "id": 7,
+      "title": "Give More Than You Take",
+      "subtitle": "Participation is about contribution, not consumption.",
+      "text": "Share your time, knowledge, encouragement, skills, connections, creativity, or simply your presence. You don’t have to contribute in the same way as everyone else — just look for ways to add value."
+    },
+    {
+      "id": 8,
+      "title": "Be Brave Enough to Care",
+      "subtitle": "Don’t be afraid to speak up, get involved, or try something new.",
+      "text": "Positive communities aren’t built by spectators. Encourage people to take initiative, support each other when things go wrong, and celebrate people who have the courage to make things happen."
+    },
+    {
+      "id": 9,
+      "title": "Keep It Human",
+      "subtitle": "People are more important than processes.",
+      "text": "Rules and structures exist to help people, not the other way around. Be reasonable, compassionate, and willing to recognise context. We can have standards without losing our humanity."
+    },
+    {
+      "id": 10,
+      "title": "Build Something That Outlives Us",
+      "subtitle": "Think beyond today.",
+      "text": "B.E.N. shouldn’t depend on a handful of personalities, founders, or friendships. Build relationships, systems, traditions, and a culture that future members can inherit, improve, and eventually pass on themselves."
+    }
+  ],
+  "benTest": [
+    "Does this leave things better?",
+    "Does it put people before ego?",
+    "Does it treat people with respect?",
+    "Does it make room for others?",
+    "Does it move us towards a solution?",
+    "Does it add more than it takes?",
+    "Does it encourage people to participate?",
+    "Does it keep the human element intact?",
+    "And does it help build something worth passing on?"
+  ],
+  "governanceNote": "The B.E.N. Test guides judgment; it cannot override safety duties, conflict rules, legal obligations, or recorded voting thresholds.",
+  "rightsNote": "Participation, donations, friendship, popularity and past contributions must not buy immunity or extra votes. Contributions are encouraged according to capacity; no one must perform positivity to belong."
+}

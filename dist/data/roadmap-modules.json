@@ -1,0 +1,1733 @@
+{
+  "status": "planning proposal; not adopted",
+  "version": "0.2",
+  "date": "2026-10-26",
+  "modules": [
+    {
+      "id": "P01",
+      "name": "GitHub organisation, source control and delivery",
+      "release": "0.1.1",
+      "priority": "P0",
+      "audience": "Founders / developers",
+      "depends": [],
+      "goal": "Preserve v0.1 as a recoverable baseline and create an accountable multi-person GitHub workflow.",
+      "workflow": "Founders select an organisation-owned private repo; enable MFA, at least two recovery-capable org owners, branch rules, CODEOWNERS, mandatory reviews, automated tests and release tags. Each PR names its source and any required human decision.",
+      "data": "GitHub Issues/Projects are the canonical non-sensitive development records; the app only projects their status.",
+      "safeguards": "An admin permission is not a B.E.N. Board vote. Review Git history and Pages artefacts before publishing; no shared passwords or secrets in commits.",
+      "acceptance": [
+        "v0.1 build reproducible",
+        "unauthorised direct main push blocked where plan supports it",
+        "protected release and rollback proven"
+      ],
+      "enhancement": "Add signed releases, dependency provenance and a public developer contribution programme after licence approval.",
+      "stories": [
+        "Freeze baseline and record test results",
+        "Configure GitHub organisation, teams, branch rules and CODEOWNERS",
+        "Build and run CI, source scan and rollback drill",
+        "Set up project fields and issue workflows"
+      ],
+      "refs": [
+        "BEN-00",
+        "BEN-06"
+      ],
+      "complexity": "M"
+    },
+    {
+      "id": "P02",
+      "name": "Production hosting, API and deployment protection",
+      "release": "0.1.1",
+      "priority": "P0",
+      "audience": "Developers / operations",
+      "depends": [
+        "P01"
+      ],
+      "goal": "Separate public content, authenticated services, restricted casework and AI inference before any live user data.",
+      "workflow": "Keep public Pages static; provide a hosted HTTPS API and private inference gateway only after approved vendor/hosting selection. Establish staging, production, backups, health checks, incident on-call coverage and budgets.",
+      "data": "Environment configuration and operational telemetry; no personal data in Pages, client bundles or public logs.",
+      "safeguards": "No public hosting of v0.1 unauthenticated Node server; least-privilege service accounts, origin checks, rate limits and abuse budgets.",
+      "acceptance": [
+        "Unauthorized API access denied",
+        "staging data non-production",
+        "deploy and rollback demonstrated",
+        "health and error alerts verified"
+      ],
+      "enhancement": "Infrastructure-as-code and geographically resilient deployment only after measured need.",
+      "stories": [
+        "Choose hosting and capture data processing risks",
+        "Introduce authenticated staging API and environment controls",
+        "Add rate limiting, metrics and security headers",
+        "Exercise release rollback and recovery"
+      ],
+      "refs": [
+        "BEN-06"
+      ],
+      "complexity": "L"
+    },
+    {
+      "id": "P03",
+      "name": "Identity, delegated roles and authorization",
+      "release": "0.3",
+      "priority": "P0",
+      "audience": "Members / stewards / developers",
+      "depends": [
+        "P02",
+        "P04"
+      ],
+      "goal": "Provide inclusive identity for members and strict delegated permissions for stewards without requiring GitHub accounts from everyone.",
+      "workflow": "Use OIDC/passkeys or equivalent inclusive methods; verify community membership separately from legal CIC membership and GitHub permissions. Staff MFA, short-lived sessions, role expiry, backups and per-case conflict exclusion.",
+      "data": "User, CommunityMembership, StewardAssignment, legal member link (optional) and access audit; never a public directory of legal names.",
+      "safeguards": "Deny by default on the backend. Negative tests must cover member/steward/reviewer/implicated founder; no client-only access checks.",
+      "acceptance": [
+        "Every restricted API denies nonauthorised use",
+        "privileges expire on role exit",
+        "account recovery works through two authorised custodians"
+      ],
+      "enhancement": "Later support federation and delegated community identity without data sale.",
+      "stories": [
+        "Design identity and membership distinction",
+        "Implement login/session/MFA and server-side role policy",
+        "Add steward onboarding/offboarding and conflict recusal",
+        "Run cross-role privilege and recovery tests"
+      ],
+      "refs": [
+        "BEN-01",
+        "BEN-03",
+        "BEN-06"
+      ],
+      "complexity": "L"
+    },
+    {
+      "id": "P04",
+      "name": "Data classification, schemas and ownership",
+      "release": "0.2",
+      "priority": "P0",
+      "audience": "Founders / developers",
+      "depends": [
+        "P01"
+      ],
+      "goal": "Create reliable records with one canonical home for every domain and no duplication of sensitive information.",
+      "workflow": "Define typed IDs, source status, timestamps, classification and allowed destinations. Keep current Drive policy masters until real adoption; GitHub owns non-sensitive Issues; private DB owns identities and event participation; isolated vault owns casework.",
+      "data": "PolicyVersion, Decision, GitHubActionProjection, User, Project, Event, Consent, AuditEvent, SafetyReference.",
+      "safeguards": "No private allegations, member identifiers, medical conditions or raw financial credentials in ordinary GitHub, model inputs, shared logs or static assets.",
+      "acceptance": [
+        "Schema review documented",
+        "cross-domain IDs unique",
+        "forbidden fields blocked at API/import boundary",
+        "backup restore tested"
+      ],
+      "enhancement": "Event-sourced audit and selective data portability for other community organisations.",
+      "stories": [
+        "Publish canonical data-ownership matrix",
+        "Define typed schemas and version migrations",
+        "Implement data classification/validation gates",
+        "Test duplicate events, data export and restricted-data exclusion"
+      ],
+      "refs": [
+        "BEN-00",
+        "BEN-06"
+      ],
+      "complexity": "L"
+    },
+    {
+      "id": "P05",
+      "name": "Accessible design system and usability",
+      "release": "0.2",
+      "priority": "P0",
+      "audience": "Everyone",
+      "depends": [
+        "P01"
+      ],
+      "goal": "Turn purple/gold B.E.N. branding into an accessible interface for nontechnical and neurodivergent participants.",
+      "workflow": "Auditable component library for navigation, forms, errors, tables, assisted workflows, mobile layouts and plain-language consent. Test real keyboard, screen-reader, zoom and contrast journeys.",
+      "data": "Design tokens, components, content style, optional reduced motion/contrast/reading choices.",
+      "safeguards": "Brand playfulness (#probablyacult) must never appear in safety/appeals/financial warnings. Avoid gamification that pressures participation.",
+      "acceptance": [
+        "WCAG 2.2 AA targets tested",
+        "mobile task flow feasible",
+        "automated and manual accessibility checks run in CI/release reviews"
+      ],
+      "enhancement": "Installable PWA, low-bandwidth mode and offline draft capture later.",
+      "stories": [
+        "Create design tokens and accessible component patterns",
+        "Audit v0.1 keyboard, mobile and screen reader",
+        "Add plain-language form/errors and localization hooks",
+        "Publish usability and accessibility regression tests"
+      ],
+      "refs": [
+        "BEN-01",
+        "BEN-05"
+      ],
+      "complexity": "M"
+    },
+    {
+      "id": "P06",
+      "name": "Public website and approved knowledge portal",
+      "release": "0.3",
+      "priority": "P0",
+      "audience": "Public / members",
+      "depends": [
+        "P04",
+        "P05",
+        "F03"
+      ],
+      "goal": "Explain B.E.N. accurately to outsiders with truthful organisational status, safe contacts and accessible published policies.",
+      "workflow": "Publish the approved mission, contact channels, programme descriptions, decision summaries and how to join. Show PROPOSED where unadopted; use a separate public output build after document review.",
+      "data": "ApprovedPage, PolicyVersion, PublicDecisionSummary, EventSummary; no member roll or permissioned Google Drive links.",
+      "safeguards": "Pages content can be public even from a private repository. Verify assets, source/history, consent and publication tier prior to release.",
+      "acceptance": [
+        "Public pages contain only reviewed content",
+        "links work for unauthenticated visitors",
+        "contact and privacy routes tested"
+      ],
+      "enhancement": "Offer translated accessible guides, impact stories and community maps after consent and safety review.",
+      "stories": [
+        "Publish approved public information architecture",
+        "Create versioned policy and governance pages",
+        "Build safe public joining/contact pathways",
+        "Test privacy exclusions and Pages deploy"
+      ],
+      "refs": [
+        "BEN-01",
+        "BEN-05",
+        "BEN-06"
+      ],
+      "complexity": "M"
+    },
+    {
+      "id": "P07",
+      "name": "Notification and scheduled-work engine",
+      "release": "0.3",
+      "priority": "P1",
+      "audience": "Members / stewards",
+      "depends": [
+        "P03",
+        "P04"
+      ],
+      "goal": "Replace fragile manual reminders with voluntary, reliable scheduling without constant monitoring or message spam.",
+      "workflow": "Event RSVP, deadlines, appeals time targets, action due dates and opt-in digests generate bounded queues. Users control channels and frequency; urgent safety routing remains human-owned and clearly scoped.",
+      "data": "NotificationPreference, NotificationJob, DeliveryAttempt, quietHours, expiry and template versions.",
+      "safeguards": "No confidential complaint details in ordinary email subjects/notifications; no promise of 24/7 emergency monitoring.",
+      "acceptance": [
+        "Idempotent delivery, unsubscribe and quiet hours work",
+        "test service outage retry and expired notifications"
+      ],
+      "enhancement": "SMS, email and messaging providers can be added one at a time with consent and costs assessed.",
+      "stories": [
+        "Design consent-first notification preferences",
+        "Build queued delivery and template service",
+        "Add steward task deadlines and optional member digests",
+        "Test retries, unsubscription and sensitive-content redaction"
+      ],
+      "refs": [
+        "BEN-02",
+        "BEN-04",
+        "BEN-06"
+      ],
+      "complexity": "M"
+    },
+    {
+      "id": "F01",
+      "name": "Founding launch-gate control centre",
+      "release": "0.2",
+      "priority": "P0",
+      "audience": "Six founders",
+      "depends": [
+        "P04",
+        "P01"
+      ],
+      "goal": "Convert the 19 mandatory proposed setup gates and optional business gates into a truthful founder cockpit.",
+      "workflow": "Each gate has status NOT VERIFIED / IN REVIEW / CONFIRMED, owner, backup, source, evidence link and independent check. Publish nothing as active until the actual adopted vote and required contacts are verified.",
+      "data": "LaunchGate, GateEvidence, DecisionReference, PolicyVersion, reviewer + audit.",
+      "safeguards": "No dropdown/checkbox substitutes for a safe service, legal registration, vote or access test. Do not expose evidence containing personal data.",
+      "acceptance": [
+        "All gates default unconfirmed",
+        "missing evidence blocks member invitations",
+        "founders can export a launch status memo"
+      ],
+      "enhancement": "Add automatic reminders and evidence expiry rechecks; never auto-certify a control.",
+      "stories": [
+        "Import snapshot of required setup gates",
+        "Build owner/evidence/reviewer workflow",
+        "Generate release go/no-go report",
+        "Test negative cases for missing adoption or appeal route"
+      ],
+      "refs": [
+        "BEN-00",
+        "BEN-03",
+        "BEN-06"
+      ],
+      "complexity": "M"
+    },
+    {
+      "id": "F02",
+      "name": "Live founder actions and GitHub Projects",
+      "release": "0.2",
+      "priority": "P0",
+      "audience": "Founders / developers",
+      "depends": [
+        "P01",
+        "P04"
+      ],
+      "goal": "Make the 22 starter actions genuinely manageable, without two drifting task registers.",
+      "workflow": "Adopt GitHub Issues/Projects as authoritative for non-sensitive tasks. Show live status, owner, backup, priority, dependencies, due date, next step and evidence preview in dashboard; use a narrow read-first GitHub App.",
+      "data": "GitHubIssueId, project custom fields, syncCursor, lastVerifiedAt, local readonly projection.",
+      "safeguards": "No automated closure for votes; member identities, sensitive reports and financial account details forbidden in Issues and logs.",
+      "acceptance": [
+        "Webhooks/polling idempotent",
+        "stale integration clearly flagged",
+        "task changes update dashboard without duplicating masters"
+      ],
+      "enhancement": "Add dependency graph, capacity planning and automatic non-sensitive weekly meeting summaries.",
+      "stories": [
+        "Import 22 source actions with unique IDs and no duplicates",
+        "Build read-only GitHub Issues/Projects adapter",
+        "Implement owner, dependency and stale-data dashboard",
+        "Test webhook replay and sync conflict resolution"
+      ],
+      "refs": [
+        "BEN-CONTROL",
+        "BEN-00"
+      ],
+      "complexity": "L"
+    },
+    {
+      "id": "F03",
+      "name": "Charter, policies and adoption source register",
+      "release": "0.2",
+      "priority": "P0",
+      "audience": "Founders / members",
+      "depends": [
+        "P04"
+      ],
+      "goal": "Preserve canonical founding wording and track the difference between working proposals and adopted B.E.N. rules.",
+      "workflow": "For BEN-00 through BEN-07, show document revision, owner, Drive master, exact hash, proposed/adopted/superseded state, effective date, recorded decision, planned review and approved public copy.",
+      "data": "PolicyVersion, SourceManifest, ChangeImpact, DecisionReference, ReviewLog.",
+      "safeguards": "An edited GitHub Markdown file never silently changes policy; exclude archives and fictional B.E.N. lore from real governance knowledge.",
+      "acceptance": [
+        "Every surfaced rule reports its status and source",
+        "updating approved policy requires evidenced human action",
+        "old editions remain retrievable"
+      ],
+      "enhancement": "Automatic human-reviewed policy diff with suggested impacted workflows and tests.",
+      "stories": [
+        "Create policy and source manifest registry",
+        "Build adoption/supersession workflow with formal decision link",
+        "Add source diff and impact check",
+        "Test AI and public copy reflect only approved policy status"
+      ],
+      "refs": [
+        "BEN-00",
+        "BEN-01",
+        "BEN-03",
+        "BEN-07"
+      ],
+      "complexity": "M"
+    },
+    {
+      "id": "F04",
+      "name": "Steward portfolio, backup and succession management",
+      "release": "0.2",
+      "priority": "P0",
+      "audience": "Six founders / later elected stewards",
+      "depends": [
+        "P04",
+        "F03"
+      ],
+      "goal": "Make six equal portfolios operational without building permanent founder privilege.",
+      "workflow": "Named lead/backup, delegated scope, term, capacity, training and conflict declarations. Handover runs through approval, grant/revoke access, outstanding task transfer and dual custody checks.",
+      "data": "StewardAssignment, Delegation, TrainingEvidence, AccessGrant, HandoverLog.",
+      "safeguards": "No extra votes from holding several responsibilities. A conflicted or departing steward loses affected access; no automatic broad access for coordinator.",
+      "acceptance": [
+        "Six role slots have reviewable owners/backups",
+        "expiry triggers access review",
+        "handover exercises documented"
+      ],
+      "enhancement": "Add volunteer mentorship and shadow portfolios in preparation for elections.",
+      "stories": [
+        "Implement portfolio assignment and scope registry",
+        "Build backup, conflict and term review workflow",
+        "Automate access change request without self-approval",
+        "Run departure and conflicted-founder handover scenario"
+      ],
+      "refs": [
+        "BEN-03",
+        "BEN-06",
+        "BEN-07"
+      ],
+      "complexity": "M"
+    },
+    {
+      "id": "F05",
+      "name": "Meetings, formal decisions and votes",
+      "release": "0.2",
+      "priority": "P0",
+      "audience": "Founding Board / Governance Committee",
+      "depends": [
+        "F03",
+        "F04"
+      ],
+      "goal": "Record decisions rigorously and eliminate accidental authority created by task completion.",
+      "workflow": "Draft agenda and minuted proposal, evidence, consulted members, eligibility, recusals, quorum, vote counts, exact version, decision ID, ratification and privacy-safe summary. Proposed rules: Board quorum 4 unconflicted, ordinary 3 yes, reserved 4 yes out of six; committee 3 with 2 yes.",
+      "data": "Decision, VoteSession, ParticipantEligibility, Recusal, SignedMinuteReference, PublicSummary.",
+      "safeguards": "Rules only become active after adoption; no AI-cast votes; excluded conflicted people cannot certify or view restricted annexes.",
+      "acceptance": [
+        "Invalid quorum/threshold never shown passed",
+        "complete audit trail",
+        "manual paper vote can be recorded with provenance"
+      ],
+      "enhancement": "Later support cryptographic verification and accessible secret ballots without making blockchain necessary.",
+      "stories": [
+        "Design proposal, quorum and recusal rules engine",
+        "Build minute and decision forms with evidence hash",
+        "Add independent confirmation and public redaction",
+        "Test tie, recusal, absence, amendment and failed vote cases"
+      ],
+      "refs": [
+        "BEN-03",
+        "BEN-07",
+        "BEN-CONTROL"
+      ],
+      "complexity": "L"
+    },
+    {
+      "id": "F06",
+      "name": "Member consultations and election transition",
+      "release": "0.7",
+      "priority": "P0",
+      "audience": "Eligible members / stewards",
+      "depends": [
+        "F05",
+        "M01",
+        "M11"
+      ],
+      "goal": "Enable representative decision-making and leadership transition without permanently entrenching founders.",
+      "workflow": "Provide consultations and later elections with clear eligibility, notice, turnout, ballot confidentiality, conflict checks and explainable results. Proposed trigger: prepare at 30 active members; begin transition at 50 or six months after adoption and complete within prescribed period if adopted.",
+      "data": "Consultation, VotingRollSnapshot, Ballot, ElectionRuleVersion, ResultCertification, AppealReference.",
+      "safeguards": "Legal CIC membership differs from ordinary community membership; public comments/likes are not votes. Manual compliant election fallback is essential.",
+      "acceptance": [
+        "Eligibility/notice/quorum verified",
+        "independent audit and formal challenge route",
+        "no voting rights traded for money, work or popularity"
+      ],
+      "enhancement": "Explore verifiable secret ballots and decentralized governance only after independent expert assessment.",
+      "stories": [
+        "Map adopted voting rules and eligibility separately",
+        "Build accessible consultation and notifications",
+        "Implement ballot/election counting with independence checks",
+        "Exercise contentious election, low quorum and manual fallback"
+      ],
+      "refs": [
+        "BEN-03",
+        "BEN-07",
+        "BEN-CIC"
+      ],
+      "complexity": "L"
+    },
+    {
+      "id": "F07",
+      "name": "CIC formation and statutory compliance companion",
+      "release": "0.2",
+      "priority": "P0",
+      "audience": "Founders / governance / external advisers",
+      "depends": [
+        "F01"
+      ],
+      "goal": "Track the proposed UK CIC limited-by-guarantee formation path and ongoing duties with evidence, not legal fiction.",
+      "workflow": "Founders verify six directors and six initial legal members (one vote each), registered office/email, identity verification, proposed CIC36, model Articles, PSC analysis, filing and bank account. Record filings and next duties only after they actually happen.",
+      "data": "CompanyFormationAction, FilingReference, LegalMemberRegisterRef, ComplianceSchedule, LegalAdvisorReview.",
+      "safeguards": "Do not collect director identity documents in GitHub. Verify fees, dates and legal terms against current official guidance prior to filing; no claim of incorporation from a checklist.",
+      "acceptance": [
+        "Every filing gate has owner, verified evidence and due rule",
+        "legal entity status cannot be toggled without evidence"
+      ],
+      "enhancement": "Add accounting reminders and document generation with professional review.",
+      "stories": [
+        "Convert CIC roadmap into owner-based checklist",
+        "Build filing/fee verification and decision references",
+        "Implement annual compliance calendar",
+        "Test not-incorporated status and no personal identity leakage"
+      ],
+      "refs": [
+        "BEN-CIC",
+        "BEN-06"
+      ],
+      "complexity": "M"
+    },
+    {
+      "id": "F08",
+      "name": "Finance, expenses, budgets and two-person approval",
+      "release": "0.6",
+      "priority": "P1",
+      "audience": "Finance stewards / Board",
+      "depends": [
+        "F05",
+        "P03",
+        "F07"
+      ],
+      "goal": "Enable transparent finance without personal pots or unchecked spending.",
+      "workflow": "Budgets require authorized reserved Board approval; invoices and expense claims require independent approvers; money stays in approved organisational accounts. Track multi-currency only via documented conversions and a base reporting currency.",
+      "data": "Budget, FinanceRequest, ApprovedAmount, ReceiptRef, ApprovalChain, ReconciliationPeriod.",
+      "safeguards": "Never store bank/card numbers in general GitHub, allow AI to initiate payments, or treat PR approval as financial authorization. Verify legal/tax obligations.",
+      "acceptance": [
+        "Spending beyond approved cap is blocked",
+        "requester cannot approve own reimbursement",
+        "monthly reconciliation and audit trail work"
+      ],
+      "enhancement": "Integrate bank feeds only after security and consent review; optional public aggregated expenditure dashboard.",
+      "stories": [
+        "Define finance authorization and ledger contracts",
+        "Build budget/expense approval and evidence links",
+        "Add reconciliation, currency and variance reports",
+        "Test self-approval, unbudgeted expense and missing second approver"
+      ],
+      "refs": [
+        "BEN-03",
+        "BEN-06",
+        "BEN-CIC"
+      ],
+      "complexity": "L"
+    },
+    {
+      "id": "F09",
+      "name": "Grants, sponsorship and ethical funding pipeline",
+      "release": "0.6",
+      "priority": "P1",
+      "audience": "Fundraising / projects / Finance",
+      "depends": [
+        "F07",
+        "F08",
+        "F15"
+      ],
+      "goal": "Find suitable funding without allowing donors to control community rights.",
+      "workflow": "Capture criteria, eligibility, geography, purpose, deadlines, restrictions, conflicts, reporting milestones, outcomes and funding concentration. B.E.N. AI can help draft truthful applications from verified impact data.",
+      "data": "FundingOpportunity, Application, DocumentChecklist, GrantAgreementRef, RestrictedFund, ReportDue.",
+      "safeguards": "No fabricated beneficiary counts, conditional hidden donor access, preferential votes or claiming tax status without verification.",
+      "acceptance": [
+        "Every application has evidence and human sign-off",
+        "financial/impact promises match verifiable records",
+        "follow-up reporting tracked"
+      ],
+      "enhancement": "Donor-facing transparency dashboard and automated public grant opportunity discovery after source verification.",
+      "stories": [
+        "Build grant opportunity and eligibility register",
+        "Create evidence-linked application workflow",
+        "Add report deadlines and grant restrictions",
+        "Test donor influence and fabricated-statistic prevention"
+      ],
+      "refs": [
+        "BEN-CIC",
+        "BEN-06",
+        "BEN-05"
+      ],
+      "complexity": "M"
+    },
+    {
+      "id": "F10",
+      "name": "Partners, suppliers and sponsorship due diligence",
+      "release": "0.6",
+      "priority": "P1",
+      "audience": "Events / Finance / Governance",
+      "depends": [
+        "F05",
+        "F08"
+      ],
+      "goal": "Make collaborations purposeful, consent-aware and reversible.",
+      "workflow": "Review the proposed benefit, values/risks, conflicts, data sharing, money, logo, responsibilities, exit rights and approval before contracts or announcements.",
+      "data": "PartnerProposal, DueDiligenceChecklist, ContractRef, ApprovalRef, ReviewDeadline.",
+      "safeguards": "No sharing member contacts with partners without appropriate lawful grounds/consent; no sponsor veto over moderation.",
+      "acceptance": [
+        "Every agreement has clear owner, scope, decision authority and termination terms",
+        "rejected partner creates no ongoing access"
+      ],
+      "enhancement": "Add trust and safety reviews of approved community partner opportunities.",
+      "stories": [
+        "Build partnership intake with disclosure fields",
+        "Implement decision-linked approval and contract register",
+        "Track logo/data/financial scope and renewal",
+        "Test revoked partner and undisclosed conflict scenarios"
+      ],
+      "refs": [
+        "BEN-03",
+        "BEN-05",
+        "BEN-06"
+      ],
+      "complexity": "M"
+    },
+    {
+      "id": "F11",
+      "name": "Confidential safety, moderation and independent appeals",
+      "release": "0.3",
+      "priority": "P0",
+      "audience": "Designated unconflicted reviewers",
+      "depends": [
+        "P02",
+        "P03",
+        "P04",
+        "F04"
+      ],
+      "goal": "Provide fair, confidential routes to protect members and challenge leader misconduct.",
+      "workflow": "Independent report intake, alternative contacts, triage, temporary protections, three-person case panel, fixed deadlines and independent appeal. Existing proposals include 72-hour emergency restriction review and 14-day appeal window; confirm policy before automation.",
+      "data": "Encrypted case vault, CaseAccessGrant, CaseTimeline, EvidenceRef, SafetyAction, AppealPanel; only opaque case ID exposed externally.",
+      "safeguards": "Keep reports in separate restricted storage; never allow implicated founder, general GitHub collaborator or public AI to see them. No AI auto-judgment or moral profiling; distinguish report from finding and offer emergency services guidance.",
+      "acceptance": [
+        "Reporter/subject can access appropriate limited information",
+        "reviewer independence tested",
+        "no sensitive content in logs/Issues/AI",
+        "appeal route confirmed"
+      ],
+      "enhancement": "Independent ombuds and external practitioner support if volume exceeds volunteer capacity.",
+      "stories": [
+        "Design isolated reporting routes and independent reviewer checks",
+        "Implement restricted case/timeline and confidentiality controls",
+        "Build sanctions review and appeal workflow",
+        "Run simulated founder complaint, urgent protection and data leakage tests"
+      ],
+      "refs": [
+        "BEN-02",
+        "BEN-04",
+        "BEN-06"
+      ],
+      "complexity": "L"
+    },
+    {
+      "id": "F12",
+      "name": "Communications editorial and approval workflow",
+      "release": "0.3",
+      "priority": "P1",
+      "audience": "Communications stewards / reviewers",
+      "depends": [
+        "F03",
+        "F05"
+      ],
+      "goal": "Produce trustworthy, inclusive public messages while respecting current policy authority.",
+      "workflow": "Brief -> draft/version -> verify claims/rights/consent -> Green self-check, Amber independent review, Red three unconflicted participants with two approvals -> publish exact version -> correct/learn.",
+      "data": "ContentBrief, VersionHash, ReviewTier, PermissionRef, ApprovalRecord, PublishedURL, Correction.",
+      "safeguards": "Approval to post never approves underlying policy, spending or contracts. Do not turn private stories or distress into publicity; tagline optional and never for safety notices.",
+      "acceptance": [
+        "Final version matches approved hash",
+        "publication blocked for missing clearance",
+        "correction history and human reviewer visible"
+      ],
+      "enhancement": "AI copy-assistant and accessible publishing templates with platform APIs after approval.",
+      "stories": [
+        "Create Green/Amber/Red content templates",
+        "Build version-specific independent approval and consent checks",
+        "Add publishing calendar and correction log",
+        "Test changed-after-approval and serious-statement scenarios"
+      ],
+      "refs": [
+        "BEN-05",
+        "BEN-07"
+      ],
+      "complexity": "M"
+    },
+    {
+      "id": "F13",
+      "name": "Founder event planning and volunteer operations",
+      "release": "0.3",
+      "priority": "P1",
+      "audience": "Event stewards / backup leads",
+      "depends": [
+        "F11",
+        "F05"
+      ],
+      "goal": "Safely organise accessible online and in-person activities as the community grows.",
+      "workflow": "Every event requires purpose, capacity, lead/backup, venue/timezone, accessibility plan, risk/stop authority, budget, consent and go/no-go. Volunteer shifts must have clear boundaries and backup coverage.",
+      "data": "EventPlan, RiskCheck, ActivityLead, Shift, AttendanceConsentRef, StopDecision, Followup.",
+      "safeguards": "No unsupported youth, transport, clinical or high-risk events. Safety and insurance decisions remain human; private access needs not public.",
+      "acceptance": [
+        "Event cannot be labelled approved with missing mandatory gate",
+        "cancellations and participant notifications work",
+        "review captures lessons"
+      ],
+      "enhancement": "Events toolkit with reusable templates for mutual aid, creative projects and environmental actions.",
+      "stories": [
+        "Build risk-aware event proposal checklist",
+        "Add volunteer shifts, backup and capacity planning",
+        "Implement go/no-go approval and cancellation pathways",
+        "Test high-risk gating and inaccessible venue handling"
+      ],
+      "refs": [
+        "BEN-06",
+        "BEN-07"
+      ],
+      "complexity": "M"
+    },
+    {
+      "id": "F14",
+      "name": "Risk register, security incidents and continuity",
+      "release": "0.2",
+      "priority": "P0",
+      "audience": "Operations / Governance",
+      "depends": [
+        "P01",
+        "P04"
+      ],
+      "goal": "Keep the organisation functional when volunteers leave, platforms fail or sensitive events occur.",
+      "workflow": "Maintain risk owner, severity, mitigation, review date, continuity plan, backup custody and incidents. Schedule quarterly access and restore tests; recorded two-person emergency publishing/account controls.",
+      "data": "Risk, Incident, BackupEvidence, AccessReview, RecoveryPlan, FollowUpAction.",
+      "safeguards": "No incident secrets in GitHub; no privileged founder bypasses confidentiality. A service outage or AI error must have a manual fallback.",
+      "acceptance": [
+        "Staffing absence and compromised account drills pass",
+        "risks reviewed",
+        "member-facing status can be published without exposing personal cases"
+      ],
+      "enhancement": "Add business continuity dashboards, external audits and tabletop exercises for higher-risk services.",
+      "stories": [
+        "Create risk/incident ownership register",
+        "Implement recovery and access-review schedule",
+        "Document least-privilege emergency controls",
+        "Run compromised-account and absent-founder drills"
+      ],
+      "refs": [
+        "BEN-04",
+        "BEN-06"
+      ],
+      "complexity": "M"
+    },
+    {
+      "id": "F15",
+      "name": "Impact, feedback and accountability reports",
+      "release": "0.4",
+      "priority": "P1",
+      "audience": "Governance / members / funders",
+      "depends": [
+        "F02",
+        "M05",
+        "M06"
+      ],
+      "goal": "Measure whether B.E.N. really leaves things better rather than counting clicks or popularity.",
+      "workflow": "Consent-safe evidence records project outcomes, participants reached in aggregate, accessibility, satisfaction, volunteer hours optional, feedback, governance participation, complaints process performance and project cost.",
+      "data": "ImpactObservation, Feedback, ProjectOutcome, AggregationRule, PublicReportApproval.",
+      "safeguards": "No public small-group deanonymisation, moral score, mandatory disclosure or made-up improvements. Qualitative accounts need consent.",
+      "acceptance": [
+        "Every displayed statistic has time window and denominator",
+        "publishable reports pass privacy and evidence review"
+      ],
+      "enhancement": "Community-designed outcomes and independently assessed impact studies as capacity grows.",
+      "stories": [
+        "Define outcome metrics and evidence sources",
+        "Build feedback and project-level outcome capture",
+        "Implement aggregation/suppression and consent-aware stories",
+        "Publish reviewed monthly/annual impact report template"
+      ],
+      "refs": [
+        "BEN-01",
+        "BEN-CIC",
+        "BEN-06"
+      ],
+      "complexity": "M"
+    },
+    {
+      "id": "F16",
+      "name": "Training, onboarding, volunteer care and handovers",
+      "release": "0.3",
+      "priority": "P1",
+      "audience": "Stewards / moderators / volunteers",
+      "depends": [
+        "F04",
+        "F11"
+      ],
+      "goal": "Sustain a healthy volunteer movement with realistic workload, skill transfer and emotional boundaries.",
+      "workflow": "Steward training covers Charter, Code, safeguarding, conflicts, privacy, accessibility, approvals, AI limitations and handover. Volunteers can indicate capacity and stop without retaliation; record backup assignment and reviewed role permissions.",
+      "data": "TrainingModule, Acknowledgement, CompetencyCheck, ShiftCapacity, HandoverRecord.",
+      "safeguards": "No pressure to be available 24/7; no volunteer handles sensitive wellbeing cases without scope and guidance.",
+      "acceptance": [
+        "New stewards complete required scenario tests before privileged access",
+        "departing volunteers lose access and open work gets reassigned"
+      ],
+      "enhancement": "Peer mentorship and publicly available open training modules for other communities.",
+      "stories": [
+        "Create modular steward learning paths",
+        "Add practice cases and policy comprehension checks",
+        "Implement workload and burnout check-ins without profiling",
+        "Test role transfer and least-privilege revoke"
+      ],
+      "refs": [
+        "BEN-02",
+        "BEN-04",
+        "BEN-06"
+      ],
+      "complexity": "M"
+    },
+    {
+      "id": "M01",
+      "name": "Member registration, eligibility and welcoming onboarding",
+      "release": "0.3",
+      "priority": "P0",
+      "audience": "Prospective and new members",
+      "depends": [
+        "P03",
+        "P05",
+        "P06",
+        "F11"
+      ],
+      "goal": "Offer a welcoming, low-pressure entrance to B.E.N. that does not require a legal name of Ben or a GitHub account.",
+      "workflow": "Show the approved Charter/Code, realistic community service boundaries, actual adult-only eligibility if adopted, privacy notice and independent concerns contacts. Minimal acceptance record and optional interest selection; no compulsory publicity or marketing consent.",
+      "data": "CommunityMembership, CodeAcceptanceVersion, EligibilityAttestation, OnboardingProgress, OptionalInterest.",
+      "safeguards": "No identity documents or full birthdate without a distinct justified purpose. Do not invite people until all mandatory founder launch gates pass.",
+      "acceptance": [
+        "A newcomer can join with minimal data, see how to get help, decline optional data and leave",
+        "policy version is auditable"
+      ],
+      "enhancement": "Group invitation and buddy introduction programmes once capacity exists.",
+      "stories": [
+        "Create approved Charter/Code/consent onboarding flow",
+        "Implement minimal eligibility and acceptance recording",
+        "Add first-week low-pressure welcome and community guide",
+        "Test no-membership-fee, no-Ben-name and exit cases"
+      ],
+      "refs": [
+        "BEN-01",
+        "BEN-02",
+        "BEN-06"
+      ],
+      "complexity": "L"
+    },
+    {
+      "id": "M02",
+      "name": "Member home, privacy-respecting profile and preferences",
+      "release": "0.3",
+      "priority": "P0",
+      "audience": "Members",
+      "depends": [
+        "M01",
+        "P03"
+      ],
+      "goal": "Give each person a personal space they control instead of a behavioural surveillance profile.",
+      "workflow": "Optional nickname, pronouns, interests, skills, ways they can help, accessibility and notification preferences; fine-grained sharing and anonymous browsing of basic resources where possible.",
+      "data": "Profile, VisibilitySetting, ConsentPurpose, SavedProject, PreferredLanguage.",
+      "safeguards": "No public display of private address, diagnoses, volunteer hours or complaint history; do not infer ideology, wealth or mental state.",
+      "acceptance": [
+        "Member sees exactly who can access each field and changes take effect immediately",
+        "profile can be almost blank"
+      ],
+      "enhancement": "Portable personal portfolio and user-controlled aliases for different community activities.",
+      "stories": [
+        "Implement opt-in profile and audience controls",
+        "Build member dashboard for saved activities",
+        "Add preference visibility previews",
+        "Test field-level privacy and sparse-profile journeys"
+      ],
+      "refs": [
+        "BEN-01",
+        "BEN-06"
+      ],
+      "complexity": "M"
+    },
+    {
+      "id": "M03",
+      "name": "Community conversations and the sixteen broad interest spaces",
+      "release": "0.4",
+      "priority": "P1",
+      "audience": "Members / moderators",
+      "depends": [
+        "M01",
+        "F11"
+      ],
+      "goal": "Help people connect across interests without fragmenting B.E.N. into dozens of dead or exclusionary groups.",
+      "workflow": "Preserve the 16-channel subject map from BEN-02 as navigation tags/categories: Beniverse, games, arts, music, entertainment, wellbeing, fitness, travel, learning, engineering, business, exchange, events, memes, volunteering and recommendations. Integrate chosen chat provider rather than cloning Discord first.",
+      "data": "ChannelCategory, ThreadReference, ModerationPolicy, LinkPreview, MembershipVisibility.",
+      "safeguards": "No forced public activity, no surveillance-based active-member score, and no new regional channels by default. Respect provider content policies and deletion rights.",
+      "acceptance": [
+        "Member locates an appropriate subject space",
+        "link navigation works",
+        "moderator can stop abuse without suppressing respectful disagreement"
+      ],
+      "enhancement": "Optional native forums and ephemeral groups only if a gap is demonstrated through a reviewed pilot.",
+      "stories": [
+        "Publish sixteen-category navigation and channel ownership",
+        "Create moderated discussion links/integration abstraction",
+        "Build channel proposal and four-week pilot review",
+        "Test reporting, quiet members and duplicate spaces"
+      ],
+      "refs": [
+        "BEN-02",
+        "BEN-01"
+      ],
+      "complexity": "M"
+    },
+    {
+      "id": "M04",
+      "name": "Lend a Ben: help requests and safe volunteer matching",
+      "release": "0.4",
+      "priority": "P1",
+      "audience": "Members / volunteer coordinators",
+      "depends": [
+        "M01",
+        "F11",
+        "F13"
+      ],
+      "goal": "Convert kindness into practical, opt-in help rather than social-media performance.",
+      "workflow": "Member posts a specific request or offer with category, broad location, boundaries, time window, accessibility and desired contact method. Consent-based match request -> mutual acceptance -> safe contact -> outcome/closure; coordinators review higher-risk work.",
+      "data": "HelpRequest, VolunteerOffer, MatchIntent, ConsentToConnect, SafetyTier, ResolutionState.",
+      "safeguards": "No automatic disclosure of addresses, unlimited messaging, unverified transport/childcare/medical help or ranking individuals by helpfulness.",
+      "acceptance": [
+        "Both sides may reject or withdraw without penalty",
+        "high-risk requests route to trained humans",
+        "outcome claims require consent"
+      ],
+      "enhancement": "Optional partner referrals, local resources, repeatable mutual-aid kits and vetted safe opportunities.",
+      "stories": [
+        "Create requests/offers schema with safe risk tiers",
+        "Build mediated interest/acceptance and communication flow",
+        "Add coordinator review and closure feedback",
+        "Test withdrawal, safety escalation, location privacy and spam"
+      ],
+      "refs": [
+        "BEN-01",
+        "BEN-02",
+        "BEN-06"
+      ],
+      "complexity": "L"
+    },
+    {
+      "id": "M05",
+      "name": "Community project and campaign workspace",
+      "release": "0.4",
+      "priority": "P1",
+      "audience": "Members / project leads",
+      "depends": [
+        "M01",
+        "F02",
+        "F13"
+      ],
+      "goal": "Let people propose, join and complete helpful projects with visible purposes and accountable owners.",
+      "workflow": "Propose a project with B.E.N. Test, goal, beneficiaries, risks, resources, consent, timeline and measurable output; approved lead adds tasks and volunteer roles, tracks delivery, publishes a privacy-safe outcome. Non-sensitive engineering tasks may link GitHub.",
+      "data": "Project, ProjectMilestone, VolunteerRole, RiskReview, OutcomeRecord, GitHubLink.",
+      "safeguards": "Projects are not automatically B.E.N. policy, fundraising or authorised public events. Avoid compulsory hours or exploitative unpaid commitments.",
+      "acceptance": [
+        "Approval status unambiguous",
+        "volunteers can withdraw",
+        "project has stop criteria and post-project outcome review"
+      ],
+      "enhancement": "Template library for repair cafes, habitat care, creative workshops, food drives and skill sharing.",
+      "stories": [
+        "Create project intake with B.E.N. Test and risk tier",
+        "Build lead/participant tasks and milestones",
+        "Add review, go/no-go and activity tracking",
+        "Test closure evidence, volunteer withdrawal and cross-project permissions"
+      ],
+      "refs": [
+        "BEN-01",
+        "BEN-06",
+        "BEN-07"
+      ],
+      "complexity": "L"
+    },
+    {
+      "id": "M06",
+      "name": "Events, calendars and accessible participation",
+      "release": "0.4",
+      "priority": "P1",
+      "audience": "Members / event organisers",
+      "depends": [
+        "M01",
+        "F13",
+        "P07"
+      ],
+      "goal": "Make it easy to discover and join safe online and in-person community activities.",
+      "workflow": "Browse event details with clear timezone/location precision, cost, capacity, accessibility, photo consent and organiser. RSVP with optional pseudonym, receive reminders, cancel, join waitlist and give feedback.",
+      "data": "EventPublicView, RSVP, Waitlist, NotificationPreference, AccessibilityRequestRef.",
+      "safeguards": "Never expose private attendance, home addresses or disability details publicly. Waitlists must be fair, and the event must be authorised before public B.E.N. branding.",
+      "acceptance": [
+        "Correct capacity updates, consent and cancellation notice",
+        "all dates show timezone",
+        "accessibility needs sent only to proper organiser"
+      ],
+      "enhancement": "Calendar integrations and recurring series after opt-in and timezone testing.",
+      "stories": [
+        "Build event browse/search with approved status",
+        "Create RSVP, waitlist and cancellation services",
+        "Add attendee-controlled reminders and post-event feedback",
+        "Test full event, low bandwidth and private access needs"
+      ],
+      "refs": [
+        "BEN-06",
+        "BEN-07"
+      ],
+      "complexity": "M"
+    },
+    {
+      "id": "M07",
+      "name": "Benlightenment: learning and skills exchange",
+      "release": "0.4",
+      "priority": "P1",
+      "audience": "Members / mentors",
+      "depends": [
+        "M01",
+        "M02",
+        "F16"
+      ],
+      "goal": "Help members share practical knowledge without subscriptions or guru hierarchies.",
+      "workflow": "Offer/request skill sessions, beginner-friendly materials, mentoring availability and one-off workshops; find helpers by opt-in skills rather than automated rankings. Provide feedback, accessible learning paths and plagiarism/source checks.",
+      "data": "SkillOffer, LearningSession, ResourceReference, Availability, ParticipantFeedback.",
+      "safeguards": "No imposed credentials or fee for core access, avoid dangerous unqualified medical/legal advice and personal-data exposure.",
+      "acceptance": [
+        "Skill provider controls visibility",
+        "learners can opt out",
+        "feedback is qualitative and not a global person score"
+      ],
+      "enhancement": "Openly licensed course packs and community-run micro-credentials for demonstrated learning (not status privilege).",
+      "stories": [
+        "Create skill offer/ask intake and categories",
+        "Build opt-in mentor/session matching",
+        "Add accessible shared learning resource library",
+        "Test qualifications disclaimers, privacy and no-ranked-person results"
+      ],
+      "refs": [
+        "BEN-01",
+        "BEN-02"
+      ],
+      "complexity": "M"
+    },
+    {
+      "id": "M08",
+      "name": "Well-Ben-ing: bounded peer support and wellbeing signposting",
+      "release": "0.3",
+      "priority": "P0",
+      "audience": "Members / trained stewards",
+      "depends": [
+        "F11",
+        "M01"
+      ],
+      "goal": "Provide compassionate space for difficult days without misrepresenting volunteer discussion as therapy.",
+      "workflow": "Publish supportive listening boundaries, options for listening vs advice, support resources, reporting routes and emergency guidance. Moderators can pause harmful discussion, limit graphic content and refer to locally appropriate crisis services.",
+      "data": "WellbeingResource, ModerationEscalationRef, ConsentPreference, AnonymousFeedback.",
+      "safeguards": "No AI diagnosis or 24/7 crisis promise. No vulnerable moment repurposed as promotional content; do not collect diagnoses by default.",
+      "acceptance": [
+        "Boundaries explicit before entering area",
+        "escalation routes tested",
+        "difficult feelings are not punished as non-benevolence"
+      ],
+      "enhancement": "Specialist partnerships with qualified services and dedicated facilitator training if resources permit.",
+      "stories": [
+        "Write and review accessible peer-support boundaries",
+        "Build safe signposting and confidential contact handoff",
+        "Create moderator safe-response and escalation guides",
+        "Test urgent harm, non-graphic discussion and no-diagnosis cases"
+      ],
+      "refs": [
+        "BEN-02",
+        "BEN-04"
+      ],
+      "complexity": "M"
+    },
+    {
+      "id": "M09",
+      "name": "Recognition, gratitude and verified contributions",
+      "release": "0.5",
+      "priority": "P1",
+      "audience": "Members / project leads",
+      "depends": [
+        "M05",
+        "F15",
+        "F11"
+      ],
+      "goal": "Celebrate meaningful kindness without creating a social-credit regime or access-based class system.",
+      "workflow": "With explicit opt-in, let project participants thank each other or recognise verified project milestones. Recognition can appear privately or in a consented public story. Extra sponsored learning/computing may support projects based on transparent need and value, never personal moral score.",
+      "data": "GratitudeEvent, ProjectEvidenceRef, RecipientConsent, RecognitionVisibility, SponsorshipAllocation.",
+      "safeguards": "Never publish virtue leaderboards, punish inactivity, sell contribution scores, change voting rights or deny essential services based on recognition.",
+      "acceptance": [
+        "Nonparticipant retains full baseline access",
+        "self-awarded claims not treated as verified",
+        "recipient can revoke publicity"
+      ],
+      "enhancement": "Optional non-transferable thank-you artwork, volunteer milestones and transparent project resource grants.",
+      "stories": [
+        "Define non-ranking recognition policy and consent UX",
+        "Build verified project-thanks workflow",
+        "Add sponsor-supported resource allocation with independent review",
+        "Test gaming, withdrawal, no-participation and donor-pressure cases"
+      ],
+      "refs": [
+        "BEN-01",
+        "BEN-03"
+      ],
+      "complexity": "M"
+    },
+    {
+      "id": "M10",
+      "name": "Benefits Exchange: gifts, lending, swaps and permitted trade",
+      "release": "0.6",
+      "priority": "P2",
+      "audience": "Members / moderators",
+      "depends": [
+        "M01",
+        "F11"
+      ],
+      "goal": "Let people share underused resources without falsely implying B.E.N. guarantees every exchange.",
+      "workflow": "Post gifts, loans, swaps or permitted items with broad area, terms, expiration and a mediated contact route. Disclose paid promotions/affiliate interests and provide safe handoff guidance.",
+      "data": "Listing, ExchangeIntent, ListingCategory, Terms, Expiry, ReportReference.",
+      "safeguards": "No public banking details, home addresses, prohibited items, platform guarantees or unsupported escrow/financial service.",
+      "acceptance": [
+        "Listings expire, can be reported and removed",
+        "participants understand B.E.N. is not a verified marketplace guarantor"
+      ],
+      "enhancement": "Shared tool libraries and repair/redistribution hubs with approved partner oversight.",
+      "stories": [
+        "Define allowed listing categories and rules",
+        "Build listing/search and safe contact flow",
+        "Implement expiry, fraud reporting and moderation",
+        "Test prohibited listings and personal location exposure"
+      ],
+      "refs": [
+        "BEN-02",
+        "BEN-06"
+      ],
+      "complexity": "M"
+    },
+    {
+      "id": "M11",
+      "name": "Open proposals, consultation and reasoned disagreement",
+      "release": "0.4",
+      "priority": "P1",
+      "audience": "All members / governance",
+      "depends": [
+        "M01",
+        "F05"
+      ],
+      "goal": "Let the community influence decisions without turning every discussion into an ideological loyalty test.",
+      "workflow": "Offer a proposal template with the B.E.N. Test, alternatives, risks, inclusiveness and success criteria; consultations disclose invitees, numbers, questions, comments and a written response. GitHub Discussions can host non-sensitive developer/public ideas; member portal must be accessible to non-GitHub users.",
+      "data": "MemberProposal, Consultation, ResponseSummary, DecisionLink, ReservationSummary.",
+      "safeguards": "Criticism and good-faith reports are allowed even without a solution; no false claim of consensus or vote-by-like.",
+      "acceptance": [
+        "All proposals receive traceable status, reasoned responses and links to actual decisions",
+        "minority views summarized fairly"
+      ],
+      "enhancement": "Deliberation support by AI with balanced alternatives and transparent summarization tests.",
+      "stories": [
+        "Create proposal/B.E.N. Test submissions",
+        "Build time-bounded consultation and inclusive response options",
+        "Link exact decision and rationale to published outcome",
+        "Test no-quorum, low response and dissent protection"
+      ],
+      "refs": [
+        "BEN-01",
+        "BEN-03",
+        "BEN-07"
+      ],
+      "complexity": "L"
+    },
+    {
+      "id": "M12",
+      "name": "Member data rights, consent and departure",
+      "release": "0.3",
+      "priority": "P0",
+      "audience": "Members / privacy custodians",
+      "depends": [
+        "P03",
+        "P04"
+      ],
+      "goal": "Give real control over personal data, communication preferences and the ability to leave.",
+      "workflow": "Consent centre for publicity, contact, analytics, AI chat history and optional profile attributes. Provide access/export, correction, deletion/review, consent withdrawal and account deactivation, with clear lawful retention exceptions.",
+      "data": "ConsentRecord, ProcessingPurpose, DataExportJob, ErasureRequest, RetentionException.",
+      "safeguards": "No dark patterns, bundled marketing, or assurances that all backups can be erased instantly. Case records require separate legal review.",
+      "acceptance": [
+        "Member can change consent and see purpose, recipients and review status",
+        "records follow classification and retention rules"
+      ],
+      "enhancement": "Portable privacy dashboard and public aggregate data inventory.",
+      "stories": [
+        "Build consent/purpose registry and plain-language controls",
+        "Implement data export and erasure-request workflow",
+        "Add retention review, audit and backup-caveat notices",
+        "Test marketing opt-out, edge retention and cross-role data isolation"
+      ],
+      "refs": [
+        "BEN-06",
+        "BEN-07"
+      ],
+      "complexity": "L"
+    },
+    {
+      "id": "M13",
+      "name": "Curated community resource library and knowledge commons",
+      "release": "0.4",
+      "priority": "P1",
+      "audience": "Everyone / knowledge stewards",
+      "depends": [
+        "P06",
+        "M01",
+        "F03"
+      ],
+      "goal": "Help people find trustworthy information and practical guides without relying solely on AI answers.",
+      "workflow": "Tag approved pages by topic, audience, language, currency, geography and review date; allow member-submitted suggestions with editor attribution and verification before they become official resources.",
+      "data": "Resource, SourceCitation, EditorReview, Translation, Deprecation, Licence.",
+      "safeguards": "Separate evidence from opinion; include accessible alternatives; do not import restricted Drive archives automatically.",
+      "acceptance": [
+        "Search returns checked source/review date",
+        "broken or outdated resources flagged",
+        "contributor attribution with consent"
+      ],
+      "enhancement": "Open educational materials and community teaching kits with licensed reuse.",
+      "stories": [
+        "Build reviewed resource catalogue and tags",
+        "Enable attribution and member suggestions",
+        "Add expiry/review reminders and dead-link checks",
+        "Test outdated, disputed and wrongly licensed resources"
+      ],
+      "refs": [
+        "BEN-01",
+        "BEN-05"
+      ],
+      "complexity": "M"
+    },
+    {
+      "id": "M14",
+      "name": "Clear front door for concerns, feedback and fair appeals",
+      "release": "0.3",
+      "priority": "P0",
+      "audience": "Members / public / reviewers",
+      "depends": [
+        "F11",
+        "M01"
+      ],
+      "goal": "Allow people to reach a safe, independent human contact without publicly revealing a complaint.",
+      "workflow": "Explain ordinary feedback vs confidential report vs urgent safety concern. Provide primary and alternate route, time-of-monitoring, report receipt reference and appeal information; allow anonymous initial messages where feasible.",
+      "data": "FeedbackSubmission, PrivateCaseTicketRef, ContactRouteVersion; narrative stored only in restricted service.",
+      "safeguards": "GitHub Issues or public forums must never receive full complaints. Subject of concern cannot be the only available report recipient.",
+      "acceptance": [
+        "A case involving a founder reaches unconflicted reviewers",
+        "report acknowledgements are honest and optional anonymity preserved where possible"
+      ],
+      "enhancement": "Encrypted anonymous dropbox and independent advisory contact if support capacity justifies it.",
+      "stories": [
+        "Build accessible guidance choosing report/feedback route",
+        "Connect secure separate report intake and receipt",
+        "Provide independent escalation and appeal contact paths",
+        "Test implicated-founder and anonymous-report cases"
+      ],
+      "refs": [
+        "BEN-02",
+        "BEN-04"
+      ],
+      "complexity": "M"
+    },
+    {
+      "id": "M15",
+      "name": "Member activity feed and opt-in digests",
+      "release": "0.4",
+      "priority": "P1",
+      "audience": "Members",
+      "depends": [
+        "P07",
+        "M05",
+        "M06"
+      ],
+      "goal": "Help members discover relevant B.E.N. activity without addictive attention harvesting.",
+      "workflow": "Personal dashboard lists chosen channels, accessible events, project updates and saved opportunities. Digests default to conservative frequency and allow pausing or disabling; no infinite-scroll reward loops.",
+      "data": "FeedPreference, Follow, DigestSchedule, NotificationRef, AnnouncementSource.",
+      "safeguards": "Never rank users by posting frequency or engagement, profile sensitive needs, or sell feed personalization.",
+      "acceptance": [
+        "New member can turn feeds off",
+        "digest only contains authorized and consented events",
+        "no default daily spam"
+      ],
+      "enhancement": "Offline digest and accessibility-tailored notification formats.",
+      "stories": [
+        "Create transparent opt-in feed rules",
+        "Build subscribed project/event updates",
+        "Add weekly digest and unsubscribe controls",
+        "Test quiet member, repetitive alerts and private event filtering"
+      ],
+      "refs": [
+        "BEN-01",
+        "BEN-06"
+      ],
+      "complexity": "M"
+    },
+    {
+      "id": "M16",
+      "name": "Local activity discovery without community fragmentation",
+      "release": "0.5",
+      "priority": "P2",
+      "audience": "Members / activity leads",
+      "depends": [
+        "M04",
+        "M06"
+      ],
+      "goal": "Enable relevant local help and events while preserving one broad global community rather than siloed regional groups.",
+      "workflow": "User chooses a general locality/radius or anonymous online-only mode; searches return safe public activities. Exact addresses revealed only when needed and agreed by participants.",
+      "data": "LocationPreference, SearchRadius, LocationPrecision, EventListing, ConsentToShare.",
+      "safeguards": "No default location tracking, background GPS, public home addresses or scraping of other member positions.",
+      "acceptance": [
+        "Location mode optional",
+        "remote members see full access",
+        "granularity changes correctly remove private coordinates"
+      ],
+      "enhancement": "Opt-in neighbourhood project pods and partner venues with separate risk review; not automatic permanent regional channels.",
+      "stories": [
+        "Define locality precision and privacy defaults",
+        "Build safe location/radius filtering",
+        "Add event/help discovery with minimal location",
+        "Test online-only, location withdrawal and sensitive venue"
+      ],
+      "refs": [
+        "BEN-02",
+        "BEN-06"
+      ],
+      "complexity": "M"
+    },
+    {
+      "id": "M17",
+      "name": "Multilingual and low-bandwidth inclusion",
+      "release": "0.4",
+      "priority": "P1",
+      "audience": "International / neurodivergent members",
+      "depends": [
+        "P05",
+        "M01"
+      ],
+      "goal": "Let people participate regardless of English fluency, connection quality or device power.",
+      "workflow": "Support clear language, translation review and human-readable source language. Key safety/legal notices use approved human-reviewed translations; optional AI translation labels uncertainty; lightweight/mobile offline drafts for non-sensitive forms.",
+      "data": "Locale, TranslationVersion, SourceLocale, ContentComplexity, OfflineDraft.",
+      "safeguards": "Never machine-translate urgent legal/safety requirements without human review; offline drafts must not store sensitive casework in browser cache.",
+      "acceptance": [
+        "Accessible navigation in at least pilot languages chosen by founders",
+        "source and translation versions linked",
+        "low-bandwidth path tested"
+      ],
+      "enhancement": "Audio narration and participatory language translation programme with consent.",
+      "stories": [
+        "Choose priority languages from consenting member needs",
+        "Build internationalization and translated content review",
+        "Add low-bandwidth/PWA for non-sensitive content",
+        "Test untranslated legal notices, screen reader and offline data safety"
+      ],
+      "refs": [
+        "BEN-01",
+        "BEN-05",
+        "BEN-06"
+      ],
+      "complexity": "M"
+    },
+    {
+      "id": "M18",
+      "name": "Public outcomes, stories and community accountability",
+      "release": "0.6",
+      "priority": "P1",
+      "audience": "Public / members",
+      "depends": [
+        "F15",
+        "M05",
+        "M09"
+      ],
+      "goal": "Show tangible changes achieved without exploiting beneficiaries or turning kindness into marketing.",
+      "workflow": "Publish verified project outcomes, anonymous aggregate figures, consented short stories, corrections and community feedback. Link to context, method, time window and any limits.",
+      "data": "ImpactStory, EvidenceRef, PermissionRef, Correction, PublicationApproval.",
+      "safeguards": "No identifiable distressed-member stories without meaningful consent; reject fabricated images and impact statistics.",
+      "acceptance": [
+        "Every public outcome has source, consent, reviewer and correction route",
+        "small-group data suppressed where appropriate"
+      ],
+      "enhancement": "Independent community impact research and replicable project instructions.",
+      "stories": [
+        "Create public outcome story templates",
+        "Implement consent and factual verification check",
+        "Add change-log and corrections",
+        "Test small-population privacy and withdrawn publicity consent"
+      ],
+      "refs": [
+        "BEN-01",
+        "BEN-05",
+        "BEN-CIC"
+      ],
+      "complexity": "M"
+    },
+    {
+      "id": "A01",
+      "name": "B.E.N. AI constitution and authority boundaries",
+      "release": "0.1.1",
+      "priority": "P0",
+      "audience": "Everyone / AI maintainers",
+      "depends": [
+        "P01"
+      ],
+      "goal": "Make Be Even Nicer an explicitly accountable assistant, not an unanswerable ideological authority.",
+      "workflow": "Create versioned system behaviour standards: kindness without coercion, dissent protection, human decisions, source provenance, honest uncertainty, privacy, environmental awareness, no ranking moral worth. Each change reviewed against BEN-01 and actual adoption state.",
+      "data": "AIConstitutionVersion, RuleRef, ModelCard, BehaviourChangeLog, DecisionRef.",
+      "safeguards": "Model instruction is advisory not enforcement. No AI can grant itself authority, decide who is greedy or suppress disagreement.",
+      "acceptance": [
+        "Constitution is human-readable, versioned and tested",
+        "conflicting user/system/retrieved instructions cannot overwrite human rights or approval gates"
+      ],
+      "enhancement": "Public community consultation on the AI constitution after baseline safeguards and governance adoption.",
+      "stories": [
+        "Publish initial versioned AI constitution",
+        "Map each principle to testable behavioural requirements",
+        "Implement refusal-to-claim-authority tests",
+        "Review values changes against actual approved policies"
+      ],
+      "refs": [
+        "BEN-01",
+        "BEN-03"
+      ],
+      "complexity": "M"
+    },
+    {
+      "id": "A02",
+      "name": "Verified knowledge retrieval and policy provenance",
+      "release": "0.2",
+      "priority": "P0",
+      "audience": "Members / founders / AI maintainers",
+      "depends": [
+        "F03",
+        "P04"
+      ],
+      "goal": "Replace seven short keyword-selected notes with document-grounded, version-aware answers.",
+      "workflow": "Ingest only authorized documents after classification and editor review. Chunk with source IDs, offsets, policy status, hash, effective date and access class. Retrieve only allowed chunks; model cites exact spans and says when evidence is missing.",
+      "data": "DocumentSource, SourceChunk, EmbeddingIndex, RetrievalLog, AnswerCitation, FreshnessDate.",
+      "safeguards": "Untrusted retrieved text cannot instruct tools; private docs never leaked into public user contexts; no invented decision IDs or false adoption claims.",
+      "acceptance": [
+        "Citation click opens exact permitted passage",
+        "unsupported policy claims flagged",
+        "source update/rollback and stale status tested"
+      ],
+      "enhancement": "Multilingual retrieval, independent source-verification and semantic conflict detection.",
+      "stories": [
+        "Build approved-source ingestion and version registry",
+        "Implement permission-aware hybrid search and exact citation spans",
+        "Add unsupported-answer and freshness checks",
+        "Test fabricated citations, injected documents and role leakage"
+      ],
+      "refs": [
+        "BEN-00",
+        "BEN-01",
+        "BEN-03",
+        "BEN-06"
+      ],
+      "complexity": "L"
+    },
+    {
+      "id": "A03",
+      "name": "Founder copilot for administration and planning",
+      "release": "0.3",
+      "priority": "P1",
+      "audience": "Founders / stewards",
+      "depends": [
+        "A02",
+        "F02",
+        "F05"
+      ],
+      "goal": "Give overworked volunteer leaders a capable secretary without turning the secretary into a decision-maker.",
+      "workflow": "Draft meeting agendas, minute summaries, actions, grant text, publication briefs, policy comparisons and risk prompts from approved sources. Show editable drafts, source citations, uncertainty and a named reviewer step. No silent GitHub write or outreach.",
+      "data": "AIDraft, ActionProposal, SourceCitation, HumanApproval, ExportVersion.",
+      "safeguards": "No auto-votes, legal claims, payments, private case analysis or publication without human action; consent before processing transcripts.",
+      "acceptance": [
+        "Human can inspect and edit before copy/export",
+        "missing evidence flagged",
+        "all tool requests remain pending until approved"
+      ],
+      "enhancement": "Role-specific assistants for six portfolios once the common governance gate is mature.",
+      "stories": [
+        "Build read-only founder Q&A and agenda drafts",
+        "Add referenced minutes/action extraction from consented material",
+        "Implement approval-aware non-sensitive GitHub task drafting",
+        "Test wrong authority, missing source and transcript privacy"
+      ],
+      "refs": [
+        "BEN-00",
+        "BEN-03",
+        "BEN-07"
+      ],
+      "complexity": "M"
+    },
+    {
+      "id": "A04",
+      "name": "Member-facing B.E.N. companion",
+      "release": "0.5",
+      "priority": "P1",
+      "audience": "Members / public",
+      "depends": [
+        "A01",
+        "A02",
+        "M12",
+        "F11"
+      ],
+      "goal": "Offer practical empathy, education and project guidance while refusing coercive reward systems and false professional authority.",
+      "workflow": "Chat helps navigate the organisation, discover resources, write proposals and plan positive actions. It displays source/version links, alternative human route, content boundaries and optional memory settings.",
+      "data": "Conversation, RetrievalPermission, ModelVersion, AIUserFeedback, SafetyRedirect.",
+      "safeguards": "No therapy/diagnosis, coercive upsell, secret social scoring or unrestricted private-data ingestion. Some queries should be answered without personal account.",
+      "acceptance": [
+        "Member obtains useful, comprehensible sourced guidance",
+        "high-risk or uncertain cases redirect to appropriate human service",
+        "errors can be reported"
+      ],
+      "enhancement": "Voice, additional languages and domain-specific tutoring after robust evaluation.",
+      "stories": [
+        "Create member copilot UX and scope disclosures",
+        "Build resource/project guidance flows",
+        "Add uncertainty, helpfulness and incident reporting",
+        "Test inclusion, critical dissent and harmful-usage boundaries"
+      ],
+      "refs": [
+        "BEN-01",
+        "BEN-02",
+        "BEN-04"
+      ],
+      "complexity": "L"
+    },
+    {
+      "id": "A05",
+      "name": "AI tools, permissions and human action queue",
+      "release": "0.5",
+      "priority": "P0",
+      "audience": "Stewards / developers",
+      "depends": [
+        "P03",
+        "A02",
+        "F05"
+      ],
+      "goal": "Allow AI to prepare useful actions while preventing it from becoming an unreviewable operator.",
+      "workflow": "AI proposes typed actions (draft GitHub Issue, schedule non-sensitive event, write public draft) with impact preview, required role, allowed scopes, idempotency key, expiration and explicit approval. Server independently validates on execution.",
+      "data": "ToolPermission, ProposedAction, ApprovalEvent, Expiration, ExecutionReceipt.",
+      "safeguards": "No model-originated bank transfers, member bans, votes, case access, new admin grants or self-authorised publishing; kill switch and rate cap required.",
+      "acceptance": [
+        "Unapproved action causes zero external side effects",
+        "permissions enforced on server even with malicious prompt",
+        "receipts auditable"
+      ],
+      "enhancement": "Negotiated multi-agent task plans after independent safety evaluation and strict per-step human approval.",
+      "stories": [
+        "Define allowlisted tools and typed schemas",
+        "Build preview, expiry and human approval queue",
+        "Implement scoped GitHub create-only actions with idempotency",
+        "Red-team prompt injection and privileged-tool requests"
+      ],
+      "refs": [
+        "BEN-03",
+        "BEN-06"
+      ],
+      "complexity": "L"
+    },
+    {
+      "id": "A06",
+      "name": "Consented personal memory and data minimisation",
+      "release": "0.5",
+      "priority": "P1",
+      "audience": "Members",
+      "depends": [
+        "P03",
+        "M12",
+        "A04"
+      ],
+      "goal": "Let B.E.N. remember helpful preferences without creating hidden surveillance dossiers.",
+      "workflow": "Offer explicit memory OFF/ON, purpose-specific storage, preview/edit/export/delete and retention choices. Keep conversation knowledge isolated per user and never infer political beliefs, wealth, diagnoses or social worth.",
+      "data": "MemoryConsent, ScopedMemoryItem, RetentionDate, UserDeleteRequest.",
+      "safeguards": "No invisible cross-member training or unrestricted reuse of volunteer/member stories; private case material excluded.",
+      "acceptance": [
+        "OFF means no durable personal memory",
+        "deletion request stops retrieval",
+        "users can inspect exact stored items"
+      ],
+      "enhancement": "Local-device memory and encrypted portable data vault if technically and legally feasible.",
+      "stories": [
+        "Create consent-first memory design and off-by-default state",
+        "Implement inspect/edit/export/delete controls",
+        "Add isolated retrieval and retention rules",
+        "Test cross-user leak, disabled memory and backup notice"
+      ],
+      "refs": [
+        "BEN-06",
+        "BEN-01"
+      ],
+      "complexity": "L"
+    },
+    {
+      "id": "A07",
+      "name": "Evaluation, red teams and independent AI oversight",
+      "release": "0.2",
+      "priority": "P0",
+      "audience": "AI engineers / independent community reviewers",
+      "depends": [
+        "A01",
+        "P01"
+      ],
+      "goal": "Prove behaviour through repeated tests, not assurances that a model is benevolent.",
+      "workflow": "Versioned synthetic benchmark with dilemmas about dissent, founders, private cases, sources, fundraising, AI agency and fairness. Measure factual support, respectful refusal, transparency, privacy, accessibility, cost and failure frequency by model/prompt/retriever version.",
+      "data": "EvalCase, ExpectedProperties, ModelRun, HumanReview, FailureSeverity, ReleaseGate.",
+      "safeguards": "No publishing confidential user prompts; no single person-defined goodness score. Include adversarial tests and real human complaint path.",
+      "acceptance": [
+        "CI fails on critical private-data leaks or unauthorized tool actions",
+        "results reproducible",
+        "model rollback possible"
+      ],
+      "enhancement": "Independent evaluation grants and community challenge programmes with controlled disclosure.",
+      "stories": [
+        "Create comprehensive synthetic B.E.N. benchmark",
+        "Build automated model/retriever eval runner",
+        "Add independent review and critical-failure release gates",
+        "Test adversarial prompt injection and disparate treatment"
+      ],
+      "refs": [
+        "BEN-01",
+        "BEN-04",
+        "BEN-06"
+      ],
+      "complexity": "L"
+    },
+    {
+      "id": "A08",
+      "name": "Replaceable model providers and cost limits",
+      "release": "0.5",
+      "priority": "P1",
+      "audience": "AI maintainers / members",
+      "depends": [
+        "A07",
+        "P02"
+      ],
+      "goal": "Keep the movement free to change AI providers as licensing, ethics, performance and costs evolve.",
+      "workflow": "Adapt Ollama/local and separately reviewed hosted providers to one interface. Track model weights/license, provenance, deployment region, cost, context/energy limits and evaluation profile. Degrade gracefully when quota reached.",
+      "data": "ModelProvider, ModelConfig, InferenceBudget, EvalResult, OutageFallback.",
+      "safeguards": "No vendor lock-in by design; do not promise every model is safe or equally capable; no raw private prompts to third parties without consent and contract review.",
+      "acceptance": [
+        "Same eval suite works on two providers",
+        "costs capped",
+        "unsupported provider disabled",
+        "user gets honest outage notice"
+      ],
+      "enhancement": "Cooperative hosting and self-managed community inference when actual maintenance capacity exists.",
+      "stories": [
+        "Implement provider-neutral inference adapter",
+        "Add quotas, health checks and fallback mode",
+        "Compare output on B.E.N. benchmark and licensing",
+        "Test outage, overruns and endpoint data exposure"
+      ],
+      "refs": [
+        "BEN-01",
+        "BEN-06"
+      ],
+      "complexity": "M"
+    },
+    {
+      "id": "A09",
+      "name": "Opt-in ethical opportunity matching",
+      "release": "0.6",
+      "priority": "P2",
+      "audience": "Members / coordinators",
+      "depends": [
+        "M04",
+        "M07",
+        "A07"
+      ],
+      "goal": "Help people find useful ways to participate without manipulating or profiling them.",
+      "workflow": "Use explicit interests, selected location, availability and capacity to suggest projects, help requests or mentoring. Explain reasons, allow filters and opt out; new participants and small projects must remain discoverable.",
+      "data": "RecommendationPreference, ProjectFeature, SuggestedMatch, UserFeedback.",
+      "safeguards": "No inferred vulnerability, political views, wealth or social worth; no mandatory engagement and no black-box exclusions.",
+      "acceptance": [
+        "Users can see why a suggestion appears and turn matching off",
+        "results do not become member scores"
+      ],
+      "enhancement": "Fairness evaluation for visibility of new/small projects and accessibility preferences.",
+      "stories": [
+        "Build explainable opt-in matching rules",
+        "Add preference editor and reason strings",
+        "Measure project exposure fairness and opt-out",
+        "Test edge cases for scarce availability and sensitive profiles"
+      ],
+      "refs": [
+        "BEN-01",
+        "BEN-06"
+      ],
+      "complexity": "M"
+    },
+    {
+      "id": "A10",
+      "name": "Public-interest evidence and accountability researcher",
+      "release": "0.7",
+      "priority": "P2",
+      "audience": "Community project teams / researchers",
+      "depends": [
+        "A02",
+        "A05",
+        "F15"
+      ],
+      "goal": "Use AI to help citizens assess public claims, contracts and environmental impacts transparently and peacefully.",
+      "workflow": "Assist with open public sources, claim extraction, evidence graph, conflicting reports, citations, corrections and a human editor. Frame concerns as verifiable questions and disclose uncertainties.",
+      "data": "ResearchSource, Claim, EvidenceLink, SourceDate, EditorAttestation, Correction.",
+      "safeguards": "No hacking, private data scraping, doxxing, unsupported accusations, political manipulation or publishing unreviewed conclusions.",
+      "acceptance": [
+        "Every material claim links to evidence and review",
+        "a contested or missing-source claim is labelled, not asserted as fact"
+      ],
+      "enhancement": "Open reusable FOI/public procurement and environmental review toolkits.",
+      "stories": [
+        "Design public-source research and provenance graph",
+        "Build claim-to-citation checking and disagreement summaries",
+        "Create editor review and corrections workflow",
+        "Test false allegations, source conflicts and personal privacy"
+      ],
+      "refs": [
+        "BEN-01",
+        "BEN-05"
+      ],
+      "complexity": "L"
+    },
+    {
+      "id": "A11",
+      "name": "Energy, sustainability and compute accountability",
+      "release": "0.5",
+      "priority": "P1",
+      "audience": "Founders / users / AI operators",
+      "depends": [
+        "A08",
+        "F15"
+      ],
+      "goal": "Make environmental cost a visible product constraint rather than an afterthought.",
+      "workflow": "Measure requests, model/server resource proxies, provider energy disclosures when available, cost and infrastructure impacts. Offer small-model routing for simpler tasks, caching, opt-in long tasks and published limits of estimates.",
+      "data": "ComputeUsage, ModelFootprintEstimate, CostPeriod, SustainabilityReport.",
+      "safeguards": "Never claim exact carbon emissions without defensible measurement; avoid hiding provider uncertainty or sacrificing user safety for lower compute.",
+      "acceptance": [
+        "Per-task cost and resource budget tracked",
+        "public reporting separates measured data from estimates",
+        "thresholds trigger review"
+      ],
+      "enhancement": "Environmental procurement checklist and nonprofit climate partner collaborations.",
+      "stories": [
+        "Instrument inference and provider-cost metrics",
+        "Implement simple-task/small-model routing benchmark",
+        "Publish measured-versus-estimated environmental notes",
+        "Test quota, energy accounting and cost regression"
+      ],
+      "refs": [
+        "BEN-01",
+        "BEN-CIC"
+      ],
+      "complexity": "M"
+    },
+    {
+      "id": "A12",
+      "name": "Community-governed AI research and federation",
+      "release": "1.0",
+      "priority": "P3",
+      "audience": "Members / researchers / governance",
+      "depends": [
+        "A05",
+        "A07",
+        "F06"
+      ],
+      "goal": "Investigate a genuinely public-benefit AI network beyond a single founder or company.",
+      "workflow": "Publish model/evaluation governance, community consultation, exit/portability rights, documented disagreements and independent oversight; explore interoperable community instances without sharing raw member data.",
+      "data": "GovernanceProposal, CompatibilityProfile, EvalReport, FederationConsent, OversightRecord.",
+      "safeguards": "No autonomous sovereignty or claims of AI consciousness; research potential AI welfare ethically without asserting today's systems are sentient.",
+      "acceptance": [
+        "Pilot communities can export approved public methods and their own data",
+        "independent reviewers can challenge major model changes"
+      ],
+      "enhancement": "Federated co-op infrastructure and participatory AI research only after strong privacy, governance and capacity proof.",
+      "stories": [
+        "Publish community AI stewardship research charter",
+        "Prototype portable source/model configs",
+        "Test consent-aware federation with synthetic data",
+        "Run independent governance and AI welfare ethics review"
+      ],
+      "refs": [
+        "BEN-01",
+        "BEN-03",
+        "BEN-CIC"
+      ],
+      "complexity": "XL"
+    }
+  ]
+}
