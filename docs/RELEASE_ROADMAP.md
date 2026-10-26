@@ -1,8 +1,8 @@
 # B.E.N. OS — implementation and release runbook
 
-**Date:** 26 October 2026 · **Current software:** v0.3 developer prototype · **Organisational rules:** proposed, not adopted.
+**Date:** 26 October 2026 · **Current software:** v0.3 Node developer prototype with v0.3.3 Cloudflare staging status-bridge candidate · **Organisational rules:** proposed, not adopted.
 
-The programme contains 53 module specifications and 212 engineering issues, each in `config/roadmap-modules.json` and `config/roadmap-issues.json`. The definitive current implementation conditions are in `docs/DELIVERY_TRACKER.md` and `config/module-delivery-status.json`. **None is independently production certified.** No GitHub repository was created by this build.
+The programme contains 53 module specifications and 212 engineering issues, each in `config/roadmap-modules.json` and `config/roadmap-issues.json`. The definitive current implementation conditions are in `docs/DELIVERY_TRACKER.md` and `config/module-delivery-status.json`. **None is independently production certified.** The repository, static Pages preview, D1 founder staging and real GitHub authentication are now deployed separately. The original package itself did not create them.
 
 ## The operational principle
 
@@ -110,3 +110,17 @@ Develop interoperable knowledge and model interfaces, neutral public-interest re
 10. `P05/M17` — Independent browser, screen reader, mobile, multilingual and low-bandwidth acceptance.
 
 **Practical stop rule:** do not open general registration, paid activities, live sensitive reports or large-scale AI inference while the launch gates remain unverified.
+
+## v0.3.3 — work towards a source-aware Drive connector
+
+The public site must not be treated as a live mirror of all private Google
+Drive. The deployable first step is a public-only build status probe and
+evidence-backed P01–P06 snapshots. The subsequent Drive sync work is documented
+in `docs/DRIVE_SYNC_DESIGN_v0.3.3.md`. It requires an explicitly permissioned
+Google integration, native Google working documents/Sheets where writes are
+needed, strict classification, revision-checked two-way diffs, and human
+approval of policy changes. This setup has **not yet been activated**.
+
+WhatsApp remains the community conversation surface. The 16 topics are an
+expansion catalogue, not 16 mandated website chat rooms. See revised M03 and
+ACT-013.

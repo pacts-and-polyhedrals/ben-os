@@ -817,7 +817,7 @@
     },
     {
       "id": "M03",
-      "name": "Community conversations and the sixteen broad interest spaces",
+      "name": "WhatsApp Community directory and staged interest-group expansion",
       "release": "0.4",
       "priority": "P1",
       "audience": "Members / moderators",
@@ -825,21 +825,21 @@
         "M01",
         "F11"
       ],
-      "goal": "Help people connect across interests without fragmenting B.E.N. into dozens of dead or exclusionary groups.",
-      "workflow": "Preserve the 16-channel subject map from BEN-02 as navigation tags/categories: Beniverse, games, arts, music, entertainment, wellbeing, fitness, travel, learning, engineering, business, exchange, events, memes, volunteering and recommendations. Integrate chosen chat provider rather than cloning Discord first.",
-      "data": "ChannelCategory, ThreadReference, ModerationPolicy, LinkPreview, MembershipVisibility.",
-      "safeguards": "No forced public activity, no surveillance-based active-member score, and no new regional channels by default. Respect provider content policies and deletion rights.",
+      "goal": "Help members find suitable moderated WhatsApp community groups and grow the directory based on real demand, without duplicating private chat functionality.",
+      "workflow": "Start with the initial Central, Culture & Entertainment, Wellbeing and existing Gaming groups after moderator coverage; maintain a role-restricted directory, purposes, admins, backups and controlled joining. Seek member input around the 50-member milestone before considering more of the 16 suggested topics. WhatsApp hosts conversations, B.E.N. OS organises access; never scrape private chats.",
+      "data": "Permitted directory metadata and join-request decisions in D1; never store members’ WhatsApp chat transcripts or publicly expose invite links or phone numbers.",
+      "safeguards": "Joining a WhatsApp group can reveal a person’s phone number to others; provide clear notice, keep invite links controlled, obtain admin approval, and apply safety rules. No automated AI chat monitoring.",
       "acceptance": [
-        "Member locates an appropriate subject space",
-        "link navigation works",
-        "moderator can stop abuse without suppressing respectful disagreement"
+        "Members can review accurate descriptions before requesting access",
+        "Authorised admins approve joins and group changes with audit records",
+        "Group creation and expansion are justified by interest and moderator capacity; no WhatsApp message collection"
       ],
-      "enhancement": "Optional native forums and ephemeral groups only if a gap is demonstrated through a reviewed pilot.",
+      "enhancement": "Later support optional group discovery and event links across platforms after member consultation, without forcing the community to abandon familiar tools.",
       "stories": [
-        "Publish sixteen-category navigation and channel ownership",
-        "Create moderated discussion links/integration abstraction",
-        "Build channel proposal and four-week pilot review",
-        "Test reporting, quiet members and duplicate spaces"
+        "Agree the small initial WhatsApp Community group set and administrator backups",
+        "Create a privacy-safe directory with human-reviewed group join requests",
+        "Track group utilisation, moderation cover and member proposals",
+        "Consult members before activating more topic groups"
       ],
       "refs": [
         "BEN-02",

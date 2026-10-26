@@ -3,3 +3,5 @@
 .learning-stages{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:22px 0}.path-stage{background:#1b1730;border:1px solid #61466c;border-radius:14px;padding:18px;display:flex;flex-direction:column;align-items:flex-start;gap:9px}.path-stage strong{color:#f8d59a;font-size:.85rem}.path-stage p{font-size:.84rem;flex:1;margin:0}.path-stage button{margin-top:5px}.learning-path{margin-bottom:20px}@media(max-width:720px){.learning-stages{grid-template-columns:1fr}}
 
 .release-state{display:inline-block;margin-top:7px;color:#e1c396;font-size:.71rem;font-weight:800}.release-state::before{content:"○ ";color:#e3af76}
+
+.roadmap-evidence{margin-top:8px!important;line-height:1.55;color:#e6ddf4}.roadmap-remains{margin-top:6px!important;color:#d2badc;line-height:1.6}.roadmap-reviewed{margin-top:6px!important;color:#d8d3dd;font-size:.7rem!important}

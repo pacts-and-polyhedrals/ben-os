@@ -1,6 +1,8 @@
 # B.E.N. OS — 53-module execution tracker
 
-**Snapshot: 26 October 2026. Developer build, not a live service.**
+**Reviewed: 26 October 2026. Public Pages preview and an auth-only Cloudflare founder staging service are live. All 53 modules remain unverified for production.**
+
+The first six P modules now have specific evidence and outstanding release gates recorded in `config/module-delivery-status.json`. Their technical milestones should not be confused with full acceptance; GitHub Pages shows a live read-only staging probe for P02–P04 in v0.3.3.
 
 This table is a **technical implementation inventory**, not approval of B.E.N. policies. A module is not complete merely because its UI exists. The 212 draft engineering issues are in `config/roadmap-issues.json`.
 
@@ -8,12 +10,12 @@ This table is a **technical implementation inventory**, not approval of B.E.N. p
 
 | Module | Target release | Engineering condition | Current status |
 |---|---|---|---|
-| P01 — GitHub organisation, source control and delivery | 0.1.1 | prototype partial | GitHub templates and CI code are present; no live organisation, branch protection or tag. |
-| P02 — Production hosting, API and deployment protection | 0.1.1 | prototype partial | Node dev server, basic origin/CSRF controls and headers; production security, backups and hosting remain. |
-| P03 — Identity, delegated roles and authorization | 0.3 | prototype partial | GitHub App identity and member/steward allowlist checks; no production MFA, full conflict-aware role delegation or recovery. |
-| P04 — Data classification, schemas and ownership | 0.2 | prototype partial | Development SQLite schema with basic row access and audit; no production migrations or data classification enforcement. |
-| P05 — Accessible design system and usability | 0.2 | prototype partial | Responsive prototype layouts and accessible labels; manual WCAG/browser QA pending. |
-| P06 — Public website and approved knowledge portal | 0.3 | prototype partial | Static public homepage, constitution extracts and creative resources; no approved public launch. |
+| P01 — GitHub organisation, source control and delivery | 0.1.1 | prototype partial | GitHub repository, CI, Pages and Cloudflare Git deployment live; no organisation/backup ownership, branch protection, release tag or rollback proof. |
+| P02 — Production hosting, API and deployment protection | 0.1.1 | prototype partial | Cloudflare HTTPS Worker and D1 staging API operational; production separation, alerts, backup/restore, abuse limits and incident coverage outstanding. |
+| P03 — Identity, delegated roles and authorization | 0.3 | prototype partial | Real founder GitHub App sign-in and D1 sessions confirmed; member alternatives, privileged MFA, role expiry, conflict-aware permissions and recovery remain. |
+| P04 — Data classification, schemas and ownership | 0.2 | prototype partial | Staging D1 users/sessions/task progress/audit schema active; versioned migration, classification, retention and restore tests outstanding. |
+| P05 — Accessible design system and usability | 0.2 | prototype partial | Responsive GitHub Pages and staging founder UI live; manual keyboard, WCAG 2.2 AA, screen reader and mobile testing not signed off. |
+| P06 — Public website and approved knowledge portal | 0.3 | prototype partial | Public Pages preview live; policy adoption, public privacy/contact checks and integration with member backend remain outstanding. |
 | P07 — Notification and scheduled-work engine | 0.3 | planned | Not implemented beyond its blueprint. |
 | F01 — Founding launch-gate control centre | 0.2 | prototype partial | 22 founding tasks visible with saved operational notes; launch gates not formally certified. |
 | F02 — Live founder actions and GitHub Projects | 0.2 | prototype partial | GitHub Issue read/approved proposal publishing and local task changes; no full GitHub Projects sync. |

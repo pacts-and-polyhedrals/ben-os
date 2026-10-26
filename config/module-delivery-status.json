@@ -1,9 +1,9 @@
 {
-  "version": "0.3.0",
+  "version": "0.3.3-status-bridge",
   "date": "2026-10-26",
   "source": "config/roadmap-modules.json",
   "meaning": {
-    "prototype_partial": "A limited development feature exists, not release-ready",
+    "prototype_partial": "An implemented slice exists but full module acceptance/review gates remain open; read operationalMilestone and remainingGates",
     "planned": "A specification exists but no relevant production feature is implemented",
     "verified_complete": "Full acceptance and external operational gates verified (none yet)"
   },
@@ -11,44 +11,105 @@
     {
       "id": "P01",
       "stage": "prototype_partial",
-      "whatExists": "GitHub templates and CI code are present; no live organisation, branch protection or tag.",
+      "whatExists": "Public pacts-and-polyhedrals/ben-os repository on main, GitHub Actions tests and Pages deployment, Cloudflare Git-connected Worker; real commits deployed.",
       "targetRelease": "0.1.1",
-      "priority": "P0"
+      "priority": "P0",
+      "operationalMilestone": "repository_and_deployment_pipeline_live",
+      "remainingGates": [
+        "Establish accountable organisation/team custody and recovery contacts",
+        "Apply and test main branch protection and mandatory PR reviews",
+        "Create protected release baseline and prove rollback"
+      ],
+      "evidence": [
+        "https://github.com/pacts-and-polyhedrals/ben-os",
+        "https://github.com/pacts-and-polyhedrals/ben-os/actions"
+      ],
+      "lastEvidenceReview": "2026-10-26"
     },
     {
       "id": "P02",
       "stage": "prototype_partial",
-      "whatExists": "Node dev server, basic origin/CSRF controls and headers; production security, backups and hosting remain.",
+      "whatExists": "Cloudflare ben-os-staging HTTPS Worker is deployed with D1, a working health endpoint, GitHub-triggered builds and protected founder routes.",
       "targetRelease": "0.1.1",
-      "priority": "P0"
+      "priority": "P0",
+      "operationalMilestone": "staging_api_live",
+      "remainingGates": [
+        "Production separation, monitoring/alerting and measured abuse/rate limits",
+        "Test deployment rollback, database backup and recovery",
+        "Document incident and data-processing controls"
+      ],
+      "evidence": [
+        "https://ben-os-staging.selvagrow7.workers.dev/api/health"
+      ],
+      "lastEvidenceReview": "2026-10-26"
     },
     {
       "id": "P03",
       "stage": "prototype_partial",
-      "whatExists": "GitHub App identity and member/steward allowlist checks; no production MFA, full conflict-aware role delegation or recovery.",
+      "whatExists": "Real GitHub App founder sign-in verified; server-side allowlist, session and CSRF protections and D1 audit exist. Public registration remains disabled.",
       "targetRelease": "0.3",
-      "priority": "P0"
+      "priority": "P0",
+      "operationalMilestone": "founder_auth_live",
+      "remainingGates": [
+        "Introduce alternative inclusive member identity (avoid GitHub-only requirement)",
+        "Test role expiry, delegation, conflict exclusions and recovery with two custodians",
+        "Independent founder MFA and role-boundary security review"
+      ],
+      "evidence": [
+        "https://ben-os-staging.selvagrow7.workers.dev/api/health"
+      ],
+      "lastEvidenceReview": "2026-10-26"
     },
     {
       "id": "P04",
       "stage": "prototype_partial",
-      "whatExists": "Development SQLite schema with basic row access and audit; no production migrations or data classification enforcement.",
+      "whatExists": "Staging Cloudflare D1 holds users, oauth_states, sessions, founder_updates and audit tables. Founder board persistence and audit writes have automated tests.",
       "targetRelease": "0.2",
-      "priority": "P0"
+      "priority": "P0",
+      "operationalMilestone": "d1_founder_schema_live",
+      "remainingGates": [
+        "Versioned migration runner and canonical record ownership/classification",
+        "Backup and restore drill, retention policies and forbidden-data rejection checks",
+        "Separate confidential casework before any public membership"
+      ],
+      "evidence": [
+        "https://github.com/pacts-and-polyhedrals/ben-os/blob/main/ben-founder-schema.sql"
+      ],
+      "lastEvidenceReview": "2026-10-26"
     },
     {
       "id": "P05",
       "stage": "prototype_partial",
-      "whatExists": "Responsive prototype layouts and accessible labels; manual WCAG/browser QA pending.",
+      "whatExists": "Responsive public GitHub Pages interface, design patterns and labels exist; founder staging dashboard also renders.",
       "targetRelease": "0.2",
-      "priority": "P0"
+      "priority": "P0",
+      "operationalMilestone": "responsive_ui_available",
+      "remainingGates": [
+        "Manual keyboard and screen-reader acceptance review",
+        "WCAG 2.2 AA automated/manual checks including contrast and zoom",
+        "Mobile user journeys and low-bandwidth/accessibility regression coverage"
+      ],
+      "evidence": [
+        "https://pacts-and-polyhedrals.github.io/ben-os/"
+      ],
+      "lastEvidenceReview": "2026-10-26"
     },
     {
       "id": "P06",
       "stage": "prototype_partial",
-      "whatExists": "Static public homepage, constitution extracts and creative resources; no approved public launch.",
+      "whatExists": "GitHub Pages static public B.E.N. preview is deployed and contains principles, creative resources and the module roadmap. Separate protected founder staging is live.",
       "targetRelease": "0.3",
-      "priority": "P0"
+      "priority": "P0",
+      "operationalMilestone": "public_preview_live",
+      "remainingGates": [
+        "Integrate authenticated frontend with backend without exposing private data",
+        "Document adoption and review public policy/contact/privacy content",
+        "Verify unauthenticated visitor links, member joining/contact paths and public-only outputs"
+      ],
+      "evidence": [
+        "https://pacts-and-polyhedrals.github.io/ben-os/"
+      ],
+      "lastEvidenceReview": "2026-10-26"
     },
     {
       "id": "P07",
@@ -60,9 +121,19 @@
     {
       "id": "F01",
       "stage": "prototype_partial",
-      "whatExists": "22 founding tasks visible with saved operational notes; launch gates not formally certified.",
+      "whatExists": "Cloudflare v0.3.2 founder-only progress board and D1 task/audit records deployed; 22 proposed actions can be updated by an authorised founder. Formal launch gates and decisions are not certified.",
       "targetRelease": "0.2",
-      "priority": "P0"
+      "priority": "P0",
+      "operationalMilestone": "staging_founder_board_live",
+      "remainingGates": [
+        "Approved launch gate owners and verified evidence for all mandatory controls",
+        "Human adoption/decisions and independent safety, privacy, role and continuity checks",
+        "Controlled alerts, review queues and owner assignments"
+      ],
+      "lastEvidenceReview": "2026-10-26",
+      "evidence": [
+        "https://ben-os-staging.selvagrow7.workers.dev/api/health"
+      ]
     },
     {
       "id": "F02",
@@ -379,5 +450,6 @@
       "targetRelease": "1.0",
       "priority": "P3"
     }
-  ]
+  ],
+  "evidenceReview": "Founder and repository technical evidence reviewed 2026-10-26; not a certified production acceptance"
 }

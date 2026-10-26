@@ -1,14 +1,14 @@
 # B.E.N. OS v0.3 — what actually works
 
-**Developer implementation snapshot · 26 October 2026. No public service is deployed.**
+**Reviewed 26 October 2026. Public static Pages preview and a separate restricted Cloudflare founder staging Worker are now live. This is not an approved public membership service.**
 
 | Feature | Current condition | Release gate / missing work |
 |---|---|---|
-| GitHub App web sign-in | Implemented and testable with mocked GitHub provider | Real App registration and human identity allowlist required |
+| GitHub App web sign-in | Real GitHub founder authentication verified on Cloudflare v0.3.2; public member onboarding remains off | Inclusive member login, privileged MFA/recovery and role boundary acceptance |
 | Member vs founder permissions | Server-side role checks, founder/steward allowlists using stable GitHub IDs | Independent account security review, steward assignment decisions, privileged MFA strategy |
 | Member onboarding | Pending by default; adult attestation + adopted Code required | Actual founder adoption and safeguarding/age handling review |
 | Public UI / design | Responsive single-page interface, no frontend framework | Manual accessibility, mobile and browser QA; content editorial review |
-| Local storage | SQLite tables with explicit schema and prepared statements | Managed Postgres, protected backups, migration and monitoring before production |
+| Staging storage | Cloudflare D1 users/sessions/founder_updates/audit schema deployed; local SQLite code still exists separately | Reviewed migrations, data classification, backup and restore, monitoring before launch |
 | Creative curricula | 48 named disciplines, original exercises, four-stage learning paths, private creative journals, 48 draft workpackets, techniques, constructive feedback prompts | Qualified expert review and deeper technique content for each discipline |
 | Creative AI mentor | Ollama user chat with discipline instructions and five mentoring modes | Real model evaluation, safeguards, licensing and privacy testing |
 | Inspiration gallery | The Met API query for item-verified public-domain image records | External API reliability, image license display, moderation and image accessibility review |

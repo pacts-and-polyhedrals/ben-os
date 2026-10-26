@@ -92,3 +92,16 @@ Preserve v0.1 as the baseline. Make changes through focused pull requests, pass 
 B.E.N. OS uses Cloudflare Workers and D1 for
 its staging backend. Public membership remains
 disabled while authentication is tested.
+
+## Cloudflare staging and website status bridge (v0.3.3 pilot)
+
+The GitHub Pages website remains a public static preview, but its roadmap now
+reads a **read-only, non-sensitive** status probe at the separate Cloudflare
+founder staging Worker. That probe only reports whether staging auth, D1 and the
+founder board are available; it does not assert full module completion or expose
+sessions, founder identities or private Drive links. Founder login and tasks
+remain on the Cloudflare origin. Public membership is still closed.
+
+`docs/DRIVE_SYNC_DESIGN_v0.3.3.md` specifies the staged two-way Google Drive
+integration and required Google permissions. **Drive write-back and AI analysis
+are not connected by installing the status bridge alone.**

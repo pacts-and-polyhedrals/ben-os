@@ -1,6 +1,6 @@
 const $=(selector,root=document)=>root.querySelector(selector);
 const $$=(selector,root=document)=>[...root.querySelectorAll(selector)];
-const state={charter:null,actions:null,roles:null,catalog:null,roadmap:[],user:null,csrf:null,online:false,registrationOpen:false,selection:null,history:[],launch:[],pending:[],connections:[],targetConnection:null};
+const state={charter:null,actions:null,roles:null,catalog:null,roadmap:[],publicBuild:null,user:null,csrf:null,online:false,registrationOpen:false,selection:null,history:[],launch:[],pending:[],connections:[],targetConnection:null};
 const htmlEscape=()=>{}; // User content is always added with textContent, not interpolated into markup.
 function el(tag,cls='',value){const e=document.createElement(tag);if(cls)e.className=cls;if(value!==undefined)e.textContent=String(value);return e;}
 function add(parent,...children){children.filter(Boolean).forEach(c=>parent.append(c));return parent;}
@@ -38,7 +38,23 @@ async function loadSite(){
   $('#platform-state').title=health.modelConnected?'AI model connected':'AI model can be configured separately';
   if(!health.loginConfigured)$('#sign-in').title='Founders must register a GitHub App first';
  }catch{state.online=false;$('#platform-state').textContent='Static project preview';}
- try{if(!state.roadmap.length){const d=await fallback('roadmap-modules');const status=await fallback('module-delivery-status');const stages=new Map(status.modules.map(s=>[s.id,s.stage]));state.roadmap=d.modules.map(x=>({id:x.id,name:x.name,release:x.release,priority:x.priority,goal:x.goal,implementation:stages.get(x.id)||'planned'}));}}catch{}
+ try{if(!state.roadmap.length){
+  const d=await fallback('roadmap-modules'),status=await fallback('module-delivery-status');
+  const stages=new Map(status.modules.map(s=>[s.id,s]));
+  state.roadmap=d.modules.map(x=>{
+   const m=stages.get(x.id)||{};
+   return {id:x.id,name:x.name,release:x.release,priority:x.priority,goal:x.goal,
+    implementation:m.stage||'planned',operationalMilestone:m.operationalMilestone||'',
+    whatExists:m.whatExists||'',remainingGates:m.remainingGates||[],lastEvidenceReview:m.lastEvidenceReview||''};
+  });
+ }}catch{}
+ // Public GitHub Pages reads only a minimal, non-sensitive status endpoint.
+ // Founder authentication and full member data remain on the Cloudflare origin.
+ if(location.hostname==='pacts-and-polyhedrals.github.io'){
+  try{const v=await getJSON('https://ben-os-staging.selvagrow7.workers.dev/api/public-build-status');
+   if(v.service==='B.E.N. public build status'&&v.runtime?.environment==='founder-staging')state.publicBuild=v;
+  }catch{state.publicBuild=null;}
+ }
  renderAuth();renderPrinciples();renderCreativeCatalog();renderRoadmap();installForms();
  const hash=location.hash.replace('#','');show(['home','creative','people','projects','help','events','proposals','assistant','profile','principles','ethics','roadmap','founders'].includes(hash)?hash:'home');
  const authCode=new URLSearchParams(location.search).get('auth');if(authCode){warn({'invalid-state':'Sign-in validation failed. Please try again.','not-configured':'A founder needs to configure the GitHub App first.','failed':'GitHub sign-in did not complete.'}[authCode]||'Sign-in information is unavailable.');}
@@ -51,7 +67,7 @@ function renderAuth(){
  $('#steward-nav').classList.toggle('hidden',!isSteward());
  $$('.member-only').forEach(n=>n.classList.toggle('hidden',!activeMember()));
  $('#journal-section').classList.toggle('hidden',!activeMember());
- if(!state.online){$('#welcome-title').textContent='Project preview';$('#welcome-copy').textContent='This is a static demonstration. The secure member experience requires the Node backend, GitHub App and approved pilot settings.';return;}
+ if(!state.online){$('#welcome-title').textContent='Project preview';$('#welcome-copy').textContent='This is a public preview, not a logged-in member portal. A separate Cloudflare founder staging login and D1 task board are operational. Public membership is closed pending safeguards.';return;}
  if(!user){$('#welcome-title').textContent='Explore, then join when ready';$('#welcome-copy').textContent='Sign in with GitHub to identify yourself to the B.E.N. app. You will not get access to edit the GitHub repository. Member registration opens only after the founders have adopted the required controls.';return;}
  if(activeMember()){
   $('#welcome-title').textContent=`Welcome back, ${user.name}`;
@@ -121,7 +137,24 @@ function renderRoadmap(){
  const releases=[...new Set(state.roadmap.map(x=>x.release))].sort();releases.forEach(r=>$('#roadmap-release').append(option(r,r)));
  const render=()=>{const q=$('#roadmap-search').value.toLowerCase(),release=$('#roadmap-release').value,tar=$('#roadmap-list');tar.replaceChildren();
   for(const item of state.roadmap.filter(x=>(release==='all'||release===x.release)&&[x.id,x.name,x.goal].join(' ').toLowerCase().includes(q))){const row=el('article','roadmap-row');
-   const info=el('div');add(info,el('h3','',item.name),el('p','',item.goal));add(info,el('span','release-state',item.implementation==='prototype_partial'?'Prototype slice — incomplete':'Planned, not yet built'));add(row,el('strong','',item.id),info,el('small','',item.release));tar.append(row);}
+   const info=el('div');add(info,el('h3','',item.name),el('p','',item.goal));
+   const live=state.publicBuild?.runtime||{};
+   const verifiedLive=(item.id==='P02'&&live.databaseConnected===true)||
+    (item.id==='P03'&&live.githubLoginConfigured===true)||
+    (item.id==='P04'&&live.founderWorkspaceReady===true);
+   let label=item.implementation==='verified_complete'?'Independently verified complete':
+    item.implementation==='planned'?'Planned, not yet built':'Prototype slice — incomplete';
+   if(item.operationalMilestone&&item.implementation==='prototype_partial'){
+    label=verifiedLive?'Staging online now — release gates remain':
+     'Milestone evidenced — release gates remain';
+   }
+   add(info,el('span','release-state',label));
+   if(item.whatExists&&/^P0[1-6]$/.test(item.id)){
+    add(info,el('p','roadmap-evidence',item.whatExists));
+    if(item.remainingGates?.length)appendText(info,'Still required: '+item.remainingGates.join(' • '),'p','roadmap-remains');
+    if(item.lastEvidenceReview)appendText(info,'Evidence reviewed: '+item.lastEvidenceReview+(verifiedLive?' · Live staging probe passed':''),'p','roadmap-reviewed');
+   }
+   add(row,el('strong','',item.id),info,el('small','',item.release));tar.append(row);}
  };$('#roadmap-search').addEventListener('input',render);$('#roadmap-release').addEventListener('change',render);render();}
 function installForms(){
  $$('[data-go]').forEach(b=>b.addEventListener('click',()=>show(b.dataset.go)));
