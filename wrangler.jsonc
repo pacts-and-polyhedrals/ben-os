@@ -1,0 +1,14 @@
+{
+  "name": "ben-os-staging",
+  "main": "cloudflare-worker.mjs",
+  "compatibility_date": "2026-10-26",
+  "workers_dev": true,
+  "keep_vars": true,
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "ben-os-staging-db",
+      "database_id": "b173bedb-423d-41be-8a89-7a807bdf2444"
+    }
+  ]
+}
