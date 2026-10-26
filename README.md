@@ -86,3 +86,9 @@ Only ordinary member records are stored in local SQLite for development, never i
 ### Development model
 
 Preserve v0.1 as the baseline. Make changes through focused pull requests, pass regression tests, and document unresolved limitations. Follow `docs/BUILD_STATUS.md` for remaining engineering and operational gates. **Do not deploy open registration until the founders have actually adopted the policies and independently tested safeguarding, privacy, security and accessibility.**
+
+## Cloudflare Staging
+
+B.E.N. OS uses Cloudflare Workers and D1 for
+its staging backend. Public membership remains
+disabled while authentication is tested.
